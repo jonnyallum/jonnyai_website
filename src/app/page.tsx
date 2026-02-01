@@ -76,22 +76,22 @@ export default function Home() {
             <div className="absolute inset-0 bg-citrus/10 mix-blend-overlay" />
           </div>
           <div>
-            <h2 className="futuristic-title text-4xl mb-8">KLIQT MEDIA HQ</h2>
+            <h2 className="futuristic-title text-4xl mb-8">THE INNOVATION HUB</h2>
             <p className="text-steel text-lg font-light mb-8 leading-relaxed">
-              Our flagship autonomous discovery network. We deployed a global 'Honeytrap' infrastructure that scales social presence and evidence collection with zero human intervention.
+              Evolved from **KLIQT Media** (Digital Marketing), Jonny Allum Innovations is our flagship center for recursive engineering. We build the **Honeytrap Protocol**—a proprietary OSINT infrastructure that scales signal collection with zero human intervention.
             </p>
             <ul className="space-y-4 mb-12">
               <li className="flex items-center gap-4 text-xs font-bold tracking-widest text-void/60">
-                <span className="w-2 h-2 bg-citrus rounded-full" /> AUTONOMOUS PROFILING
+                <span className="w-2 h-2 bg-citrus rounded-full" /> ADVANCED SIGNAL DISCOVERY
               </li>
               <li className="flex items-center gap-4 text-xs font-bold tracking-widest text-void/60">
-                <span className="w-2 h-2 bg-citrus rounded-full" /> REAL-TIME OSINT DATA-STREAMS
+                <span className="w-2 h-2 bg-citrus rounded-full" /> AUTONOMOUS OSINT PIPELINES
               </li>
               <li className="flex items-center gap-4 text-xs font-bold tracking-widest text-void/60">
-                <span className="w-2 h-2 bg-citrus rounded-full" /> ADAPTIVE CONTENT SYNTHESIS
+                <span className="w-2 h-2 bg-citrus rounded-full" /> MARKET INTELLIGENCE MATRICES
               </li>
             </ul>
-            <button className="btn-citrus">EXPLORE LAB</button>
+            <button className="btn-citrus">EXPLORE SYSTEMS</button>
           </div>
         </div>
       </section>
