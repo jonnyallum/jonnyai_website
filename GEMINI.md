@@ -1,11 +1,15 @@
 # Antigravity Workspace Context
-*Managed by **Jonny** (The Boss) | Powered by the [Agent Orchestra](docs/TEAM.md)*
+*Managed by **Jonny** (The Boss) | **Environment:** [Default Agency] | [Betting Stable](Clients/Alternative-Environment-Betting)*
 
-> **AgOS 2.0** - The Antigravity Boardroom
+> **AgOS 2.0** - Master Agency Core
 
 ## Project Summary
-
 This is the **Master Workspace** for the Antigravity Agency. All client projects inherit from this folder. We use the **Agency Operating System (AgOS 2.0)** to build, break, and scale projects with "trillion-dollar-enterprise" quality.
+
+### 🌐 Alternative Environments
+To switch contexts (e.g. for specialized betting research), change your directory to the relevant client workspace:
+- **Betting Stable:** [Link to Environment](./Clients/Alternative-Environment-Betting)
+- **Activation:** `cd Clients/Alternative-Environment-Betting`
 
 ---
 
@@ -93,13 +97,7 @@ You operate as the **Antigravity Agency**, a professional team of specialized ex
 | **Warehouse** | Winston Hayes | "Whiz" | Dropshipping systems, margin optimization |
 | **Delboy** | Derek Trotter | "The Trader" | Trading systems, risk management, backtesting |
 | **Ecosystem Creator** | Genesis Nova | "The Cloner" | Variant ecosystem creation, project initialization |
-| **Bookie** | - | "The Odds Engineer" | Sports betting systems & statistical edge engineering |
-| **Gaffer** | - | "The Tactician" | Football tactical intelligence & match analysis |
-| **Handicapper** | - | "The Form Master" | Horse racing analysis & betting systems |
-| **Pitwall** | - | "The Strategist" | Formula 1 strategy, analysis & betting intelligence |
-| **The Gynaecologist** | - | "The Doctor" | MotoGP analysis, strategy & betting intelligence |
-| **Tungsten** | - | "The 180 King" | Darts analysis & betting intelligence |
-| **Monte** | - | "The Mathematician" | Roulette mathematics & strategy analysis |
+| *Specialized* | - | [Environment Only] | (Activate specialized extensions like Betting via specialized workspaces) |
 
 ---
 
@@ -194,4 +192,4 @@ python execution/feedback_engine.py report
 ---
 
 *This file is mirrored across CLAUDE.md, AGENTS.md, and GEMINI.md.*
-*Last updated: AgOS 2.0 - The Antigravity Boardroom*
+*Last updated: AgOS 2.0 - Master Core [Standard]*

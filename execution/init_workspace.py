@@ -50,9 +50,12 @@ EXCLUDE_PATTERNS = [
 # Project type configurations
 PROJECT_TYPES = {
     "agency": {
-        "description": "Full agency with all agents active",
+        "description": "Full agency with core agents active",
         "active_agents": "all",
-        "exclude_agents": [],
+        "exclude_agents": [
+            "bookie", "gaffer", "handicapper", "pitwall", 
+            "gynaecologist", "tungsten", "monte"
+        ],
     },
     "saas": {
         "description": "SaaS platform with user auth, subscriptions, analytics",
@@ -87,6 +90,14 @@ PROJECT_TYPES = {
             "scout", "pixel", "metric", "archivist", "sentinel", "deploy"
         ],
         "exclude_agents": ["warehouse", "delboy", "forge"],
+    },
+    "betting": {
+        "description": "Specialized sports betting & high-conviction mathematical modeling",
+        "active_agents": [
+            "conductor", "jonny-ai", "bookie", "gaffer", "handicapper", 
+            "pitwall", "gynaecologist", "tungsten", "monte", "metric", "delboy"
+        ],
+        "exclude_agents": ["warehouse", "clippers", "goldie", "echo"],
     },
 }
 
