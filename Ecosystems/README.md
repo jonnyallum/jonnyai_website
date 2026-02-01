@@ -11,11 +11,23 @@ These ecosystems are part of the master workspace, so you can switch contexts in
 **Status:** 🟢 Active (Ultra-Optimized 70%+ Accuracy)
 **activation:** `cd Ecosystems/Betting`
 
-### 2. [Trading Floor](./Trading) *(Planned)*
-**Focus:** Crypto/Forex arbitrage and volatility trading.
-**Agents:** Delboy, Quant, Ledger.
+### 2. [Trading Floor](./Trading-Floor)
+**Focus:** High-frequency trading, arbitrage, and risk modeling.
+**Agents:** Delboy, Metric, Vaultguard, + Planned: Quant, Broker.
+**Status:** 🟡 Initialized
+**Activation:** `cd Ecosystems/Trading-Floor`
 
----
+### 3. [Red Team Lab](./Red-Team-Lab)
+**Focus:** Offensive security, vulnerability scanning, and hardening.
+**Agents:** Sentinel, Vaultguard, Parser, + Planned: Breaker, Ghost.
+**Status:** 🟡 Initialized
+**Activation:** `cd Ecosystems/Red-Team-Lab`
+
+### 4. [Media House](./Media-House)
+**Focus:** Content factory, video production pipeline, and viral optimization.
+**Agents:** Echo, Clippers, Goldie, Scout, + Planned: Producer, Viral.
+**Status:** 🟡 Initialized
+**Activation:** `cd Ecosystems/Media-House`
 
 ## 🛠️ How to Use
 1. **Navigate**: Open the specific ecosystem folder.
