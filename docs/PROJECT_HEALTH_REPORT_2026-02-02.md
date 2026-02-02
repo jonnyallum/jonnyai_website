@@ -337,7 +337,7 @@ Highly sophisticated with:
 
 ### Architecture Recommendations
 
-1. **Shared UI Library**: CD Waste and DJ Waste share identical UI - extract to shared package
+1. **Distinct Branding**: CD Waste and DJ Waste maintain separate UI for unique brand identities
 2. **Supabase Standardization**: Use Supabase across all projects for consistency
 3. **Auth Pattern**: Implement Google One-Tap across all web projects
 4. **Deployment**: Set up Vercel for Next.js, EAS for Expo apps
