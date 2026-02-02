@@ -9,13 +9,14 @@ I build autonomous digital ecosystems and high-impact physical experiences. My w
 I am the founder of the **Antigravity AI Agency**, powered by the proprietary **AgOS 2.0** orchestration layer. We build "Trillion-Dollar" enterprise infrastructure at the speed of thought.
 
 - 🤖 **Specialization**: Autonomous Agent Swarms, High-Conviction Signal Intelligence, & MCP Frameworks.
-- 📡 **Current Mission**: Scaling **KLIQT.MEDIA** and the **AI Honeytrap Network**.
+- 📡 **History**: Evolved from **KLIQT Media** (Digital Marketing) into **Jonny Allum Innovations Ltd**, focusing on providing AI infrastructure for the modern world.
 - 📍 **Based**: UK-based, operating globally.
 
 ---
 
 ## 🚀 Key Ventures
-- **[KLIQT Media](https://kliqt.media)**: Autonomous discovery analytics and AI media infrastructure.
+- **Jonny Allum Innovations (Formerly KLIQT Media)**: Autonomous discovery analytics and AI media infrastructure. 
+- **The Honeytrap Protocol**: A proprietary OSINT signal network for automated lead intelligence and evidence collection.
 - **Insydetradar**: Deep statistical signal analysis for financial intelligence.
 - **Little Jonnys**: Revolutionizing high-end street food with AI-augmented logistics and marketing.
 - **AgOS 2.0**: The proprietary engine behind a suite of high-performance autonomous sub-systems.

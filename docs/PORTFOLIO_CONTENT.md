@@ -29,7 +29,7 @@ A sophisticated signals and trading intelligence platform. Leveraging deep stati
 A robust React Native trade ecosystem. A unified marketplace integrating seamless backends with fluid, high-performance mobile interfaces for the modern trade professional.
 
 ### ♻️ Waste Management 2.0 (DJ & CD Waste)
-Transforming traditional waste logistics through AgOS-driven efficiency. Portfolio of high-profile transformations including the **Spinnaker Tower**, **Debenhams**, and **Carphone Warehouse**.
+Transforming traditional waste logistics through AgOS-driven efficiency. Portfolio of high-profile transformations including major retail sites like **Debenhams** and **Carphone Warehouse**.
 
 ---
 
