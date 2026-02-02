@@ -1,17 +1,34 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen bg-titanium">
+    <div className="relative min-h-screen bg-titanium selection:bg-citrus/30 selection:text-citrus">
+
+      {/* --- NEURAL GRID OVERLAY --- */}
+      <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.03]"
+          style={{ backgroundImage: 'linear-gradient(#000 1px, transparent 1px), linear-gradient(90deg, #000 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+        <div className="absolute inset-0 bg-gradient-to-tr from-white via-transparent to-white/50" />
+
+        {/* Animated Scanning Line */}
+        <motion.div
+          animate={{ top: ['0%', '100%'] }}
+          transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+          className="absolute left-0 right-0 h-px bg-gradient-to-r from-transparent via-citrus/20 to-transparent z-0 opacity-50"
+        />
+      </div>
+
       {/* --- BACKGROUND LAYER --- */}
-      <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none opacity-40">
+      <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none opacity-20">
         <Image
           src="/backdrop-hq.png"
           alt="JAI Innovation Lab"
           fill
-          className="object-cover object-center grayscale brightness-125 contrast-75"
+          className="object-cover object-center grayscale contrast-125"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/80 to-white" />
       </div>
 
       {/* --- NAVIGATION --- */}
@@ -19,10 +36,14 @@ export default function Home() {
         <div className="flex items-center gap-6 pointer-events-auto">
           <h1 className="futuristic-title text-xl text-void">JAI</h1>
           <div className="h-px w-12 bg-citrus/20" />
-          <div className="flex items-center gap-3 bg-void text-white px-4 py-1.5 rounded-full border border-white/10 shadow-2xl">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            className="flex items-center gap-3 bg-void text-white px-4 py-1.5 rounded-full border border-white/10 shadow-2xl"
+          >
             <span className="w-1.5 h-1.5 bg-citrus rounded-full animate-ping" />
-            <span className="text-[8px] font-black tracking-[.2em] uppercase">Inter-AI Sync: CLAUDE/GEMINI MIGRATION ACTIVE</span>
-          </div>
+            <span className="text-[8px] font-black tracking-[.2em] uppercase">Inter-AI Sync: MIGRATION ACTIVE</span>
+          </motion.div>
         </div>
         <div className="hidden md:flex gap-12 font-black tracking-[.4em] text-[10px] pointer-events-auto">
           <a href="#lab" className="hover:text-citrus transition-colors">THE LAB</a>
@@ -33,36 +54,111 @@ export default function Home() {
       </nav>
 
       {/* --- HERO SECTION --- */}
-      <main className="relative z-10 max-w-7xl mx-auto px-8 pt-24 pb-48">
-        <div className="max-w-3xl">
-          <p className="text-citrus font-bold tracking-[.4em] mb-6 animate-pulse">SCALING SMALL BUSINESSES WITH AGENTIC AI</p>
-          <h1 className="font-outfit text-7xl md:text-9xl font-black leading-none mb-8 text-void tracking-tighter uppercase">
-            THE UNFAIR <br />
-            <span className="text-citrus text-6xl md:text-8xl">ADVANTAGE.</span>
-          </h1>
-          <p className="text-steel text-xl md:text-2xl font-light mb-12 max-w-2xl leading-relaxed">
-            I’m Jonny. I build high-performance AI systems that actually work for small businesses. No fluff, just autonomous velocity engineered to help you scale.
-          </p>
-          <div className="flex flex-wrap gap-6">
-            <button className="btn-citrus">AUTOMATE MY BUSINESS</button>
-            <button className="px-8 py-3 border border-void/10 font-bold uppercase tracking-widest text-xs hover:bg-void hover:text-white transition-all">
-              VIEW SERVICES
-            </button>
+      <main className="relative z-10 max-w-7xl mx-auto px-8 pt-32 pb-48">
+        <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-24 items-center">
+          <div>
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="text-citrus font-bold tracking-[.4em] mb-6 text-sm"
+            >
+              SCALING SMALL BUSINESSES WITH AGENTIC AI
+            </motion.p>
+
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              className="font-outfit text-7xl md:text-[10rem] font-black leading-[0.85] mb-8 text-void tracking-tighter uppercase"
+            >
+              THE UNFAIR <br />
+              <span className="text-citrus/90">ADVANTAGE.</span>
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="text-void/80 text-xl md:text-2xl font-medium mb-12 max-w-2xl leading-relaxed"
+            >
+              I’m Jonny. I build high-performance AI systems that actually work for small businesses. No fluff, just autonomous velocity engineered to help you scale.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              className="flex flex-wrap gap-6 items-center"
+            >
+              <button className="btn-citrus shadow-2xl">AUTOMATE MY BUSINESS</button>
+              <div className="h-px w-8 bg-void/10" />
+              <p className="text-[10px] font-black tracking-widest text-void/40 uppercase">AgOS 2.0 PROTOCOL: READY</p>
+            </motion.div>
+          </div>
+
+          {/* Floating HUD/Metric nodes */}
+          <div className="hidden lg:block relative">
+            <motion.div
+              animate={{ y: [0, -20, 0] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+              className="glass-card relative z-20 !p-10 border-citrus/20 shadow-[-20px_20px_60px_rgba(0,0,0,0.05)]"
+            >
+              <div className="flex justify-between items-center mb-8">
+                <span className="text-[10px] font-black tracking-widest text-citrus">OPERATIONAL TELEMETRY</span>
+                <div className="w-2 h-2 bg-citrus rounded-full animate-pulse" />
+              </div>
+              <div className="space-y-8">
+                <div>
+                  <div className="flex justify-between text-[10px] font-bold mb-2">
+                    <span className="opacity-40 uppercase">MANUAL REDUCTION</span>
+                    <span className="text-citrus">84%</span>
+                  </div>
+                  <div className="w-full h-1 bg-void/5 rounded-full overflow-hidden">
+                    <motion.div initial={{ width: 0 }} animate={{ width: '84%' }} transition={{ duration: 2, delay: 0.5 }} className="h-full bg-citrus" />
+                  </div>
+                </div>
+                <div>
+                  <div className="flex justify-between text-[10px] font-bold mb-2">
+                    <span className="opacity-40 uppercase">AGENTIC UPTIME</span>
+                    <span className="text-citrus">99.99%</span>
+                  </div>
+                  <div className="w-full h-1 bg-void/5 rounded-full overflow-hidden">
+                    <motion.div initial={{ width: 0 }} animate={{ width: '99.9%' }} transition={{ duration: 2, delay: 0.7 }} className="h-full bg-citrus" />
+                  </div>
+                </div>
+              </div>
+              <div className="mt-12 pt-8 border-t border-void/5">
+                <p className="text-[9px] font-medium leading-relaxed opacity-40 uppercase">
+                  "Current system status indicates 42% decrease in parasitic drag across client nodes."
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Shadow Nodes */}
+            <div className="absolute top-24 -right-12 w-32 h-32 bg-citrus/10 blur-3xl rounded-full" />
+            <div className="absolute -bottom-12 -left-12 w-48 h-48 bg-void/5 blur-3xl rounded-full" />
           </div>
         </div>
 
         {/* --- STATS CLUSTERS --- */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mt-48">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mt-48 border-t border-void/5 pt-24">
           {[
             { label: "AGENTS DEPLOYED", val: "420+" },
             { label: "SYSTEM UPTIME", val: "99.9%" },
             { label: "SIGNAL ACCURACY", val: "94.2%" },
             { label: "ROI MULTIPLIER", val: "12.5X" }
           ].map((stat, i) => (
-            <div key={i} className="glass-card">
-              <p className="text-[10px] tracking-[.3em] text-citrus font-bold mb-2 uppercase">{stat.label}</p>
-              <h4 className="text-4xl font-outfit font-black">{stat.val}</h4>
-            </div>
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.1 }}
+              viewport={{ once: true }}
+              className="group cursor-pointer"
+            >
+              <p className="text-[10px] tracking-[.3em] text-citrus font-bold mb-2 uppercase opacity-60 group-hover:opacity-100 transition-opacity">{stat.label}</p>
+              <h4 className="text-5xl font-outfit font-black tracking-tighter">{stat.val}</h4>
+            </motion.div>
           ))}
         </div>
       </main>
@@ -295,6 +391,60 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* --- THE DIGITAL WORKFORCE (£3/HR) --- */}
+      <section id="workforce" className="relative z-10 py-32 bg-citrus text-white">
+        <div className="max-w-7xl mx-auto px-8 relative overflow-hidden">
+          <div className="grid lg:grid-cols-2 gap-24 items-center">
+            <div>
+              <p className="text-[10px] font-black tracking-[.5em] mb-4 uppercase opacity-80">AGENTIC RENTAL SERVICE</p>
+              <h2 className="font-outfit text-6xl md:text-8xl font-black leading-none mb-8 tracking-tighter uppercase">
+                THE 168-HOUR <br />
+                <span className="opacity-60 underline">EMPLOYEE.</span>
+              </h2>
+              <p className="text-white text-2xl font-light mb-12 max-w-xl leading-relaxed">
+                Why pay a human for 40 hours when you can rent a dedicated AgOS Agent that never stops working? I'm offering direct access to my neural network for a flat utility rate.
+              </p>
+              <div className="flex items-center gap-12">
+                <div>
+                  <div className="text-6xl font-black font-outfit uppercase">£3</div>
+                  <div className="text-[10px] font-black tracking-widest uppercase mt-2">PER HOUR / 24-7</div>
+                </div>
+                <div className="w-px h-16 bg-white/20" />
+                <p className="text-xs font-bold leading-relaxed max-w-[200px] uppercase opacity-80">
+                  FULL OSINT, AUTOMATION, AND LEAD CAPTURE - DEPLOYED IN MINUTES.
+                </p>
+              </div>
+            </div>
+            <div className="glass-card !bg-white/10 !border-white/20 backdrop-blur-3xl p-12 relative">
+              <div className="absolute top-8 right-8 flex items-center gap-2">
+                <span className="w-2 h-2 bg-white rounded-full animate-ping" />
+                <span className="text-[8px] font-black tracking-widest">LIVE INSTANCE: ACTIVE</span>
+              </div>
+              <h3 className="font-outfit font-black text-3xl mb-8">CHOOSE YOUR AGENT</h3>
+              <div className="space-y-4">
+                {[
+                  { n: "@Scout", r: "OSINT & Discovery", s: "ONLINE" },
+                  { n: "@Autoflow", r: "Process Engineering", s: "ONLINE" },
+                  { n: "@Metric", r: "Growth Intelligence", s: "ONLINE" },
+                  { n: "@Echo", r: "Professional Synthesis", s: "ONLINE" }
+                ].map((agent, i) => (
+                  <div key={i} className="flex justify-between items-center p-4 border border-white/10 bg-white/5 hover:bg-white/10 transition-colors cursor-pointer">
+                    <div>
+                      <div className="text-xs font-black tracking-widest">{agent.n}</div>
+                      <div className="text-[9px] font-bold opacity-60 uppercase">{agent.r}</div>
+                    </div>
+                    <span className="text-[8px] font-black bg-white text-citrus px-2 py-1 rounded-sm">{agent.s}</span>
+                  </div>
+                ))}
+              </div>
+              <button className="w-full mt-8 py-4 bg-white text-citrus font-black text-xs tracking-[.4em] uppercase hover:bg-void hover:text-white transition-all">
+                HIRE THE ORCHESTRA
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="monetize" className="relative z-10 py-32">
         <div className="max-w-7xl mx-auto px-8">
           <div className="text-center mb-16">
