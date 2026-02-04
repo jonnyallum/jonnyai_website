@@ -1,17 +1,37 @@
-'use client';
-
-import { useParams } from 'next/navigation';
-import { motion } from 'framer-motion';
+import { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, ArrowRight, ExternalLink, Github, Check } from 'lucide-react';
 import { caseStudies } from '@/data/case-studies';
 import { Button } from '@/components/ui/Button';
 import { notFound } from 'next/navigation';
+import { CaseStudyContent } from './CaseStudyContent';
 
-export default function CaseStudyPage() {
-  const params = useParams();
-  const slug = params.slug as string;
+interface PageProps {
+  params: Promise<{ slug: string }>;
+}
 
+export async function generateStaticParams() {
+  return caseStudies.map((study) => ({
+    slug: study.slug,
+  }));
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const study = caseStudies.find(s => s.slug === slug);
+
+  if (!study) {
+    return { title: 'Case Study Not Found' };
+  }
+
+  return {
+    title: `${study.title} | JonnyAI Case Study`,
+    description: study.description,
+  };
+}
+
+export default async function CaseStudyPage({ params }: PageProps) {
+  const { slug } = await params;
   const study = caseStudies.find(s => s.slug === slug);
 
   if (!study) {
@@ -19,8 +39,6 @@ export default function CaseStudyPage() {
   }
 
   const isLive = !!study.liveUrl;
-
-  // Find next and previous studies for navigation
   const currentIndex = caseStudies.findIndex(s => s.slug === slug);
   const prevStudy = currentIndex > 0 ? caseStudies[currentIndex - 1] : null;
   const nextStudy = currentIndex < caseStudies.length - 1 ? caseStudies[currentIndex + 1] : null;
@@ -37,57 +55,14 @@ export default function CaseStudyPage() {
           Back to Case Studies
         </Link>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="max-w-3xl"
-        >
-          <div className="flex items-center gap-3 mb-4">
-            <span className="text-sm font-medium text-citrus bg-citrus/10 px-3 py-1 rounded-full">
-              {study.category}
-            </span>
-            <span className={`text-sm font-medium px-3 py-1 rounded-full ${
-              isLive ? 'bg-green-100 text-green-700' : 'bg-yellow-100 text-yellow-700'
-            }`}>
-              {isLive ? 'Live' : 'In Development'}
-            </span>
-          </div>
-
-          <h1 className="font-outfit font-bold text-4xl sm:text-5xl text-void mb-6">
-            {study.title}
-          </h1>
-
-          <p className="text-xl text-steel mb-8">
-            {study.description}
-          </p>
-
-          <div className="flex flex-wrap gap-4">
-            {study.liveUrl && (
-              <Button href={study.liveUrl} target="_blank">
-                Visit Live Site
-                <ExternalLink className="w-4 h-4" />
-              </Button>
-            )}
-            {study.githubUrl && (
-              <Button href={study.githubUrl} variant="outline" target="_blank">
-                View on GitHub
-                <Github className="w-4 h-4" />
-              </Button>
-            )}
-          </div>
-        </motion.div>
+        <CaseStudyContent study={study} isLive={isLive} />
       </section>
 
       {/* Hero Image */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
-          className="aspect-video bg-gradient-to-br from-ghost to-citrus/10 rounded-2xl overflow-hidden flex items-center justify-center"
-        >
+        <div className="aspect-video bg-gradient-to-br from-ghost to-citrus/10 rounded-2xl overflow-hidden flex items-center justify-center">
           <span className="text-6xl font-outfit font-bold text-citrus/20">{study.title}</span>
-        </motion.div>
+        </div>
       </section>
 
       {/* Details Grid */}
@@ -96,24 +71,16 @@ export default function CaseStudyPage() {
           {/* Main Content */}
           <div className="lg:col-span-2 space-y-12">
             {/* Full Description */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
+            <div>
               <h2 className="font-outfit font-bold text-2xl text-void mb-4">About This Project</h2>
               <div className="text-steel leading-relaxed whitespace-pre-line">
                 {study.fullDescription}
               </div>
-            </motion.div>
+            </div>
 
             {/* Outcomes */}
             {study.outcomes && study.outcomes.length > 0 && (
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-              >
+              <div>
                 <h2 className="font-outfit font-bold text-2xl text-void mb-4">Key Outcomes</h2>
                 <div className="grid grid-cols-1 gap-4">
                   {study.outcomes.map((outcome) => (
@@ -123,19 +90,14 @@ export default function CaseStudyPage() {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </div>
             )}
           </div>
 
           {/* Sidebar */}
           <div className="space-y-8">
             {/* Tech Stack */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="bg-ghost rounded-xl p-6"
-            >
+            <div className="bg-ghost rounded-xl p-6">
               <h3 className="font-outfit font-bold text-lg text-void mb-4">Tech Stack</h3>
               <div className="flex flex-wrap gap-2">
                 {study.tech.map((tech) => (
@@ -144,17 +106,11 @@ export default function CaseStudyPage() {
                   </span>
                 ))}
               </div>
-            </motion.div>
+            </div>
 
             {/* Agents Involved */}
             {study.agents && study.agents.length > 0 && (
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.1 }}
-                className="bg-ghost rounded-xl p-6"
-              >
+              <div className="bg-ghost rounded-xl p-6">
                 <h3 className="font-outfit font-bold text-lg text-void mb-4">Agents Involved</h3>
                 <div className="space-y-3">
                   {study.agents.map((agent) => (
@@ -173,22 +129,16 @@ export default function CaseStudyPage() {
                   Meet the Orchestra
                   <ArrowRight className="w-4 h-4" />
                 </Link>
-              </motion.div>
+              </div>
             )}
 
             {/* Build Time */}
             {study.buildTime && (
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
-                className="bg-ghost rounded-xl p-6"
-              >
+              <div className="bg-ghost rounded-xl p-6">
                 <h3 className="font-outfit font-bold text-lg text-void mb-4">Build Time</h3>
                 <p className="text-2xl font-outfit font-bold text-citrus">{study.buildTime}</p>
                 <p className="text-sm text-steel">from kickoff to launch</p>
-              </motion.div>
+              </div>
             )}
           </div>
         </div>
@@ -233,12 +183,7 @@ export default function CaseStudyPage() {
 
       {/* CTA */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="bg-void rounded-2xl p-8 lg:p-12 text-center"
-        >
+        <div className="bg-void rounded-2xl p-8 lg:p-12 text-center">
           <h2 className="font-outfit font-bold text-3xl text-white mb-4">
             Want Similar Results?
           </h2>
@@ -249,7 +194,7 @@ export default function CaseStudyPage() {
             Start Your Project
             <ArrowRight className="w-5 h-5" />
           </Button>
-        </motion.div>
+        </div>
       </section>
     </div>
   );
