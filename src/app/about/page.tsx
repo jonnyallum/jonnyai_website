@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { ArrowRight, Zap, Users, Target, Rocket, Brain, Shield, Terminal, Cpu, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { AgentCard } from '@/components/agents/AgentCard';
