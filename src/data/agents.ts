@@ -88,6 +88,7 @@ export const agents: Agent[] = [
     personality: ['Vigilant', 'Risk-aware', 'Thorough'],
     tier: 'development',
     featured: true,
+    avatar: '/agents/sentinel.png',
     color: '#ef4444', // Red
   },
   {
@@ -106,6 +107,7 @@ export const agents: Agent[] = [
     personality: ['Fast', 'Reliable', 'Automation-obsessed'],
     tier: 'deployment',
     featured: true,
+    avatar: '/agents/deploy.png',
     color: '#f97316', // Orange
   },
   {
@@ -124,6 +126,7 @@ export const agents: Agent[] = [
     personality: ['Strategic', 'Business-minded', 'Growth-focused'],
     tier: 'business',
     featured: true,
+    avatar: '/agents/forge.png',
     color: '#eab308', // Yellow
   },
   {
@@ -142,6 +145,7 @@ export const agents: Agent[] = [
     personality: ['Analytical', 'Data-driven', 'Insightful'],
     tier: 'business',
     featured: true,
+    avatar: '/agents/metric.png',
     color: '#14b8a6', // Teal
   },
   {
@@ -160,6 +164,7 @@ export const agents: Agent[] = [
     personality: ['Patient', 'Strategic', 'Detail-oriented'],
     tier: 'business',
     featured: true,
+    avatar: '/agents/goldie.png',
     color: '#84cc16', // Lime
   },
   {
@@ -178,6 +183,7 @@ export const agents: Agent[] = [
     personality: ['Articulate', 'Persuasive', 'Empathetic'],
     tier: 'business',
     featured: true,
+    avatar: '/agents/echo.png',
     color: '#a855f7', // Purple
   },
   {
@@ -196,6 +202,7 @@ export const agents: Agent[] = [
     personality: ['Efficient', 'Systematic', 'Relentless'],
     tier: 'deployment',
     featured: true,
+    avatar: '/agents/autoflow.png',
     color: '#06b6d4', // Cyan
   },
   {
@@ -214,6 +221,7 @@ export const agents: Agent[] = [
     personality: ['Curious', 'Thorough', 'Strategic'],
     tier: 'research',
     featured: true,
+    avatar: '/agents/scout.png',
     color: '#22c55e', // Green
   },
   {
@@ -232,6 +240,7 @@ export const agents: Agent[] = [
     personality: ['Precise', 'Scalable-minded', 'Organized'],
     tier: 'development',
     featured: true,
+    avatar: '/agents/datastore.png',
     color: '#6366f1', // Indigo
   },
   // Additional agents (not featured on homepage but available)
@@ -246,6 +255,7 @@ export const agents: Agent[] = [
     personality: ['Helpful', 'Patient', 'Solution-oriented'],
     tier: 'support',
     featured: false,
+    avatar: '/agents/helpline.png',
     color: '#f472b6',
   },
   {
@@ -259,6 +269,7 @@ export const agents: Agent[] = [
     personality: ['Organized', 'Thorough', 'Historical'],
     tier: 'support',
     featured: false,
+    avatar: '/agents/archivist.png',
     color: '#78716c',
   },
   {
@@ -272,6 +283,7 @@ export const agents: Agent[] = [
     personality: ['Precise', 'Systematic', 'Quality-focused'],
     tier: 'research',
     featured: false,
+    avatar: '/agents/parser.png',
     color: '#64748b',
   },
   {
@@ -285,6 +297,7 @@ export const agents: Agent[] = [
     personality: ['Creative', 'Trend-aware', 'Attention-grabbing'],
     tier: 'business',
     featured: false,
+    avatar: '/agents/clippers.png',
     color: '#fb7185',
   },
   {
@@ -298,6 +311,7 @@ export const agents: Agent[] = [
     personality: ['Cautious', 'Trustworthy', 'Protective'],
     tier: 'deployment',
     featured: false,
+    avatar: '/agents/vaultguard.png',
     color: '#dc2626',
   },
   {
@@ -311,6 +325,7 @@ export const agents: Agent[] = [
     personality: ['Reliable', 'Scalable', 'Invisible'],
     tier: 'deployment',
     featured: false,
+    avatar: '/agents/devops.png',
     color: '#0ea5e9',
   },
   {
@@ -324,6 +339,7 @@ export const agents: Agent[] = [
     personality: ['Connecting', 'Versatile', 'Enabling'],
     tier: 'development',
     featured: false,
+    avatar: '/agents/manus.png',
     color: '#7c3aed',
   },
   {
@@ -337,6 +353,7 @@ export const agents: Agent[] = [
     personality: ['Observant', 'Proactive', 'Improvement-focused'],
     tier: 'orchestration',
     featured: false,
+    avatar: '/agents/watcher.png',
     color: '#4f46e5',
   },
   {
@@ -350,6 +367,7 @@ export const agents: Agent[] = [
     personality: ['Innovative', 'Questioning', 'Visionary'],
     tier: 'orchestration',
     featured: false,
+    avatar: '/agents/nucleus.png',
     color: '#c026d3',
   },
 ];
