@@ -24,14 +24,60 @@
 
 @layer components {
   .btn-citrus {
-    @apply bg-citrus text-white font-bold py-3 px-8 rounded-sm transition-all duration-300 hover:shadow-[0_0_20px_rgba(217,119,87,0.4)] hover:scale-105 active:scale-95 uppercase tracking-widest;
+    @apply bg-citrus text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 hover:shadow-[0_0_20px_rgba(217,119,87,0.4)] hover:scale-105 active:scale-95;
   }
-  
+
   .glass-card {
-    @apply bg-white/80 backdrop-blur-xl border border-ghost shadow-[0_10px_30px_rgba(0,0,0,0.05)] rounded-sm p-6;
+    @apply bg-white/80 backdrop-blur-xl border border-ghost shadow-[0_10px_30px_rgba(0,0,0,0.05)] rounded-2xl p-6;
   }
-  
+
   .futuristic-title {
-    @apply font-outfit font-extrabold uppercase tracking-[0.2em] text-void;
+    @apply font-outfit font-extrabold text-void;
   }
+}
+
+@layer utilities {
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom selection */
+::selection {
+  background-color: var(--color-citrus);
+  color: white;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-ghost);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-steel);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-void);
 }
