@@ -40,4 +40,4 @@ jobs:
           rsync -avz --delete \
             -e "ssh -p ${{ secrets.SSH_PORT }}" \
             ./out/ \
-            ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:~/public_html/
+            ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:~/domains/jonnyai.co.uk/public_html/
