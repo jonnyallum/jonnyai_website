@@ -85,7 +85,7 @@ export function Hero() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-xl text-gray-400 max-w-xl mb-10 leading-relaxed font-light"
             >
-              Stop waiting months for developers. Our proprietary <span className="text-white font-medium">21-Agent Orchestra</span> turns your vision into production-ready software in weeks.
+              Stop waiting months for developers. Our proprietary <span className="text-white font-medium">39-Agent Orchestra</span> turns your vision into production-ready software in weeks.
             </motion.p>
 
             {/* CTAs */}
@@ -117,7 +117,7 @@ export function Hero() {
                   <Users className="w-5 h-5 text-gray-400 group-hover:text-electric-purple transition-colors" />
                 </div>
                 <div>
-                  <div className="text-white font-bold font-outfit text-lg leading-none">21+</div>
+                  <div className="text-white font-bold font-outfit text-lg leading-none">39</div>
                   <div className="text-gray-500 text-xs uppercase tracking-wider mt-1">Specialised Agents</div>
                 </div>
               </div>
