@@ -37,7 +37,7 @@ Features include smooth animations, responsive design, and SEO optimization - al
     featured: true,
     liveUrl: 'https://jonnyai.co.uk',
     githubUrl: 'https://github.com/jonnyallum/jonnyai.website',
-    agents: ['jonny-ai', 'pixel', 'echo', 'goldie', 'deploy'],
+    agents: ['sebastian', 'priya', 'elena', 'grace', 'owen'],
   },
   {
     id: 'dj-waste',
@@ -59,7 +59,7 @@ Built to convert visitors into customers with clear calls-to-action and easy quo
     buildTime: '1 week',
     featured: true,
     liveUrl: 'https://dj-waste.co.uk',
-    agents: ['pixel', 'echo', 'goldie', 'deploy'],
+    agents: ['priya', 'elena', 'grace', 'owen'],
   },
   {
     id: 'cd-waste',
@@ -81,7 +81,7 @@ Built with the same reliable tech stack as our other industrial clients, ensurin
     buildTime: '1 week',
     featured: true,
     liveUrl: 'https://cd-waste.co.uk',
-    agents: ['pixel', 'echo', 'deploy'],
+    agents: ['priya', 'elena', 'owen'],
   },
   {
     id: 'kwizz',
@@ -103,7 +103,7 @@ Built for reliability with WebSocket-based real-time communication for responsiv
     buildTime: '2 weeks',
     featured: true,
     liveUrl: 'https://kwizz.co.uk',
-    agents: ['jonny-ai', 'pixel', 'datastore', 'deploy'],
+    agents: ['sebastian', 'priya', 'diana', 'owen'],
   },
   {
     id: 'insydetradar',
@@ -126,7 +126,7 @@ Features include statistical signal analysis, position management tools, and ris
     featured: true,
     liveUrl: 'https://insydetradar.com',
     githubUrl: 'https://github.com/jonnyallum/Insydetradar',
-    agents: ['jonny-ai', 'datastore', 'sentinel', 'metric'],
+    agents: ['sebastian', 'diana', 'sam', 'maya'],
   },
   {
     id: 'poundtrades',
@@ -149,7 +149,7 @@ Built mobile-first for tradespeople who need to list and buy materials on the go
     featured: true,
     liveUrl: 'https://poundtrades.co.uk',
     githubUrl: 'https://github.com/jonnyallum/poundtrades.co.uk',
-    agents: ['jonny-ai', 'pixel', 'forge', 'deploy'],
+    agents: ['sebastian', 'priya', 'felix', 'owen'],
   },
   {
     id: 'dudley-motors',
@@ -171,7 +171,7 @@ Built with local SEO in mind to help the business reach customers in their servi
     buildTime: '1 week',
     featured: true,
     liveUrl: 'https://dudleymotors.co.uk',
-    agents: ['pixel', 'echo', 'goldie', 'deploy'],
+    agents: ['priya', 'elena', 'grace', 'owen'],
   },
   {
     id: 'little-jonnys',
@@ -194,7 +194,7 @@ Built as a demonstration of rapid e-commerce deployment capabilities.`,
     featured: true,
     liveUrl: 'https://littlejonnys.co.uk',
     githubUrl: 'https://github.com/jonnyallum/manus-test-repo',
-    agents: ['jonny-ai', 'pixel', 'deploy'],
+    agents: ['sebastian', 'priya', 'owen'],
   },
   {
     id: 'village-bakery',
@@ -216,7 +216,7 @@ Built with performance and local SEO in mind to help the bakery reach customers 
     buildTime: '1 week',
     featured: true,
     liveUrl: 'https://villagebakeryandcafe.co.uk',
-    agents: ['pixel', 'goldie', 'echo', 'deploy'],
+    agents: ['priya', 'grace', 'elena', 'owen'],
   },
   {
     id: 'bl-motorcycles',
@@ -238,7 +238,7 @@ Built with a focus on the motorcycle community and local search visibility.`,
     buildTime: '1 week',
     featured: true,
     liveUrl: 'https://blmotorcycles.co.uk',
-    agents: ['pixel', 'echo', 'goldie', 'deploy'],
+    agents: ['priya', 'elena', 'grace', 'owen'],
   },
 ];
 

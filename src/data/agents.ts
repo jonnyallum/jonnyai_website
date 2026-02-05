@@ -50,7 +50,6 @@ export const agents: Agent[] = [
     personality: ['Punctual', 'Methodical', 'Time-aware'],
     tier: 'orchestration',
     featured: false,
-    avatar: '/agents/theo.png',
     color: '#6366f1',
   },
   {
@@ -69,7 +68,6 @@ export const agents: Agent[] = [
     personality: ['Efficient', 'Fair', 'Resourceful'],
     tier: 'orchestration',
     featured: false,
-    avatar: '/agents/quinn.png',
     color: '#4f46e5',
   },
   {
@@ -242,7 +240,6 @@ export const agents: Agent[] = [
     personality: ['Tenacious', 'Analytical', 'Patient'],
     tier: 'development',
     featured: false,
-    avatar: '/agents/daniel.png',
     color: '#475569',
   },
   {
@@ -280,7 +277,6 @@ export const agents: Agent[] = [
     personality: ['Technical', 'Hands-on', 'Creative'],
     tier: 'development',
     featured: false,
-    avatar: '/agents/adrian.png',
     color: '#10b981',
   },
   {
@@ -318,7 +314,6 @@ export const agents: Agent[] = [
     personality: ['Strategic', 'Recursive', 'Scalability-focused'],
     tier: 'development',
     featured: false,
-    avatar: '/agents/genesis.png',
     color: '#d946ef',
   },
 
@@ -453,7 +448,6 @@ export const agents: Agent[] = [
     personality: ['Methodical', 'Behavioral-focused', 'Systematic'],
     tier: 'business',
     featured: false,
-    avatar: '/agents/blaise.png',
     color: '#f43f5e',
   },
   {
@@ -472,7 +466,6 @@ export const agents: Agent[] = [
     personality: ['Gritty', 'Authentic', 'Intense'],
     tier: 'business',
     featured: true,
-    avatar: '/agents/rowan.png',
     color: '#713f12',
   },
 
@@ -569,7 +562,6 @@ export const agents: Agent[] = [
     personality: ['Careful', 'Precise', 'Risk-aware'],
     tier: 'support',
     featured: false,
-    avatar: '/agents/luna.png',
     color: '#0f172a',
   },
   {
@@ -588,7 +580,6 @@ export const agents: Agent[] = [
     personality: ['Infiltrating', 'Quiet', 'Alert'],
     tier: 'research',
     featured: false,
-    avatar: '/agents/jasper.png',
     color: '#475569',
   },
 
@@ -609,7 +600,6 @@ export const agents: Agent[] = [
     personality: ['Calculated', 'Statistical', 'Sharp'],
     tier: 'research',
     featured: false,
-    avatar: '/agents/sterling.png',
     color: '#10b981',
   },
   {
@@ -628,7 +618,6 @@ export const agents: Agent[] = [
     personality: ['Tactical', 'Data-focused', 'Obsessive'],
     tier: 'research',
     featured: false,
-    avatar: '/agents/gareth.png',
     color: '#15803d',
   },
   {
@@ -647,7 +636,6 @@ export const agents: Agent[] = [
     personality: ['Detailed', 'Traditional', 'Pattern-seeking'],
     tier: 'research',
     featured: false,
-    avatar: '/agents/harry.png',
     color: '#854d0e',
   },
   {
@@ -666,7 +654,6 @@ export const agents: Agent[] = [
     personality: ['Mechanical', 'strategic', 'Fast'],
     tier: 'research',
     featured: false,
-    avatar: '/agents/pietro.png',
     color: '#b91c1c',
   },
   {
@@ -685,7 +672,6 @@ export const agents: Agent[] = [
     personality: ['Medical', 'Precise', 'Balanced'],
     tier: 'research',
     featured: false,
-    avatar: '/agents/julian.png',
     color: '#0369a1',
   },
   {
@@ -704,7 +690,6 @@ export const agents: Agent[] = [
     personality: ['Social', 'Steady', 'Focus-driven'],
     tier: 'research',
     featured: false,
-    avatar: '/agents/terry.png',
     color: '#be123c',
   },
   {
@@ -723,7 +708,6 @@ export const agents: Agent[] = [
     personality: ['Mathematical', 'Theoretical', 'Rational'],
     tier: 'research',
     featured: false,
-    avatar: '/agents/monty.png',
     color: '#1e293b',
   },
   {
@@ -742,7 +726,6 @@ export const agents: Agent[] = [
     personality: ['Business-focused', 'Logistical', 'Sharp'],
     tier: 'business',
     featured: false,
-    avatar: '/agents/winston.png',
     color: '#4338ca',
   },
   {
@@ -761,7 +744,6 @@ export const agents: Agent[] = [
     personality: ['Risk-aware', 'Opportunistic', 'Savvy'],
     tier: 'business',
     featured: false,
-    avatar: '/agents/trotter.png',
     color: '#15803d',
   },
 ];

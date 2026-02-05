@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import type { Agent } from '@/data/agents';
 
 interface AgentCardProps {
@@ -28,10 +29,11 @@ export function AgentCard({ agent, variant = 'compact' }: AgentCardProps) {
         <div className="relative z-10">
           {!imgError && agent.avatar ? (
             <div className="w-16 h-16 rounded-full mb-4 relative overflow-hidden border-2 border-white/20 group-hover:border-citrus/50 transition-colors">
-              <img
-                src={agent.avatar}
+              <Image
+                src={agent.avatar || ''}
                 alt={agent.name}
-                className="w-full h-full object-cover"
+                fill
+                className="object-cover"
                 onError={() => setImgError(true)}
               />
             </div>
@@ -90,10 +92,11 @@ export function AgentCard({ agent, variant = 'compact' }: AgentCardProps) {
         {/* Avatar */}
         {!imgError && agent.avatar ? (
           <div className="w-24 h-24 rounded-full flex-shrink-0 relative overflow-hidden border-2 border-white/20 shadow-2xl">
-            <img
-              src={agent.avatar}
+            <Image
+              src={agent.avatar || ''}
               alt={agent.name}
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
               onError={() => setImgError(true)}
             />
           </div>
