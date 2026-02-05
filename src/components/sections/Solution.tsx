@@ -10,7 +10,7 @@ import { Button } from '@/components/ui/Button';
 const comparison = [
   { label: 'MVP Timeline', traditional: '3-6 months', jonnyai: '2-4 weeks' },
   { label: 'Build Cost', traditional: '£30-80k', jonnyai: '£5-15k' },
-  { label: 'Team Size', traditional: '5-10 people', jonnyai: '1 human + 39 agents' },
+  { label: 'Team Size', traditional: '5-10 people', jonnyai: '1 human + 40 agents' },
   { label: 'Coordination', traditional: 'Overhead Nightmare', jonnyai: 'Seamless Sync' },
   { label: 'Deliverable', traditional: 'Static Code', jonnyai: 'Living System' },
 ];
@@ -65,7 +65,7 @@ export function Solution() {
               },
               {
                 num: '02',
-                title: '39 Specialized Agents Execute',
+                title: '40 Specialized Agents Execute',
                 desc: 'Development, design, QA, security, SEO, analytics, automation—each specific domain handled by a dedicated expert AI.',
               },
               {
@@ -172,7 +172,7 @@ export function Solution() {
           className="mt-20 text-center"
         >
           <Button href="/orchestra" size="lg" className="btn-glow text-white text-lg px-10 py-5">
-            Explore All 39 Agents
+            Explore All 40 Agents
             <ArrowRight className="w-5 h-5 ml-2" />
           </Button>
         </motion.div>

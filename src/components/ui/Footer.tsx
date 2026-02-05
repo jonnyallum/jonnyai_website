@@ -139,7 +139,7 @@ export function Footer() {
               <span>@JonnyAI</span>
               <span>@Pixel</span>
               <span>@Sentinel</span>
-              <span className="text-citrus/60">AgOS 3.0</span>
+              <span className="text-citrus/60">Jai.OS 4.0</span>
             </div>
           </div>
         </div>

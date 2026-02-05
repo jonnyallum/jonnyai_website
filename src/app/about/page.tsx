@@ -10,8 +10,8 @@ import { featuredAgents } from '@/data/agents';
 const timeline = [
   { year: '2024', title: 'The Spark', description: 'Jonny discovered the power of AI tools, using them to navigate a complex personal challenge. The experience revealed what was possible.' },
   { year: 'Jan 2025', title: 'The Leap', description: 'Left a decade-long career as General Manager to pursue a vision: an AI-powered agency that could outpace traditional development.' },
-  { year: '2025', title: 'The Orchestra Forms', description: 'Built the agent framework from scratch—39 specialized AI agents, each with defined human identities and elite skills.' },
-  { year: '2026', title: 'AgOS 3.0', description: 'The Antigravity Operating System reaches maturity. Multi-agent orchestration, memory banks, and client deployments go live.' },
+  { year: '2025', title: 'The Orchestra Forms', description: 'Built the agent framework from scratch—40 specialized AI agents, each with defined human identities and elite skills.' },
+  { year: '2026', title: 'Jai.OS 4.0', description: 'The Antigravity Operating System reaches maturity. Multi-AI Shared Brain, real-time orchestration, and enterprise deployments go live.' },
 ];
 
 const values = [
@@ -40,14 +40,14 @@ export default function AboutPage() {
           >
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-citrus text-[10px] font-black uppercase tracking-widest mb-6">
               <Terminal className="w-3 h-3" />
-              Manifesto // v3.0
+              Manifesto // v4.0
             </div>
             <h1 className="font-outfit font-black text-5xl sm:text-6xl lg:text-7xl text-white mb-8 tracking-tighter">
               The Architecture of <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-citrus to-orange-400">High-Velocity Intelligence</span>
             </h1>
             <p className="text-xl text-gray-400 font-light leading-relaxed max-w-3xl">
               JonnyAi isn&apos;t just an agency—it&apos;s a stateful Hive Mind. One human architect orchestrating
-              39 specialized AI agents to deliver enterprise-grade software at the speed of thought.
+              40 specialized AI agents to deliver enterprise-grade software at the speed of thought.
             </p>
           </motion.div>
         </div>

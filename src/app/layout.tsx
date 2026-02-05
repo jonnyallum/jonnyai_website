@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Banner } from "@/components/ui/Banner";
 import { Navigation } from "@/components/ui/Navigation";
 import { Footer } from "@/components/ui/Footer";
 import { Inter, Outfit } from "next/font/google";
@@ -17,9 +18,9 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "JonnyAi | AI Development Studio | Build 10x Faster",
-  description: "We deploy 39 specialized AI agents to build your product in weeks, not months. Framework licensing, done-for-you builds, and equity partnerships.",
-  keywords: ["AI development", "software development", "venture studio", "multi-agent AI", "UK", "web development", "mobile apps"],
+  title: "JonnyAi | Pioneering AI Architecture | Build 10x Faster",
+  description: "Pioneering the future of AI architecture. We deploy 40 specialized AI agents orchestrated by Jai.OS 4.0 to build your product in weeks, not months.",
+  keywords: ["AI development", "AI architecture", "software development", "venture studio", "multi-agent AI", "Jai.OS", "UK", "web development", "mobile apps"],
   authors: [{ name: "Jonny Allum", url: "https://www.jonnyai.co.uk" }],
   creator: "Jonny Allum Innovations Ltd",
   openGraph: {
@@ -27,13 +28,13 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: "https://www.jonnyai.co.uk",
     siteName: "JonnyAi",
-    title: "JonnyAi | AI Development Studio | Build 10x Faster",
-    description: "We deploy 39 specialized AI agents to build your product in weeks, not months.",
+    title: "JonnyAi | Pioneering AI Architecture | Build 10x Faster",
+    description: "Pioneering the future of AI architecture with 40 specialized AI agents.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "JonnyAi | AI Development Studio",
-    description: "Build 10x faster with our AI agent orchestra.",
+    title: "JonnyAi | Pioneering AI Architecture",
+    description: "Pioneering AI architecture with our 40-agent orchestra.",
   },
   robots: {
     index: true,
@@ -48,7 +49,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${outfit.variable} antialiased`}>
+      <body className={`${inter.variable} ${outfit.variable} antialiased font-sans`}>
+        <Banner />
         <Navigation />
         <main>{children}</main>
         <Footer />
