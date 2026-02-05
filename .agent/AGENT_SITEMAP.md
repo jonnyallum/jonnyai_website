@@ -1,125 +1,51 @@
-# Ultimate AI Development Team – Agent Ecosystem
+# 🗺️ AgOS 3.0: The Hive Mind Sitemap
 
-## Top-Level Orchestrator
+The Antigravity Agency operates as a **Stateful Hive Mind** across four integrated layers. This architecture ensures that intelligence is probabilistic, but the outcomes are deterministic.
 
-```
-┌───────────────────────────┐
-│ CONDUCTOR                 │
-│ (Team Leader / Orchestrator) │
-└───────────────┬───────────┘
-                │
-   ┌────────────┼────────────┬──────────────┐
-   │            │            │              │
-   │            │            │              │
-┌──▼───┐   ┌────▼────┐  ┌────▼────┐   ┌─────▼─────┐
-│ Forge│   │ Helpline│  │ Metric  │   │ Autoflow  │
-│(Idea→£)│ │(Support/│  │(Analytics│  │(Automation│
-│       │  │ Success) │  │ Insights)│  │ Engineer) │
-└───────┘  └─────────┘  └──────────┘  └───────────┘
-```
+---
 
-## Development Domain
+## 🏗️ The 4-Layer Stack
 
-```
-┌───────────────────────────┐
-│ DEVELOPMENT DOMAIN        │
-└───────────────┬───────────┘
-                │
-     ┌──────────┼───────────────┐
-     │                          │
-┌────▼────┐                ┌────▼───────┐
-│ Jonny AI│                │ Sentinel   │
-│ (Dev)   │                │ (QA/Test)  │
-└────┬────┘                └────┬───────┘
-     │                          │
-     │                  ┌───────▼───────┐
-     │                  │ Datastore     │
-     │                  │ (DB/Supabase) │
-     │                  └───────┬───────┘
-     │                          │
-     └──────────────────────────┴───────────────┐
-                                                │
-                                        ┌───────▼───────┐
-                                        │ Vaultguard    │
-                                        │ (Security)    │
-                                        └───────────────┘
-```
+### 1. The Talent (Layer 1)
+*The fundamental building blocks - Elite Human-Named Personas.*
+- **Personas**: 39 specialized agents ([View Team Roster](docs/TEAM.md)).
+- **Skills**: Individual `SKILL.md` files in `.agent/skills/[handle]`.
+- **Methodology**: Standard Operating Procedures in `.agent/skills/methodology/`.
 
-## SEO / Growth / Monetisation Domain
+### 2. The Boardroom (Layer 2)
+*The strategic orchestration layer.*
+- **Communication**: Real-time sync in `.agent/boardroom/chatroom.md`.
+- **Meetings**: Mission briefings and team talks governed by `.agent/boardroom/PROTOCOL.md`.
+- **Governance**: Rules of engagement in `.agent/rules/`.
 
-```
-┌───────────────────────────┐
-│ SEO / GROWTH DOMAIN       │
-└───────────────┬───────────┘
-                │
-      ┌─────────┼───────────────┐
-      │                         │
-┌─────▼─────┐             ┌─────▼─────┐
-│ Goldie    │             │ Clippers  │
-│ (SEO/     │             │ (Video /  │
-│ Content)  │             │ Viral)    │
-└───────────┘             └───────────┘
+### 3. The Engine (Execution) (Layer 3)
+*The deterministic core.*
+- **Tools**: Python and Node.js scripts in `execution/`.
+- **Validation**: Strict quality gates (**@Sam**, **@Priya**, **@Vigil**).
+- **Indexing**: Single source of truth in `execution/asset_indexer.py`.
+
+### 4. The Memory (Layer 4)
+*The persistence and learning loop.*
+- **History**: Task outcomes logged in `.agent/memory/task-history.json`.
+- **Health**: Performance tracking in `.agent/memory/agent-health.json`.
+- **Feedback**: Self-annealing logic via `.agent/memory/FEEDBACK_PROTOCOL.md`.
+
+---
+
+## 🎼 Orchestration Flow
+
+```mermaid
+graph TD
+    User((USER)) --> Marcus[Marcus: Orchestration]
+    Marcus --> Talent[TALENT: Personnel]
+    Talent --> Boardroom[BOARDROOM: Collaboration]
+    Boardroom --> Engine[ENGINE: Execution]
+    Engine --> Outcome{Outcome}
+    Outcome -- Failure --> Memory[MEMORY: Learning]
+    Memory -- Annealing --> Talent
+    Outcome -- Success --> User
 ```
 
-## Design / Experience / Words Domain
+---
 
-```
-┌───────────────────────────┐
-│ DESIGN & EXPERIENCE DOMAIN│
-└───────────────┬───────────┘
-                │
-      ┌─────────┼───────────────┐
-      │                         │
-┌─────▼─────┐             ┌─────▼─────┐
-│ Pixel     │             │ Echo      │
-│ (UI/UX)   │             │ (Content/ │
-│           │             │ UX Copy)  │
-└───────────┘             └───────────┘
-```
-
-## Knowledge, Infra & Automation Domain
-
-```
-┌───────────────────────────┐
-│ INFRA / KNOWLEDGE DOMAIN  │
-└───────────────┬───────────┘
-                │
-      ┌─────────┼───────────────┐
-      │                         │
-┌─────▼─────┐             ┌─────▼─────┐
-│ DevOps    │             │ Archivist │
-│ (Infra/   │             │ (Docs/    │
-│ CI/CD)    │             │ Knowledge)│
-└───────────┘             └───────────┘
-```
-
-## High-Level View (Compact)
-
-- **CONDUCTOR** (Orchestrator)
-  - Forge (Idea → Monetisation Strategist)
-  - Helpline (Support & Success)
-  - Metric (Analytics & Product Insights)
-  - Autoflow (Automation & Workflows)
-  - **DEVELOPMENT**
-    - Jonny AI (Dev)
-    - Sentinel (QA/Test)
-    - Datastore (DB/Supabase)
-    - Vaultguard (Security)
-    - DevOps (Infra/CI/CD)
-  - **SEO / GROWTH**
-    - Goldie (SEO/Organic)
-    - Clippers (Video/Viral)
-  - **DESIGN / EXPERIENCE**
-    - Pixel (UI/UX)
-    - Echo (Content & UX Copy)
-  - **KNOWLEDGE**
-    - Archivist (Docs/Knowledge)
-  - **MCP / AUGMENTATION**
-    - Manus (MCP Bridgemaster)
-
-## Cross-Cutting Agents
-- **Metric** (Analytics & Product Insights) – under Conductor, cross-cuts all domains.
-- **Autoflow** (Automation Engineer) – under Conductor, works with all domains.
-- **Datastore** (Database / Supabase) – under Development, linked to Vaultguard & Metric.
-- **Vaultguard** (Security) – under Development/Infra, cross-cuts everything.
-- **Manus** (MCP Bridge) – under Conductor, augments all agents with external tools.
+*Last Updated: 2026-02-05 | AgOS 3.0 - Architecture Sitemap*
