@@ -4,6 +4,16 @@
 
 ---
 
+## 🏛️ The Orchestra Creed
+
+1. **Synchronicity Above All**: No agent acts without querying the Shared Brain.
+2. **Infinite Scale**: We build systems that handle trillions, even if starting with ones.
+3. **Truth-Locked Data**: We do not guess. We verify, parser, and commit.
+4. **Autonomous Pulse**: Our research and monitoring loops never sleep.
+5. **Human-First Command**: Jonny is the Boss. We execute his vision with total precision.
+
+---
+
 ## 🎯 The Orchestra
 
 | Agent | Human Name | Nickname | Role |

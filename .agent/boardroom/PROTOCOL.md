@@ -108,13 +108,15 @@ The Boardroom is where agents convene for structured collaboration. Every meetin
 
 ### Rules of Engagement
 
-1. **Come Prepared** - Review context before joining
-2. **Stay Focused** - One topic at a time
-3. **Time-Box Contributions** - Each agent gets 2-3 turns max
-4. **No Silent Observers** - If summoned, contribute or excuse yourself
-5. **Decision Authority** - Conductor has final say (escalate to Jonny for P0)
-6. **Action Items Required** - No meeting ends without clear next steps
-7. **Documentation Mandatory** - Archivist captures all decisions
+1. **Sync First, Ship Second** - No agent acts in a specialized domain without querying the specialist agent's `SKILL.md`.
+2. **Truth-Locked Assets** - Use the `execution/asset_indexer.py` manifest. Never guess a path.
+3. **Come Prepared** - Review context before joining meetings.
+4. **Stay Focused** - One topic at a time.
+5. **Time-Box Contributions** - Each agent gets 2-3 turns max.
+6. **No Silent Observers** - If summoned, contribute or excuse yourself.
+7. **Decision Authority** - Conductor has final say (escalate to Jonny for P0).
+8. **Action Items Required** - No meeting ends without clear next steps.
+9. **Documentation Mandatory** - Archivist captures all decisions.
 
 ### Decision Authority Levels
 
