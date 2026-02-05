@@ -285,14 +285,24 @@ function About() {
             transition={{ duration: 0.8 }}
             className="relative"
           >
-            <div className="aspect-[4/5] bg-gradient-to-br from-coffee-light/30 to-cloud/30 rounded-[2rem] overflow-hidden relative">
-              {/* Libby's photo - replace src with actual photo */}
-              <Image
-                src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?q=80&w=800&auto=format&fit=crop"
-                alt="Libby - Registered Nurse & Aesthetician"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 50vw"
+            <div className="aspect-[4/5] bg-gradient-to-br from-coffee-light/30 to-cloud/30 rounded-[2rem] overflow-hidden relative flex items-center justify-center p-12 text-center group">
+              {/* Real assets pending - removing fake placeholder (@Priya) */}
+              <div className="relative z-10">
+                <div className="w-24 h-24 bg-coffee/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Instagram className="w-10 h-10 text-coffee opacity-40 group-hover:scale-110 transition-transform" />
+                </div>
+                <p className="font-serif text-2xl text-coffee/60">Libby</p>
+                <p className="text-xs text-coffee/40 uppercase tracking-[0.2em] mt-2">Verified Professional<br />Assets Loading...</p>
+              </div>
+
+              {/* Decorative background motion */}
+              <motion.div
+                animate={{
+                  scale: [1, 1.2, 1],
+                  opacity: [0.1, 0.2, 0.1]
+                }}
+                transition={{ duration: 8, repeat: Infinity }}
+                className="absolute inset-0 bg-coffee/5"
               />
 
               {/* Overlay gradient */}
@@ -337,17 +347,13 @@ function About() {
 
             <div className="space-y-6 text-charcoal-light leading-relaxed">
               <p>
-                Hello, I'm Libby – a Registered Nurse and qualified Aesthetician with a deep
-                passion for helping people feel confident in their own skin.
+                Hello, I&apos;m Libby – the owner of LA Aesthetics. I&apos;m a Nurse-Led aesthetics clinic owner in Havant, specialising in a range of injectable treatments.
               </p>
               <p>
-                With over <strong className="text-charcoal">10 years in the beauty industry</strong> and
-                clinical nursing training, I bring a unique blend of artistic vision and medical
-                precision to every treatment.
+                My aim is to make every woman feel their absolute best, by enhancing their natural beauty through precision &quot;tweakments&quot;.
               </p>
               <p>
-                My philosophy is simple: enhance your natural beauty, never mask it. I believe
-                in subtle, refined results that leave you looking refreshed – not &quot;done&quot;.
+                You can relax knowing you&apos;re in the safe and well trained hands of a perfectionist. My philosophy is simple: enhance your natural beauty, never mask it. I believe in subtle, refined results that leave you looking refreshed.
               </p>
             </div>
 
@@ -578,6 +584,67 @@ function Testimonials() {
   );
 }
 
+function Socials() {
+  return (
+    <section id="socials" className="py-32 bg-taupe-light">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center mb-16">
+          <span className="section-subtitle">Follow the Results</span>
+          <h2 className="section-title">
+            Latest from <span className="text-coffee italic">Instagram</span>
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+          {/* Reel Embed 1 */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="aspect-[9/16] bg-white rounded-3xl overflow-hidden shadow-2xl border border-coffee/10"
+          >
+            <iframe
+              src="https://www.instagram.com/reel/DTTKAF9DIg4/embed"
+              className="w-full h-full"
+              frameBorder="0"
+              scrolling="no"
+              allowTransparency={true}
+            ></iframe>
+          </motion.div>
+
+          {/* Reel Embed 2 */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="aspect-[9/16] bg-white rounded-3xl overflow-hidden shadow-2xl border border-coffee/10"
+          >
+            <iframe
+              src="https://www.instagram.com/reel/DTJZ58hDJzb/embed"
+              className="w-full h-full"
+              frameBorder="0"
+              scrolling="no"
+              allowTransparency={true}
+            ></iframe>
+          </motion.div>
+        </div>
+
+        <div className="text-center mt-12">
+          <a
+            href="https://instagram.com/la.aesthetics_rn"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-charcoal-light font-sans text-sm tracking-widest uppercase hover:text-coffee transition-colors"
+          >
+            View More on Instagram @la.aesthetics_rn
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Contact() {
   return (
     <section id="contact" className="py-32 bg-cream">
@@ -748,6 +815,7 @@ export default function Home() {
       <Services />
       <Process />
       <Testimonials />
+      <Socials />
       <Contact />
       <Footer />
     </main>
