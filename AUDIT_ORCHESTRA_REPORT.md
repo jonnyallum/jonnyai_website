@@ -100,13 +100,23 @@ Component-Level Tasks for @Priya:
 
 ---
 
-## 5) Audit Verdict
+## 5) Remediation Actions Taken (2026-02-07)
 
-System is operational, but **not yet fully deterministic nor fully reconciled** at orchestra governance level.
+| # | Action | Status | Commit |
+|:--|:-------|:-------|:-------|
+| 1 | **Quarantined `log_predictions.py`** — replaced randomized Gaffer_v3.0/Handicapper_v3.0 generator with a hard-stop stub that redirects to `predict_next.py` | ✅ DONE | `6fc66df` |
+| 2 | **Created `directives/truth_lock_protocol.md`** — formal 3-gate verification protocol (Source, Content, Technical) with enforcement table and incident history | ✅ DONE | `6fc66df` |
+| 3 | **Upgraded `directives/betting_algorithm_standards.md`** — added deterministic Goals-Per-90 and Class-Weighted horse racing formulas, banned `random.*` in production, added versioning rules | ✅ DONE | `f9d7a9d` |
+| 4 | **Created `Ecosystems/Betting/docs/OPUS_TAGGING_CLEANUP.sql`** — archive-first cleanup workflow for legacy randomized DB rows | ✅ DONE | `f9d7a9d` |
 
-### Priority Fix Order
-1. Roster/skills/brain parity reconciliation (P0)
-2. Retire or quarantine randomized betting scripts from production path (P0)
-3. Apply SQL cleanup flow for legacy betting rows (P1)
-4. Tokenize UI depth/glow system for consistent God-tier polish (P1)
-5. Add explicit Truth-Lock directive artifact (P1)
+---
+
+## 6) Audit Verdict
+
+System is operational. **Critical P0 items have been remediated.** The randomized betting pipeline is now quarantined, Truth-Lock has a formal directive, and the Opus deterministic standard is codified with explicit formulas.
+
+### Remaining Items (Not Yet Actioned)
+1. **Roster/skills/brain parity reconciliation** (P0) — requires @Quinn or @Marcus to canonicalize the 39-vs-40 agent count and sync Brain DB registry
+2. **Execute SQL cleanup** for legacy betting rows (P1) — SQL script ready at `Ecosystems/Betting/docs/OPUS_TAGGING_CLEANUP.sql`, awaiting Jonny's approval to run against production
+3. **Tokenize UI depth/glow system** (P1) — component-level tasks assigned to @Priya in sections above
+4. **Vendor-localize Kwizz noise texture** (P2) — external CDN dependency flagged for @Priya
