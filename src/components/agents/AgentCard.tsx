@@ -27,10 +27,10 @@ export function AgentCard({ agent, variant = 'compact' }: AgentCardProps) {
 
         {/* Avatar */}
         <div className="relative z-10">
-          {!imgError && agent.avatar ? (
+          {!imgError ? (
             <div className="w-16 h-16 rounded-full mb-4 relative overflow-hidden border-2 border-white/20 group-hover:border-citrus/50 transition-colors">
               <Image
-                src={agent.avatar || ''}
+                src={agent.avatar || `/agents/${agent.id}.png`}
                 alt={agent.name}
                 fill
                 className="object-cover"
@@ -90,10 +90,10 @@ export function AgentCard({ agent, variant = 'compact' }: AgentCardProps) {
     >
       <div className="flex flex-col sm:flex-row items-start gap-6">
         {/* Avatar */}
-        {!imgError && agent.avatar ? (
+        {!imgError ? (
           <div className="w-24 h-24 rounded-full flex-shrink-0 relative overflow-hidden border-2 border-white/20 shadow-2xl">
             <Image
-              src={agent.avatar || ''}
+              src={agent.avatar || `/agents/${agent.id}.png`}
               alt={agent.name}
               fill
               className="object-cover"

@@ -96,7 +96,7 @@ export function ServiceCards() {
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 relative z-10">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
@@ -105,26 +105,42 @@ export function ServiceCards() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ y: -8 }}
+              onMouseMove={(e) => {
+                const rect = e.currentTarget.getBoundingClientRect();
+                e.currentTarget.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
+                e.currentTarget.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
+              }}
               className={`
-                relative bg-[#0a0a0c] rounded-[2.5rem] p-10 
-                border-2 transition-all duration-500 group overflow-hidden
-                ${service.highlighted ? 'border-citrus/40 bg-citrus/[0.03] shadow-[0_20px_60px_-15px_rgba(217,119,87,0.15)]' : 'border-white/10 hover:border-white/20 shadow-2xl'}
+                group relative overflow-hidden rounded-[2.5rem] p-10 
+                border transition-all duration-500 glass-card
+                ${service.highlighted
+                  ? 'border-citrus/40 bg-citrus/[0.03] shadow-[0_20px_60px_-15px_rgba(217,119,87,0.15)]'
+                  : 'border-white/10 hover:border-white/20'
+                }
               `}
             >
+              {/* Spotlight Effect */}
+              <div
+                className="pointer-events-none absolute -inset-px opacity-0 transition duration-300 group-hover:opacity-100"
+                style={{
+                  background: `radial-gradient(600px circle at var(--mouse-x, 0) var(--mouse-y, 0), rgba(255,255,255,0.06), transparent 40%)`,
+                }}
+              />
+
               {service.highlighted && (
-                <div className="absolute -top-1 px-8 py-2 bg-citrus text-white text-[10px] font-black uppercase tracking-widest rounded-b-xl left-10">
+                <div className="absolute -top-1 px-8 py-2 bg-citrus text-white text-[10px] font-black uppercase tracking-widest rounded-b-xl left-10 shadow-[0_5px_15px_rgba(217,119,87,0.4)] z-20">
                   Most Popular
                 </div>
               )}
 
               {/* Icon */}
-              <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-10 shadow-lg group-hover:rotate-12 transition-transform duration-500`}>
+              <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-10 shadow-lg group-hover:rotate-12 group-hover:scale-110 transition-all duration-500 relative z-10 ring-4 ring-white/5`}>
                 <service.icon className="w-8 h-8 text-white" />
               </div>
 
               {/* Title & Sub */}
-              <div className="mb-8">
-                <h3 className="font-outfit font-black text-2xl text-white mb-2 uppercase tracking-tight">
+              <div className="mb-8 relative z-10">
+                <h3 className="font-outfit font-black text-2xl text-white mb-2 uppercase tracking-tight group-hover:text-citrus transition-colors">
                   {service.title}
                 </h3>
                 <p className="text-gray-500 text-sm leading-relaxed font-light">
@@ -133,16 +149,16 @@ export function ServiceCards() {
               </div>
 
               {/* Price */}
-              <div className="mb-10 flex items-baseline gap-1">
-                <span className="font-outfit font-black text-4xl text-white">{service.price}</span>
+              <div className="mb-10 flex items-baseline gap-1 relative z-10">
+                <span className="font-outfit font-black text-4xl text-white tracking-tight">{service.price}</span>
                 <span className="text-gray-600 text-sm">/ start</span>
               </div>
 
               {/* Features */}
-              <ul className="space-y-4 mb-12">
+              <ul className="space-y-4 mb-12 relative z-10">
                 {service.features.map((feature, i) => (
-                  <li key={i} className="flex items-start gap-4 text-sm text-gray-400">
-                    <div className="mt-1 w-5 h-5 rounded-full bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 group-hover:border-citrus/30">
+                  <li key={i} className="flex items-start gap-4 text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
+                    <div className="mt-1 w-5 h-5 rounded-full bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 group-hover:border-citrus/50 group-hover:bg-citrus/10 transition-all">
                       <Check className="w-3 h-3 text-citrus" />
                     </div>
                     {feature}
@@ -151,16 +167,21 @@ export function ServiceCards() {
               </ul>
 
               {/* CTA */}
-              <Button
-                href={service.href}
-                className={`
-                  w-full py-6 rounded-2xl font-black uppercase tracking-widest text-xs transition-all duration-300
-                  ${service.highlighted ? 'bg-citrus text-white hover:bg-white hover:text-citrus shadow-lg shadow-citrus/20' : 'bg-white/5 text-white border-white/10 hover:bg-white hover:text-black'}
-                `}
-              >
-                {service.cta}
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
+              <div className="relative z-10">
+                <Button
+                  href={service.href}
+                  className={`
+                    w-full py-6 rounded-2xl font-black uppercase tracking-widest text-xs transition-all duration-300
+                    ${service.highlighted
+                      ? 'btn-citrus'
+                      : 'btn-glow'
+                    }
+                  `}
+                >
+                  {service.cta}
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </div>
             </motion.div>
           ))}
         </div>

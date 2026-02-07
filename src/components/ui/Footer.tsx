@@ -22,47 +22,47 @@ export function Footer() {
   return (
     <footer className="bg-obsidian border-t border-white/5 relative overflow-hidden">
       {/* Subtle floor glow */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[300px] bg-citrus/5 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[80%] h-[300px] bg-citrus/5 blur-[150px] rounded-full pointer-events-none mix-blend-screen" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 lg:gap-16">
           {/* Brand */}
-          <div className="md:col-span-1">
-            <Link href="/" className="font-outfit font-black text-2xl text-white tracking-tighter">
+          <div className="md:col-span-1 space-y-8">
+            <Link href="/" className="font-outfit font-black text-2xl text-white tracking-tighter block">
               Jonny<span className="text-citrus">Ai</span>
             </Link>
-            <p className="mt-6 text-gray-500 text-sm leading-relaxed font-light">
+            <p className="text-gray-500 text-sm leading-relaxed font-light text-balance">
               UK-based AI studio. We build enterprise-grade prototypes and products at the speed of thought using a multi-agent orchestrated framework.
             </p>
-            <div className="mt-8 flex gap-6">
+            <div className="flex gap-4">
               <a
                 href={siteConfig.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-citrus hover:border-citrus/50 transition-all"
+                className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/10 hover:border-white/20 transition-all duration-300 group"
               >
-                <Linkedin className="w-4 h-4" />
+                <Linkedin className="w-4 h-4 group-hover:scale-110 transition-transform" />
               </a>
               <a
                 href={siteConfig.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:border-white/30 transition-all"
+                className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/10 hover:border-white/20 transition-all duration-300 group"
               >
-                <Github className="w-4 h-4" />
+                <Github className="w-4 h-4 group-hover:scale-110 transition-transform" />
               </a>
               <a
                 href={`mailto:${siteConfig.email}`}
-                className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-citrus hover:border-citrus/50 transition-all"
+                className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-citrus hover:bg-citrus/5 hover:border-citrus/20 transition-all duration-300 group"
               >
-                <Mail className="w-4 h-4" />
+                <Mail className="w-4 h-4 group-hover:scale-110 transition-transform" />
               </a>
             </div>
           </div>
 
           {/* Services */}
           <div>
-            <h4 className="font-outfit font-black text-xs uppercase tracking-[0.2em] text-white mb-8">
+            <h4 className="font-outfit font-black text-xs uppercase tracking-[0.2em] text-white/40 mb-8 border-b border-white/5 pb-4 inline-block">
               Services
             </h4>
             <ul className="space-y-4">
@@ -70,10 +70,10 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-500 hover:text-white transition-colors text-sm flex items-center group"
+                    className="text-gray-400 hover:text-citrus transition-colors text-sm flex items-center group font-medium"
                   >
                     {link.label}
-                    <ArrowUpRight className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <ArrowUpRight className="w-3 h-3 ml-1 opacity-0 -translate-x-2 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300" />
                   </Link>
                 </li>
               ))}
@@ -82,7 +82,7 @@ export function Footer() {
 
           {/* Company */}
           <div>
-            <h4 className="font-outfit font-black text-xs uppercase tracking-[0.2em] text-white mb-8">
+            <h4 className="font-outfit font-black text-xs uppercase tracking-[0.2em] text-white/40 mb-8 border-b border-white/5 pb-4 inline-block">
               Explore
             </h4>
             <ul className="space-y-4">
@@ -90,7 +90,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-500 hover:text-white transition-colors text-sm"
+                    className="text-gray-400 hover:text-white transition-colors text-sm font-medium"
                   >
                     {link.label}
                   </Link>
@@ -101,16 +101,16 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-outfit font-black text-xs uppercase tracking-[0.2em] text-white mb-8">
+            <h4 className="font-outfit font-black text-xs uppercase tracking-[0.2em] text-white/40 mb-8 border-b border-white/5 pb-4 inline-block">
               HQ Location
             </h4>
-            <ul className="space-y-4 text-sm text-gray-500">
-              <li>
-                <div className="mb-1 text-white font-medium">Digital First Studio</div>
-                <div>{siteConfig.location}</div>
+            <ul className="space-y-6 text-sm text-gray-500">
+              <li className="flex flex-col gap-1">
+                <div className="text-white font-bold font-outfit">Digital First Studio</div>
+                <div className="font-light">{siteConfig.location}</div>
               </li>
               <li>
-                <a href={`mailto:${siteConfig.email}`} className="text-citrus hover:text-white transition-colors font-mono">
+                <a href={`mailto:${siteConfig.email}`} className="text-citrus hover:text-white transition-colors font-mono text-xs bg-citrus/5 border border-citrus/10 px-3 py-2 rounded-lg inline-block">
                   {siteConfig.email}
                 </a>
               </li>
@@ -120,11 +120,16 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-24 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-gray-600 text-xs font-mono">
-            // &copy; {new Date().getFullYear()} Jonny Allum Innovations Ltd.
-          // UK REGISTERED STUDIO
-          </p>
-          <div className="flex gap-8 text-[10px] font-black uppercase tracking-widest text-gray-700">
+          <div className="flex flex-col gap-1">
+            <p className="text-gray-600 text-[10px] font-mono tracking-wide">
+              // &copy; {new Date().getFullYear()} Jonny Allum Innovations Ltd.
+            </p>
+            <p className="text-gray-700 text-[10px] font-mono tracking-wide">
+              // UK REGISTERED STUDIO No. 15488582
+            </p>
+          </div>
+
+          <div className="flex gap-8 text-[10px] font-black uppercase tracking-widest text-gray-600">
             <Link href="/privacy" className="hover:text-white transition-colors">
               Privacy
             </Link>
@@ -132,14 +137,14 @@ export function Footer() {
               Terms
             </Link>
           </div>
+
           <div className="flex flex-col items-end text-right">
-            <span className="text-citrus/40 text-[10px] font-black uppercase tracking-widest mb-1">Neural Build Registry</span>
-            <div className="flex gap-3 text-[9px] font-bold text-gray-500 uppercase tracking-tighter">
-              <span>@Conductor</span>
-              <span>@JonnyAI</span>
-              <span>@Pixel</span>
-              <span>@Sentinel</span>
-              <span className="text-citrus/60">Jai.OS 4.0</span>
+            <span className="text-citrus/60 text-[9px] font-black uppercase tracking-[0.2em] mb-2 font-outfit">
+              Neural Build Registry
+            </span>
+            <div className="flex items-center gap-3 text-[10px] font-bold text-gray-500 uppercase tracking-tighter bg-white/5 px-4 py-2 rounded-full border border-white/5">
+              <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
+              <span>AgOS 4.0 Active</span>
             </div>
           </div>
         </div>

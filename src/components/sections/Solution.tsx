@@ -26,36 +26,36 @@ export function Solution() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-24">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="font-outfit font-black text-4xl sm:text-5xl text-white mb-6"
+            className="font-outfit font-black text-4xl sm:text-5xl lg:text-6xl text-white mb-8 tracking-tight"
           >
-            The Antigravity <span className="text-transparent bg-clip-text bg-gradient-to-r from-citrus to-orange-400">Agent Orchestra</span>
+            The Antigravity <span className="text-transparent bg-clip-text bg-gradient-to-r from-citrus via-citrus-glow to-orange-400">Agent Orchestra</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-gray-400 text-lg max-w-3xl mx-auto leading-relaxed"
+            className="text-gray-400 text-xl max-w-3xl mx-auto leading-relaxed font-light text-balance"
           >
             We&apos;ve spent two years building a proprietary multi-agent AI system that functions like a complete development department—without the overhead, delays, or coordination failures.
           </motion.p>
         </div>
 
         {/* How it works */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-32 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 mb-32 items-center">
           {/* Left: Steps */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="space-y-8"
+            className="space-y-10"
           >
-            <h3 className="font-outfit font-bold text-3xl text-white mb-8">How It Works</h3>
+            <h3 className="font-outfit font-bold text-3xl text-white mb-10 border-l-4 border-citrus pl-6">How It Works</h3>
 
             {[
               {
@@ -87,12 +87,12 @@ export function Solution() {
                 transition={{ delay: i * 0.1 }}
                 className="flex gap-6 group"
               >
-                <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-citrus/20 group-hover:border-citrus/50 transition-all duration-300">
-                  <span className="font-outfit font-bold text-lg text-citrus">{step.num}</span>
+                <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-citrus/10 group-hover:border-citrus/50 transition-all duration-300 shadow-lg">
+                  <span className="font-outfit font-black text-xl text-gray-500 group-hover:text-citrus transition-colors">{step.num}</span>
                 </div>
                 <div>
                   <h4 className="font-outfit font-bold text-xl text-white mb-2 group-hover:text-citrus transition-colors">{step.title}</h4>
-                  <p className="text-gray-400 text-sm leading-relaxed">{step.desc}</p>
+                  <p className="text-gray-400 text-sm leading-relaxed max-w-md">{step.desc}</p>
                 </div>
               </motion.div>
             ))}
@@ -103,31 +103,31 @@ export function Solution() {
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="glass-card transform hover:scale-[1.02] transition-transform duration-500"
+            className="glass-card transform hover:scale-[1.02] transition-transform duration-500 shadow-2xl"
           >
             <h3 className="font-outfit font-bold text-2xl text-white mb-8 flex items-center gap-3">
               The Unfair Advantage
-              <span className="px-3 py-1 bg-citrus/20 text-citrus text-xs rounded-full border border-citrus/30">10x ROI</span>
+              <span className="px-3 py-1 bg-citrus/20 text-citrus text-xs font-black uppercase tracking-widest rounded-full border border-citrus/30 animate-pulse-slow">10x ROI</span>
             </h3>
 
-            <div className="overflow-hidden rounded-xl border border-white/10">
+            <div className="overflow-hidden rounded-xl border border-white/10 shadow-inner bg-black/20">
               <table className="w-full">
                 <thead>
-                  <tr className="bg-white/5">
-                    <th className="px-6 py-4 text-left text-sm font-medium text-gray-400">Comparison</th>
-                    <th className="px-6 py-4 text-center text-sm font-medium text-gray-500">Traditional Agency</th>
-                    <th className="px-6 py-4 text-center text-sm font-bold text-citrus bg-citrus/5 border-b border-citrus/20">JonnyAi</th>
+                  <tr className="bg-white/5 border-b border-white/10">
+                    <th className="px-6 py-5 text-left text-sm font-medium text-gray-400 uppercase tracking-wider">Comparison</th>
+                    <th className="px-6 py-5 text-center text-sm font-medium text-gray-500 uppercase tracking-wider">Traditional Agency</th>
+                    <th className="px-6 py-5 text-center text-sm font-bold text-citrus bg-citrus/5 border-b-2 border-citrus uppercase tracking-wider shadow-[inset_0_-2px_4px_rgba(217,119,87,0.1)]">JonnyAi</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-white/5">
                   {comparison.map((row, i) => (
                     <tr key={row.label} className={i % 2 === 0 ? 'bg-transparent' : 'bg-white/[0.02]'}>
-                      <td className="px-6 py-4 text-sm font-medium text-white">{row.label}</td>
-                      <td className="px-6 py-4 text-center text-sm text-gray-500 line-through decoration-red-500/50">{row.traditional}</td>
-                      <td className="px-6 py-4 text-center text-sm font-bold text-white bg-citrus/5 border-l border-citrus/10 relative">
+                      <td className="px-6 py-5 text-sm font-medium text-white">{row.label}</td>
+                      <td className="px-6 py-5 text-center text-sm text-gray-500 line-through decoration-red-500/30 decoration-2">{row.traditional}</td>
+                      <td className="px-6 py-5 text-center text-sm font-bold text-white bg-citrus/[0.02] border-l border-citrus/10 relative">
                         {/* Highlight marker */}
                         {row.jonnyai}
-                        <CheckCircle2 className="w-4 h-4 text-citrus absolute right-2 top-1/2 -translate-y-1/2 opacity-50" />
+                        <CheckCircle2 className="w-4 h-4 text-citrus absolute right-3 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity" />
                       </td>
                     </tr>
                   ))}
@@ -136,7 +136,7 @@ export function Solution() {
             </div>
 
             <div className="mt-8 text-center">
-              <p className="text-sm text-gray-500 italic">
+              <p className="text-sm text-gray-500 italic font-medium">
                 "We stopped hiring junior devs. We just spin up more agents."
               </p>
             </div>

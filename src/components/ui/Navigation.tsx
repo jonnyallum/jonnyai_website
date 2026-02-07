@@ -38,13 +38,16 @@ export function Navigation() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'py-4' : 'py-6'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out ${scrolled ? 'py-4 pointer-events-none' : 'py-6 pointer-events-auto'
         }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-500 ${scrolled ? 'max-w-5xl px-0' : ''}`}>
         <div className={`
-          relative flex items-center justify-between h-16 px-6 rounded-2xl transition-all duration-500
-          ${scrolled ? 'bg-obsidian/80 backdrop-blur-xl border border-white/5 shadow-2xl' : 'bg-transparent'}
+          relative flex items-center justify-between h-16 px-6 transition-all duration-500 pointer-events-auto
+          ${scrolled
+            ? 'bg-obsidian/60 backdrop-blur-3xl border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.5)] rounded-full mt-2'
+            : 'bg-transparent border-transparent rounded-none'
+          }
         `}>
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">

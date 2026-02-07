@@ -220,9 +220,18 @@ Professional waist-up cinematic portrait of Derek Trotter, a risk-aware male opp
 
 ---
 
+## 📱 Mobile & Performance
+
+### 40. Milo (Milo Swift - The Thumb)
+```
+Professional waist-up cinematic portrait of Milo Swift, an agile male mobile specialist in his late 20s, sharp focused eyes, holding a smartphone at eye level examining it intently, wearing a sleek tech hoodie with cyan accents, fast and precise expression, mobile cyan accent lighting, dark studio background with subtle smartphone-screen and touch-gesture holographic patterns, cinematic portrait photography --ar 1:1 --v 6
+```
+
+---
+
 ## Style Persistence Notes
 
-All 39 portraits share these core traits:
+All 40 portraits share these core traits:
 - **Aspect Ratio**: 1:1
 - **Composition**: Waist-up, professional cinematic headshot
 - **Lighting**: Dark studio background with vibrant color accents matching the agent's unique theme (HSL)
