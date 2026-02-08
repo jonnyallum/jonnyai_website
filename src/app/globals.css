@@ -23,6 +23,9 @@
   --color-ghost: #f8f9fa;
   --color-steel: #64748b;
   
+  /* Legacy accent — citrus now maps to aurora vivid-purple */
+  --color-citrus: #8b5cf6;
+  
   /* Legacy compat */
   --color-obsidian: #030308;
   --color-obsidian-light: #0a0b14;
@@ -115,11 +118,21 @@
   
   /* Legacy compat — citrus maps to aurora now */
   .text-gradient-citrus {
-    @apply text-gradient-aurora;
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 40%, #ec4899 70%, #f472b6 100%);
   }
   
   .btn-citrus {
-    @apply btn-aurora;
+    @apply relative overflow-hidden font-bold py-4 px-8 rounded-full transition-all duration-300 flex items-center justify-center gap-2 border border-white/10;
+    background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 50%, #f472b6 100%);
+    color: white;
+  }
+  .btn-citrus:hover {
+    box-shadow: 0 0 40px rgba(139, 92, 246, 0.4), 0 0 80px rgba(236, 72, 153, 0.2);
+    transform: scale(1.05);
+  }
+  .btn-citrus:active {
+    transform: scale(0.95);
   }
 }
 
