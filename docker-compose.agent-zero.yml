@@ -10,6 +10,9 @@ services:
     environment:
       - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
       - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - OFF_LOGIN=jonny
+      - OFF_PASSWORD=antigravity_master
+      - DEFAULT_MODEL=gemini/gemini-2.0-flash
 
   github-mcp:
     image: ghcr.io/github/github-mcp-server:latest
