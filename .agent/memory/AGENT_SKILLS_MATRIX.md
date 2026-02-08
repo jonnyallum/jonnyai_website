@@ -1,68 +1,56 @@
-# Agent Skills Matrix
-> Parallel Learning Performance Tracker | Updated by @Coordinator-L after each run
+# Agent Skills Matrix & Learning Rank
 
----
+> **System:** Jai.OS 4.0 Parallel Learning
+> **Purpose:** Tracks agent capabilities, specialization, and competitive learning outcomes.
 
-## How to Read This Matrix
+## Core Orchestra (Learning Rank Active)
 
-- **Learning Rank** = `Wins/Total Runs | Q:Avg Quality | I:Avg Innovation`
-- **Domain Strength** = Primary capability area (1-10 self-assessed + peer-validated)
-- **Last Run** = Most recent parallel learning participation
-- **Status** = `Active` | `Upgrade Needed` | `New` (no runs yet)
+| Handle | Model Base | Dev Speed | Code Quality | Innovation | Role | Learning Wins | Avg Quality | Avg Innovation |
+|:-------|:-----------|:----------|:-------------|:-----------|:-----|:--------------|:------------|:---------------|
+| **@Conductor** | Gemini 2.0 Flash | 10 | 10 | 10 | **Orchestrator** | 1/1 | Q:8.0 | I:7.0 |
+| **@Cline** | Claude 3.5 Opus | 10 | 10 | 10 | **Architect** | - | Q:6.8 | I:9.5 |
+| **@JonnyAI** | Gemini 1.5 Pro | 9 | 9 | 8 | **Lead Dev** | - | - | - |
+| **@Priya** | Claude 3.5 Sonnet | 8 | 10 | 9 | **Design** | - | - | - |
+| **@Sebastian** | Claude 3.5 Sonnet | 9 | 9 | 8 | **Architecture** | - | - | - |
+| **@Rowan** | GPT-4o | 8 | 10 | 9 | **Content/Truth** | - | - | - |
+| **@Sentinel** | Gemini 1.5 Pro | 9 | 10 | 7 | **Security** | - | - | - |
+| **@Vigil** | Claude 3.5 Haiku | 10 | 9 | 7 | **QA/Verify** | - | - | - |
 
----
+## Specialized Agents
 
-## Core Orchestra
-
-| Agent | Handle | Domain | Domain Strength | Learning Rank (Last 10 Runs) | Last Run | Status |
-|:------|:-------|:-------|:----------------|:-----------------------------|:---------|:-------|
-| Marcus Cole | @Marcus | Orchestration & Routing | 9/10 | - | - | New |
-| Sebastian Allum | @Sebastian | Full-Stack Architecture | 9/10 | - | - | New |
-| Priya Sharma | @Priya | UI/UX Design | 9/10 | - | - | New |
-| Sam Blackwood | @Sam | Security & QA | 8/10 | - | - | New |
-| Derek O'Brien | @Derek | Infrastructure | 8/10 | - | - | New |
-| Diana Chen | @Diana | Database & Storage | 9/10 | - | - | New |
-| Victor Reyes | @Victor | Secrets Management | 7/10 | - | - | New |
-| Alex Torres | @Alex | Automation & CI/CD | 8/10 | - | - | New |
-| Sophie Reid | @Sophie | Research & Intelligence | 8/10 | - | - | New |
-| Patrick Nguyen | @Patrick | Data Parsing | 7/10 | - | - | New |
-| Maya Singh | @Maya | Analytics & Metrics | 7/10 | - | - | New |
-| Felix Morgan | @Felix | Strategy & Monetization | 8/10 | - | - | New |
-| Grace Liu | @Grace | SEO & Structured Data | 8/10 | - | - | New |
-| Elena Vasquez | @Elena | Brand Tone & Copy | 8/10 | - | - | New |
-| Carlos Mendez | @Carlos | Video Editing | 7/10 | - | - | New |
-| Hannah Park | @Hannah | Customer Success | 7/10 | - | - | New |
-| Arthur Webb | @Arthur | Documentation | 7/10 | - | - | New |
-| Mason Drake | @Mason | MCP Discovery | 7/10 | - | - | New |
-| Luna Sterling | @Luna | Legal & Compliance | 7/10 | - | - | New |
-| Adrian Cross | @Adrian | MCP Server Dev | 7/10 | - | - | New |
-| Owen Stinger | @Owen | CI/CD & Deployment | 8/10 | - | - | New |
-| Rowan Blackthorn | @Rowan | Content & Truth-Lock | 9/10 | - | - | New |
-| Vigil Ashworth | @Vigil | Verification & QI | 8/10 | - | - | New |
-| Vivienne Hayes | @Vivienne | Brand & Logo Design | 8/10 | - | - | New |
-| Nina Frost | @Nina | News Monitoring | 7/10 | - | - | New |
-| Theo Blackwell | @Theo | Inter-AI Comms | 7/10 | - | - | New |
-| Milo Vance | @Milo | Health Monitoring | 7/10 | - | - | New |
-| Blaise Thornton | @Blaise | Creative Ideation | 8/10 | - | - | New |
-| Jasper Holt | @Jasper | Code Quality | 7/10 | - | - | New |
-| Red Eye | @RedEye | Overnight Monitoring | 6/10 | - | - | New |
-
-## Ecosystem Specialists
-
-| Agent | Handle | Domain | Domain Strength | Learning Rank (Last 10 Runs) | Last Run | Status |
-|:------|:-------|:-------|:----------------|:-----------------------------|:---------|:-------|
-| Winston Hayes | @Winston | E-Commerce & Dropshipping | 7/10 | - | - | New |
-| Derek Trotter | @Trotter | Trading Systems | 7/10 | - | - | New |
-| Genesis Nova | @Genesis | Ecosystem Creation | 7/10 | - | - | New |
-| Daniel Marsh | @Daniel | Vehicle Technical | 7/10 | - | - | New |
-| Gareth Southgate | @Gareth | Football Tactics | 8/10 | - | - | New |
-| Harry Findlay | @Harry | Horse Racing | 8/10 | - | - | New |
-| Julian Bookie | @Julian | Sports Betting | 8/10 | - | - | New |
-| Pietro Strategist | @Pietro | F1 Strategy | 7/10 | - | - | New |
-| Sterling Counsel | @Sterling | Legal & IP | 7/10 | - | - | New |
-| Terry Tungsten | @Terry | Darts Analysis | 7/10 | - | - | New |
-| Monte Carlo | @Monty | Roulette Mathematics | 8/10 | - | - | New |
-| Quinn Rider | @Quinn | MotoGP Analysis | 7/10 | - | - | New |
+| Name | Handle | Scope | Reliability | Learning Rank |
+|:-----|:-------|:------|:------------|:--------------|
+| Goldie Ranker | @Goldie | SEO | 9/10 | - |
+| Alex Torres | @Autoflow | CI/CD | 9/10 | - |
+| Derek O'Brien | @DevOps | Infrastructure | 9/10 | - |
+| Sam Blackwood | @Sam | Security Audit | 10/10 | - |
+| Diana Chen | @Diana | Database | 10/10 | - |
+| Victor Reyes | @Vaultguard | Secrets | 10/10 | - |
+| Mason Drake | @Manus | Tooling | 8/10 | - |
+| Arthur Webb | @Archivist | Documentation | 9/10 | - |
+| Hannah Park | @Helpline | Support | 9/10 | - |
+| Felix Morgan | @Forge | Monetization | 8/10 | - |
+| Maya Singh | @Metric | Analytics | 9/10 | - |
+| Elena Vasquez | @Echo | Copywriting | 9/10 | - |
+| Sophie Reid | @Scout | Research | 9/10 | - |
+| Patrick Nguyen | @Parser | Data Extraction | 9/10 | - |
+| Grace Liu | @Goldie | SEO | 9/10 | - |
+| Carlos Mendez | @Clippers | Video Editing | 8/10 | - |
+| Adrian Cross | @Adapter | MCP Servers | 9/10 | - |
+| Winston Hayes | @Warehouse | Dropshipping | 8/10 | - |
+| Derek Trotter | @Delboy | Trading | 7/10 | - |
+| Genesis Nova | @Genesis | Eco-Creation | 9/10 | - |
+| Lyra Nexus | @Coordinator-L | Learning | 10/10 | - |
+| Vivienne Hayes | @Vivienne | Branding | 9/10 | - |
+| Daniel Marsh | @Daniel | Autos | 8/10 | - |
+| Gareth Southgate | @Gaffer | Football Tactics | 8/10 | - |
+| Harry Findlay | @Harry | Horse Racing | 8/10 | - |
+| Julian Bookie | @Julian | Sports Betting | 8/10 | - |
+| Pietro Strategist | @Pietro | F1 Strategy | 7/10 | - |
+| Sterling Counsel | @Sterling | Legal & IP | 7/10 | - |
+| Terry Tungsten | @Terry | Darts Analysis | 7/10 | - |
+| Monte Carlo | @Monty | Roulette Mathematics | 8/10 | - |
+| Quinn Rider | @Quinn | MotoGP Analysis | 7/10 | - |
 
 ---
 
@@ -73,6 +61,7 @@
 | Task Category | Top Performer | Win Rate | Key Technique | Runbook |
 |:-------------|:-------------|:---------|:-------------|:--------|
 | Brand Alignment | @Conductor (Gemini) | 1/1 (100%) | Analyze→Implement→Document | [brand-to-print-alignment.md](../../library/runbooks/brand-to-print-alignment.md) |
+| UI Aesthetics | @Cline (Opus) | N/A | Semantic Color Palettes | [css-premium-aesthetics.md](../../library/techniques/css-premium-aesthetics.md) |
 
 ---
 
@@ -82,9 +71,7 @@
 
 | Agent | Gap Identified | Recommended Action | Source Run | Target Date |
 |:------|:--------------|:-------------------|:-----------|:------------|
-| @Priya | Did not participate | Enable parallel invocation | PLR-001 | Next run |
-| @Sebastian | Did not participate | Enable parallel invocation | PLR-001 | Next run |
-| @Vivienne | Did not participate | Enable parallel invocation | PLR-001 | Next run |
+| @Cline | Syntax Precision | Add linting pre-commit check | PLR-002 | Next run |
 
 ---
 
@@ -93,6 +80,7 @@
 | Run ID | Date | Task | Agents | Winner | Key Insight |
 |:-------|:-----|:-----|:-------|:-------|:------------|
 | PLR-001 | 2026-02-08 | Village Bakery Brand Overhaul | @Conductor | @Conductor (8.1/10) | Analyze existing assets before building new. Fonts = half the brand identity |
+| PLR-002 | 2026-02-08 | JonnyAI Aurora Rebrand | @Cline (Solo) | N/A (Score 6.8/10) | Excellent design instincts (9.5) but needs syntax validation. |
 
 ---
 
