@@ -3,9 +3,52 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown, Sparkles } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { Button } from './Button';
 import { siteConfig } from '@/data/pricing';
+
+/** The Prism — JonnyAI brand icon. Geometric light refractor. */
+function PrismIcon({ className = 'w-8 h-8' }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+      <defs>
+        <linearGradient id="prism-face-left" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stopColor="#3b82f6" />
+          <stop offset="100%" stopColor="#8b5cf6" />
+        </linearGradient>
+        <linearGradient id="prism-face-right" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stopColor="#8b5cf6" />
+          <stop offset="100%" stopColor="#ec4899" />
+        </linearGradient>
+        <linearGradient id="prism-face-top" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stopColor="#a78bfa" />
+          <stop offset="50%" stopColor="#c084fc" />
+          <stop offset="100%" stopColor="#f472b6" />
+        </linearGradient>
+        <linearGradient id="prism-refract" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.6" />
+          <stop offset="50%" stopColor="#8b5cf6" stopOpacity="0.4" />
+          <stop offset="100%" stopColor="#ec4899" stopOpacity="0.2" />
+        </linearGradient>
+      </defs>
+      {/* Left face — deep blue to purple */}
+      <polygon points="16,3 4,20 16,28" fill="url(#prism-face-left)" opacity="0.95" />
+      {/* Right face — purple to pink */}
+      <polygon points="16,3 28,20 16,28" fill="url(#prism-face-right)" opacity="0.9" />
+      {/* Top highlight — bright aurora */}
+      <polygon points="16,3 10,13 22,13" fill="url(#prism-face-top)" opacity="0.7" />
+      {/* Internal refraction line */}
+      <line x1="16" y1="6" x2="16" y2="25" stroke="white" strokeWidth="0.5" opacity="0.3" />
+      {/* Light beam entering */}
+      <line x1="16" y1="0" x2="16" y2="5" stroke="white" strokeWidth="1" opacity="0.5" />
+      {/* Refracted spectrum lines exiting */}
+      <line x1="8" y1="24" x2="4" y2="30" stroke="#3b82f6" strokeWidth="0.8" opacity="0.6" />
+      <line x1="12" y1="26" x2="10" y2="31" stroke="#8b5cf6" strokeWidth="0.8" opacity="0.6" />
+      <line x1="20" y1="26" x2="22" y2="31" stroke="#ec4899" strokeWidth="0.8" opacity="0.6" />
+      <line x1="24" y1="24" x2="28" y2="30" stroke="#f472b6" strokeWidth="0.8" opacity="0.5" />
+    </svg>
+  );
+}
 
 const navItems = [
   { label: 'About', href: '/about' },
@@ -45,17 +88,19 @@ export function Navigation() {
         <div className={`
           relative flex items-center justify-between h-16 px-6 transition-all duration-500 pointer-events-auto
           ${scrolled
-            ? 'bg-obsidian/60 backdrop-blur-3xl border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.5)] rounded-full mt-2'
+            ? 'bg-void/60 backdrop-blur-3xl border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.5),0_0_60px_rgba(139,92,246,0.05)] rounded-full mt-2'
             : 'bg-transparent border-transparent rounded-none'
           }
         `}>
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-8 h-8 bg-citrus rounded-lg flex items-center justify-center group-hover:rotate-12 transition-transform shadow-lg shadow-citrus/20">
-              <Sparkles className="w-5 h-5 text-white" />
+          {/* Logo — The Prism + Wordmark */}
+          <Link href="/" className="flex items-center gap-2.5 group">
+            <div className="relative">
+              <PrismIcon className="w-9 h-9 group-hover:scale-110 transition-transform duration-300" />
+              {/* Subtle glow behind icon */}
+              <div className="absolute inset-0 bg-vivid-purple/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </div>
             <span className="font-outfit font-black text-xl text-white tracking-tighter">
-              Jonny<span className="text-citrus">Ai</span>
+              Jonny<span className="text-gradient-aurora">Ai</span>
             </span>
           </Link>
 
@@ -69,7 +114,7 @@ export function Navigation() {
                     onMouseEnter={() => setServicesOpen(true)}
                     onMouseLeave={() => setServicesOpen(false)}
                   >
-                    <button className={`flex items-center gap-1 text-sm font-medium transition-colors ${servicesOpen ? 'text-citrus' : 'text-gray-400 hover:text-white'}`}>
+                    <button className={`flex items-center gap-1 text-sm font-medium transition-colors ${servicesOpen ? 'text-vivid-purple' : 'text-frost hover:text-white'}`}>
                       {item.label}
                       <ChevronDown className={`w-3 h-3 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
                     </button>
@@ -79,14 +124,14 @@ export function Navigation() {
                           initial={{ opacity: 0, y: 10, scale: 0.95 }}
                           animate={{ opacity: 1, y: 0, scale: 1 }}
                           exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                          className="absolute top-full left-0 mt-4 w-64 bg-black/90 backdrop-blur-2xl rounded-2xl shadow-2xl border border-white/10 py-3 overflow-hidden"
+                          className="absolute top-full left-0 mt-4 w-64 bg-abyss/95 backdrop-blur-2xl rounded-2xl shadow-2xl border border-vivid-purple/15 py-3 overflow-hidden"
                         >
-                          <div className="absolute inset-0 bg-gradient-to-br from-citrus/5 to-transparent pointer-events-none" />
+                          <div className="absolute inset-0 bg-gradient-to-br from-vivid-purple/5 to-hot-pink/5 pointer-events-none" />
                           {item.children.map((child) => (
                             <Link
                               key={child.href}
                               href={child.href}
-                              className="block px-6 py-3 text-sm text-gray-400 hover:bg-white/5 hover:text-citrus transition-all"
+                              className="block px-6 py-3 text-sm text-frost hover:bg-vivid-purple/10 hover:text-white transition-all"
                             >
                               {child.label}
                             </Link>
@@ -98,10 +143,10 @@ export function Navigation() {
                 ) : (
                   <Link
                     href={item.href}
-                    className="text-sm font-medium text-gray-400 hover:text-white transition-colors relative group"
+                    className="text-sm font-medium text-frost hover:text-white transition-colors relative group"
                   >
                     {item.label}
-                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-citrus transition-all group-hover:w-full" />
+                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-vivid-purple to-hot-pink transition-all group-hover:w-full" />
                   </Link>
                 )}
               </div>
@@ -113,7 +158,7 @@ export function Navigation() {
             <Button
               href={siteConfig.calendlyUrl}
               size="sm"
-              className="bg-white text-obsidian rounded-xl px-6 hover:bg-citrus hover:text-white transition-all font-bold"
+              className="bg-gradient-to-r from-vivid-purple to-hot-pink text-white rounded-xl px-6 hover:shadow-[0_0_25px_rgba(139,92,246,0.4)] transition-all font-bold border border-white/10"
             >
               Book Call
             </Button>
@@ -136,14 +181,14 @@ export function Navigation() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="md:hidden absolute top-full left-0 right-0 mx-4 mt-2 bg-obsidian-light/95 backdrop-blur-2xl rounded-3xl border border-white/10 shadow-3xl overflow-hidden"
+            className="md:hidden absolute top-full left-0 right-0 mx-4 mt-2 bg-abyss/95 backdrop-blur-2xl rounded-3xl border border-vivid-purple/15 shadow-3xl overflow-hidden"
           >
             <div className="px-6 py-8 space-y-4">
               {navItems.map((item) => (
                 <div key={item.label}>
                   {item.children ? (
                     <>
-                      <p className="text-gray-500 text-xs font-black uppercase tracking-widest mb-4">{item.label}</p>
+                      <p className="text-frost text-xs font-black uppercase tracking-widest mb-4">{item.label}</p>
                       <div className="grid grid-cols-1 gap-2 pl-2">
                         {item.children.map((child) => (
                           <Link
@@ -169,7 +214,7 @@ export function Navigation() {
                 </div>
               ))}
               <div className="pt-6">
-                <Button href={siteConfig.calendlyUrl} className="w-full bg-citrus text-white py-4 rounded-2xl">
+                <Button href={siteConfig.calendlyUrl} className="w-full btn-aurora py-4 rounded-2xl">
                   Book Discovery Call
                 </Button>
               </div>

@@ -20,16 +20,17 @@ const footerLinks = {
 
 export function Footer() {
   return (
-    <footer className="bg-obsidian border-t border-white/5 relative overflow-hidden">
-      {/* Subtle floor glow */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[80%] h-[300px] bg-citrus/5 blur-[150px] rounded-full pointer-events-none mix-blend-screen" />
+    <footer className="bg-void border-t border-vivid-purple/10 relative overflow-hidden">
+      {/* Subtle aurora floor glow */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[80%] h-[300px] bg-vivid-purple/5 blur-[150px] rounded-full pointer-events-none mix-blend-screen" />
+      <div className="absolute bottom-0 right-1/4 w-[40%] h-[200px] bg-hot-pink/3 blur-[120px] rounded-full pointer-events-none mix-blend-screen" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 lg:gap-16">
           {/* Brand */}
           <div className="md:col-span-1 space-y-8">
             <Link href="/" className="font-outfit font-black text-2xl text-white tracking-tighter block">
-              Jonny<span className="text-citrus">Ai</span>
+              Jonny<span className="text-gradient-aurora">Ai</span>
             </Link>
             <p className="text-gray-500 text-sm leading-relaxed font-light text-balance">
               UK-based AI studio. We build enterprise-grade prototypes and products at the speed of thought using a multi-agent orchestrated framework.
@@ -53,7 +54,7 @@ export function Footer() {
               </a>
               <a
                 href={`mailto:${siteConfig.email}`}
-                className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-citrus hover:bg-citrus/5 hover:border-citrus/20 transition-all duration-300 group"
+                className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-hot-pink hover:bg-hot-pink/5 hover:border-hot-pink/20 transition-all duration-300 group"
               >
                 <Mail className="w-4 h-4 group-hover:scale-110 transition-transform" />
               </a>
@@ -70,7 +71,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-citrus transition-colors text-sm flex items-center group font-medium"
+                    className="text-frost hover:text-vivid-purple transition-colors text-sm flex items-center group font-medium"
                   >
                     {link.label}
                     <ArrowUpRight className="w-3 h-3 ml-1 opacity-0 -translate-x-2 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300" />
@@ -110,7 +111,7 @@ export function Footer() {
                 <div className="font-light">{siteConfig.location}</div>
               </li>
               <li>
-                <a href={`mailto:${siteConfig.email}`} className="text-citrus hover:text-white transition-colors font-mono text-xs bg-citrus/5 border border-citrus/10 px-3 py-2 rounded-lg inline-block">
+                <a href={`mailto:${siteConfig.email}`} className="text-aurora-pink hover:text-white transition-colors font-mono text-xs bg-vivid-purple/5 border border-vivid-purple/10 px-3 py-2 rounded-lg inline-block">
                   {siteConfig.email}
                 </a>
               </li>
@@ -139,12 +140,12 @@ export function Footer() {
           </div>
 
           <div className="flex flex-col items-end text-right">
-            <span className="text-citrus/60 text-[9px] font-black uppercase tracking-[0.2em] mb-2 font-outfit">
+            <span className="text-vivid-purple/60 text-[9px] font-black uppercase tracking-[0.2em] mb-2 font-outfit">
               Neural Build Registry
             </span>
-            <div className="flex items-center gap-3 text-[10px] font-bold text-gray-500 uppercase tracking-tighter bg-white/5 px-4 py-2 rounded-full border border-white/5">
-              <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
-              <span>AgOS 4.0 Active</span>
+            <div className="flex items-center gap-3 text-[10px] font-bold text-frost/50 uppercase tracking-tighter bg-white/5 px-4 py-2 rounded-full border border-vivid-purple/10">
+              <span className="w-1.5 h-1.5 rounded-full bg-hot-pink animate-pulse" />
+              <span>Jai.OS 4.0 Active</span>
             </div>
           </div>
         </div>

@@ -1,63 +1,98 @@
 @import "tailwindcss";
 
 :root {
-  --background: #030305; /* Deep Obsidian */
+  --background: #030308;
 }
 
 @theme {
   --font-inter: "Inter", sans-serif;
   --font-outfit: "Outfit", sans-serif;
   
-  --color-obsidian: #030305;
-  --color-obsidian-light: #0f1115;
+  /* The Aurora Palette */
+  --color-void: #030308;
+  --color-abyss: #0a0b14;
+  --color-midnight: #0f1029;
+  --color-deep-blue: #1e3a5f;
+  --color-electric-blue: #3b82f6;
+  --color-vivid-purple: #8b5cf6;
+  --color-hot-pink: #ec4899;
+  --color-aurora-pink: #f472b6;
+  --color-ice: #e0e7ff;
+  --color-frost: #94a3b8;
   --color-titanium: #ffffff;
   --color-ghost: #f8f9fa;
-  --color-citrus: #d97757; 
-  --color-citrus-glow: #ff8f6b;
-  --color-electric-purple: #8b5cf6;
+  --color-steel: #64748b;
+  
+  /* Legacy compat */
+  --color-obsidian: #030308;
+  --color-obsidian-light: #0a0b14;
   --color-neon-cyan: #06b6d4;
-  --color-void: #000000;
-  --color-steel: #9ca3af;
   
   --animate-float: float 6s ease-in-out infinite;
   --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-aurora: aurora 8s ease-in-out infinite;
   
   @keyframes float {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-20px); }
   }
+  
+  @keyframes aurora {
+    0%, 100% { opacity: 0.5; transform: scale(1) rotate(0deg); }
+    33% { opacity: 0.8; transform: scale(1.1) rotate(2deg); }
+    66% { opacity: 0.6; transform: scale(0.95) rotate(-1deg); }
+  }
 }
 
 @layer base {
   body {
-    @apply bg-obsidian text-titanium font-inter antialiased overflow-x-hidden;
+    @apply bg-void text-ice font-inter antialiased overflow-x-hidden;
     background-image: 
-      url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E"),
-      radial-gradient(circle at 15% 50%, rgba(139, 92, 246, 0.08) 0%, transparent 25%), 
-      radial-gradient(circle at 85% 30%, rgba(6, 182, 212, 0.08) 0%, transparent 25%);
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.02'/%3E%3C/svg%3E"),
+      radial-gradient(ellipse at 15% 50%, rgba(139, 92, 246, 0.12) 0%, transparent 40%), 
+      radial-gradient(ellipse at 85% 20%, rgba(236, 72, 153, 0.08) 0%, transparent 35%),
+      radial-gradient(ellipse at 50% 80%, rgba(59, 130, 246, 0.06) 0%, transparent 40%);
     background-attachment: fixed;
   }
 }
 
 @layer components {
-  .btn-primary {
-    @apply relative overflow-hidden bg-white text-obsidian font-bold py-4 px-8 rounded-full transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,255,255,0.4)] hover:scale-105 active:scale-95 flex items-center justify-center gap-2;
+  /* Aurora gradient button — the signature CTA */
+  .btn-aurora {
+    @apply relative overflow-hidden font-bold py-4 px-8 rounded-full transition-all duration-300 flex items-center justify-center gap-2 border border-white/10;
+    background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 50%, #f472b6 100%);
+    color: white;
+  }
+  .btn-aurora:hover {
+    box-shadow: 0 0 40px rgba(139, 92, 246, 0.4), 0 0 80px rgba(236, 72, 153, 0.2);
+    transform: scale(1.05);
+  }
+  .btn-aurora:active {
+    transform: scale(0.95);
   }
 
-  .btn-citrus {
-    @apply relative overflow-hidden bg-gradient-to-r from-citrus to-[#e08e6d] text-white font-bold py-4 px-8 rounded-full transition-all duration-300 hover:shadow-[0_0_30px_rgba(217,119,87,0.5)] hover:scale-105 active:scale-95 flex items-center justify-center gap-2 border border-white/10;
+  .btn-primary {
+    @apply relative overflow-hidden bg-white text-void font-bold py-4 px-8 rounded-full transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] hover:scale-105 active:scale-95 flex items-center justify-center gap-2;
   }
 
   .btn-glow {
-    @apply bg-white/5 backdrop-blur-md border border-white/10 text-white font-medium py-3 px-6 rounded-full transition-all duration-300 hover:bg-white/10 hover:border-white/30 hover:shadow-[0_0_20px_rgba(255,255,255,0.15)];
+    @apply bg-white/5 backdrop-blur-md border border-white/10 text-white font-medium py-3 px-6 rounded-full transition-all duration-300 hover:bg-white/10 hover:border-vivid-purple/40 hover:shadow-[0_0_25px_rgba(139,92,246,0.2)];
   }
 
   .glass-card {
-    @apply bg-white/5 backdrop-blur-xl border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.5)] rounded-3xl p-8 transition-all duration-500 hover:bg-white/[0.07] hover:border-white/20 hover:shadow-[0_20px_40px_rgba(0,0,0,0.6)];
+    @apply backdrop-blur-xl border shadow-[0_10px_30px_rgba(0,0,0,0.5)] rounded-3xl p-8 transition-all duration-500;
+    background: linear-gradient(135deg, rgba(15, 16, 41, 0.6) 0%, rgba(10, 11, 20, 0.8) 100%);
+    border-color: rgba(139, 92, 246, 0.1);
+  }
+  .glass-card:hover {
+    border-color: rgba(139, 92, 246, 0.25);
+    box-shadow: 0 20px 60px rgba(139, 92, 246, 0.08), 0 0 0 1px rgba(139, 92, 246, 0.1);
   }
 
   .glass-panel {
-    @apply bg-[#0a0a0c]/80 backdrop-blur-2xl border border-white/5 rounded-[2rem] shadow-2xl;
+    @apply backdrop-blur-2xl border rounded-[2rem] shadow-2xl;
+    background: rgba(10, 11, 20, 0.85);
+    border-color: rgba(255, 255, 255, 0.05);
   }
 
   .futuristic-title {
@@ -65,15 +100,26 @@
   }
   
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-gray-400;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-ice to-frost;
   }
   
   .text-glow {
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    text-shadow: 0 0 30px rgba(139, 92, 246, 0.4), 0 0 60px rgba(236, 72, 153, 0.2);
   }
   
+  /* The signature aurora text gradient */
+  .text-gradient-aurora {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 40%, #ec4899 70%, #f472b6 100%);
+  }
+  
+  /* Legacy compat — citrus maps to aurora now */
   .text-gradient-citrus {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-citrus via-citrus-glow to-[#ffbe98];
+    @apply text-gradient-aurora;
+  }
+  
+  .btn-citrus {
+    @apply btn-aurora;
   }
 }
 
@@ -92,26 +138,26 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Custom selection */
+/* Custom selection — aurora purple */
 ::selection {
-  background-color: var(--color-citrus);
+  background-color: rgba(139, 92, 246, 0.4);
   color: white;
 }
 
-/* Custom scrollbar */
+/* Custom scrollbar — aurora gradient */
 ::-webkit-scrollbar {
   width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-obsidian);
+  background: var(--color-void);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.1);
+  background: linear-gradient(to bottom, var(--color-vivid-purple), var(--color-hot-pink));
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-citrus);
+  background: linear-gradient(to bottom, var(--color-electric-blue), var(--color-vivid-purple));
 }
