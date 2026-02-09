@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Github, Linkedin, Mail, ArrowUpRight } from 'lucide-react';
 import { siteConfig } from '@/data/pricing';
 
@@ -29,8 +30,14 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 lg:gap-16">
           {/* Brand */}
           <div className="md:col-span-1 space-y-8">
-            <Link href="/" className="font-outfit font-black text-2xl text-white tracking-tighter block">
-              Jonny<span className="text-gradient-forge">Ai</span>
+            <Link href="/" className="block">
+              <Image
+                src="/Logo/JonnyAI full logo.png"
+                alt="JonnyAI"
+                width={180}
+                height={45}
+                className="h-10 w-auto"
+              />
             </Link>
             <p className="text-gray-500 text-sm leading-relaxed font-light text-balance">
               UK-based AI studio. We build enterprise-grade prototypes and products at the speed of thought using a multi-agent orchestrated framework.

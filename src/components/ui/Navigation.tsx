@@ -2,53 +2,11 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { Button } from './Button';
 import { siteConfig } from '@/data/pricing';
-
-/** The Prism — JonnyAI brand icon. Geometric light refractor. */
-function PrismIcon({ className = 'w-8 h-8' }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
-      <defs>
-        <linearGradient id="prism-face-left" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="#3b82f6" />
-          <stop offset="100%" stopColor="#8b5cf6" />
-        </linearGradient>
-        <linearGradient id="prism-face-right" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="#8b5cf6" />
-          <stop offset="100%" stopColor="#ec4899" />
-        </linearGradient>
-        <linearGradient id="prism-face-top" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="#a78bfa" />
-          <stop offset="50%" stopColor="#c084fc" />
-          <stop offset="100%" stopColor="#f472b6" />
-        </linearGradient>
-        <linearGradient id="prism-refract" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.6" />
-          <stop offset="50%" stopColor="#8b5cf6" stopOpacity="0.4" />
-          <stop offset="100%" stopColor="#ec4899" stopOpacity="0.2" />
-        </linearGradient>
-      </defs>
-      {/* Left face — deep blue to purple */}
-      <polygon points="16,3 4,20 16,28" fill="url(#prism-face-left)" opacity="0.95" />
-      {/* Right face — purple to pink */}
-      <polygon points="16,3 28,20 16,28" fill="url(#prism-face-right)" opacity="0.9" />
-      {/* Top highlight — bright aurora */}
-      <polygon points="16,3 10,13 22,13" fill="url(#prism-face-top)" opacity="0.7" />
-      {/* Internal refraction line */}
-      <line x1="16" y1="6" x2="16" y2="25" stroke="white" strokeWidth="0.5" opacity="0.3" />
-      {/* Light beam entering */}
-      <line x1="16" y1="0" x2="16" y2="5" stroke="white" strokeWidth="1" opacity="0.5" />
-      {/* Refracted spectrum lines exiting */}
-      <line x1="8" y1="24" x2="4" y2="30" stroke="#3b82f6" strokeWidth="0.8" opacity="0.6" />
-      <line x1="12" y1="26" x2="10" y2="31" stroke="#8b5cf6" strokeWidth="0.8" opacity="0.6" />
-      <line x1="20" y1="26" x2="22" y2="31" stroke="#ec4899" strokeWidth="0.8" opacity="0.6" />
-      <line x1="24" y1="24" x2="28" y2="30" stroke="#f472b6" strokeWidth="0.8" opacity="0.5" />
-    </svg>
-  );
-}
 
 const navItems = [
   { label: 'About', href: '/about' },
@@ -92,16 +50,20 @@ export function Navigation() {
             : 'bg-transparent border-transparent rounded-none'
           }
         `}>
-          {/* Logo — The Prism + Wordmark */}
-          <Link href="/" className="flex items-center gap-2.5 group">
+          {/* Logo — JonnyAI Brand */}
+          <Link href="/" className="flex items-center group">
             <div className="relative">
-              <PrismIcon className="w-9 h-9 group-hover:scale-110 transition-transform duration-300" />
-              {/* Subtle glow behind icon */}
-              <div className="absolute inset-0 bg-ember/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <Image
+                src="/Logo/JonnyAI full logo.png"
+                alt="JonnyAI"
+                width={160}
+                height={40}
+                className="h-9 w-auto group-hover:scale-105 transition-transform duration-300"
+                priority
+              />
+              {/* Subtle glow behind logo */}
+              <div className="absolute inset-0 bg-ember/15 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </div>
-            <span className="font-outfit font-black text-xl text-white tracking-tighter">
-              Jonny<span className="text-gradient-forge">Ai</span>
-            </span>
           </Link>
 
           {/* Desktop Nav */}
