@@ -3,6 +3,7 @@ import "./globals.css";
 import { Banner } from "@/components/ui/Banner";
 import { Navigation } from "@/components/ui/Navigation";
 import { Footer } from "@/components/ui/Footer";
+import { NeuralNetwork } from "@/components/NeuralNetwork";
 import { Inter, Outfit } from "next/font/google";
 
 const inter = Inter({
@@ -50,9 +51,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} ${outfit.variable} antialiased font-sans`}>
+        <NeuralNetwork />
         <Banner />
         <Navigation />
-        <main>{children}</main>
+        <main className="relative z-10">{children}</main>
         <Footer />
       </body>
     </html>

@@ -9,7 +9,6 @@ import { z } from 'zod';
 import { Send, Calendar, Linkedin, Github, Mail, MapPin, Terminal, Cpu, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { siteConfig } from '@/data/pricing';
-import { submitContactForm } from '@/lib/supabase';
 
 const contactSchema = z.object({
   name: z.string().min(2, 'Name is required'),
@@ -56,18 +55,15 @@ export default function ContactPage() {
     setError(null);
 
     try {
-      await submitContactForm({
-        name: data.name,
-        email: data.email,
-        company: data.company || undefined,
-        interest: data.interest,
-        budget: data.budget,
-        message: data.message,
-      });
+      const subject = encodeURIComponent(`[JonnyAI] ${data.interest} enquiry from ${data.name}`);
+      const body = encodeURIComponent(
+        `Name: ${data.name}\nEmail: ${data.email}\nCompany: ${data.company || 'N/A'}\nInterest: ${data.interest}\nBudget: ${data.budget}\n\n${data.message}`
+      );
+      window.open(`mailto:${siteConfig.email}?subject=${subject}&body=${body}`, '_self');
       setSubmitted(true);
     } catch (err) {
-      console.error('Failed to submit form:', err);
-      setError('Failed to send message. Please try again or email us directly.');
+      console.error('Failed to open mail client:', err);
+      setError('Failed to open email. Please email us directly at ' + siteConfig.email);
     } finally {
       setSubmitting(false);
     }
