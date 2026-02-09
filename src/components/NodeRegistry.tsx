@@ -17,7 +17,7 @@ export default function NodeRegistry() {
             <div className="max-w-7xl mx-auto px-8">
                 <div className="flex flex-col md:flex-row justify-between items-end gap-12">
                     <div className="max-w-sm">
-                        <p className="text-[10px] font-black tracking-[.5em] text-citrus mb-4 uppercase">Operational Ecosystem</p>
+                        <p className="text-[10px] font-black tracking-[.5em] text-ember mb-4 uppercase">Operational Ecosystem</p>
                         <h3 className="font-outfit text-2xl font-black uppercase mb-4 tracking-tighter">Active Network Nodes.</h3>
                         <p className="text-[10px] text-steel leading-relaxed font-bold uppercase opacity-60">
                             JAI functions as a central core powering a diverse cluster of high-performance ventures.
@@ -32,7 +32,7 @@ export default function NodeRegistry() {
                                 href={node.url}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="group relative bg-white p-6 hover:bg-citrus transition-all duration-500 overflow-hidden"
+                                className="group relative bg-white p-6 hover:bg-ember transition-all duration-500 overflow-hidden"
                             >
                                 <div className="relative z-10">
                                     <div className="text-[10px] font-black tracking-widest text-void group-hover:text-white transition-colors mb-1">

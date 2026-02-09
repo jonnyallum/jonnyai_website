@@ -39,7 +39,7 @@ const services = [
     ideal: 'Founders requiring enterprise-grade execution at scale.',
     price: 'From £4,997',
     href: '/services/builds',
-    color: 'from-citrus to-orange-600',
+    color: 'from-ember to-amber',
     highlighted: true,
   },
   {
@@ -67,19 +67,19 @@ export default function ServicesPage() {
     <div className="bg-obsidian min-h-screen text-white">
       {/* Hero */}
       <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-citrus/5 rounded-full blur-[150px] pointer-events-none" />
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-ember/5 rounded-full blur-[150px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-citrus text-[10px] font-black uppercase tracking-widest mb-6"
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-ember text-[10px] font-black uppercase tracking-widest mb-6"
           >
             <Cpu className="w-3 h-3" />
             Operational Models
           </motion.div>
           <h1 className="font-outfit font-black text-5xl sm:text-6xl lg:text-7xl text-white mb-8 tracking-tighter">
-            Architect Your <span className="text-citrus">Velocity</span>
+            Architect Your <span className="text-ember">Velocity</span>
           </h1>
           <p className="text-xl text-gray-400 font-light leading-relaxed max-w-3xl">
             JonnyAi provides three distinct vectors for project execution. Choose the path
@@ -98,7 +98,7 @@ export default function ServicesPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className={`glass-panel border-white/5 overflow-hidden transition-all duration-500 group relative ${service.highlighted ? 'border-citrus/40 bg-citrus/[0.03]' : 'hover:border-white/20'}`}
+              className={`glass-panel border-white/5 overflow-hidden transition-all duration-500 group relative ${service.highlighted ? 'border-ember/40 bg-ember/[0.03]' : 'hover:border-white/20'}`}
             >
               <div className="grid grid-cols-1 lg:grid-cols-4 items-stretch">
                 {/* Visual Accent */}
@@ -112,7 +112,7 @@ export default function ServicesPage() {
                     </div>
                     <div>
                       <h2 className="font-outfit font-black text-3xl text-white uppercase tracking-tighter">{service.title}</h2>
-                      <p className="text-citrus font-mono text-[10px] uppercase tracking-[0.2em]">{service.subtitle}</p>
+                      <p className="text-ember font-mono text-[10px] uppercase tracking-[0.2em]">{service.subtitle}</p>
                     </div>
                   </div>
 
@@ -122,7 +122,7 @@ export default function ServicesPage() {
                     {service.features.map((feature) => (
                       <div key={feature} className="flex items-start gap-3">
                         <div className="mt-1 w-4 h-4 rounded-full bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
-                          <Check className="w-2.5 h-2.5 text-citrus" />
+                          <Check className="w-2.5 h-2.5 text-ember" />
                         </div>
                         <span className="text-[13px] text-gray-500">{feature}</span>
                       </div>
@@ -172,8 +172,8 @@ export default function ServicesPage() {
                 <tr className="border-b border-white/10">
                   <th className="px-6 py-6 text-xs font-black uppercase tracking-widest text-gray-600">Capability Matrix</th>
                   <th className="px-6 py-6 text-center text-xs font-black uppercase tracking-widest text-white">Framework</th>
-                  <th className="px-6 py-6 text-center text-xs font-black uppercase tracking-widest text-citrus">Builds</th>
-                  <th className="px-6 py-6 text-center text-xs font-black uppercase tracking-widest text-purple-400">Partnership</th>
+                  <th className="px-6 py-6 text-center text-xs font-black uppercase tracking-widest text-ember">Builds</th>
+                  <th className="px-6 py-6 text-center text-xs font-black uppercase tracking-widest text-nebula-rose">Partnership</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-white/5">
@@ -189,21 +189,21 @@ export default function ServicesPage() {
                     <td className="px-6 py-6 text-sm font-medium text-gray-400">{row.label}</td>
                     <td className="px-6 py-6 text-center">
                       {typeof row.framework === 'boolean' ? (
-                        row.framework ? <Check className="w-5 h-5 text-citrus mx-auto" /> : <span className="text-gray-800">—</span>
+                        row.framework ? <Check className="w-5 h-5 text-ember mx-auto" /> : <span className="text-gray-800">—</span>
                       ) : (
                         <span className="text-xs font-bold text-white">{row.framework}</span>
                       )}
                     </td>
                     <td className="px-6 py-6 text-center">
                       {typeof row.builds === 'boolean' ? (
-                        row.builds ? <Check className="w-5 h-5 text-citrus mx-auto" /> : <span className="text-gray-800">—</span>
+                        row.builds ? <Check className="w-5 h-5 text-ember mx-auto" /> : <span className="text-gray-800">—</span>
                       ) : (
                         <span className="text-xs font-bold text-white">{row.builds}</span>
                       )}
                     </td>
                     <td className="px-6 py-6 text-center">
                       {typeof row.partnership === 'boolean' ? (
-                        row.partnership ? <Check className="w-5 h-5 text-citrus mx-auto" /> : <span className="text-gray-800">—</span>
+                        row.partnership ? <Check className="w-5 h-5 text-ember mx-auto" /> : <span className="text-gray-800">—</span>
                       ) : (
                         <span className="text-xs font-bold text-white">{row.partnership}</span>
                       )}
@@ -218,16 +218,16 @@ export default function ServicesPage() {
 
       {/* Closing CTA */}
       <section className="py-40 relative">
-        <div className="absolute inset-0 bg-gradient-to-t from-citrus/5 to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ember/5 to-transparent pointer-events-none" />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="font-outfit font-black text-4xl sm:text-5xl text-white mb-8 tracking-tighter uppercase whitespace-nowrap">
-            Unsure of the <span className="text-citrus italic">Vector?</span>
+            Unsure of the <span className="text-ember italic">Vector?</span>
           </h2>
           <p className="text-gray-400 text-xl mb-12 font-light max-w-2xl mx-auto">
             Book a discovery call. We&apos;ll assess your mission requirements and determine
             the most efficient operational model for your launch.
           </p>
-          <Button href="/contact" size="lg" className="bg-white text-obsidian px-12 py-5 rounded-2xl font-black uppercase tracking-widest text-xs hover:bg-citrus hover:text-white transition-all shadow-2xl">
+          <Button href="/contact" size="lg" className="bg-white text-obsidian px-12 py-5 rounded-2xl font-black uppercase tracking-widest text-xs hover:bg-ember hover:text-white transition-all shadow-2xl">
             Book Technical Audit
             <ArrowRight className="w-4 h-4 ml-2" />
           </Button>

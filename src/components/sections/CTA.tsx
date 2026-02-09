@@ -17,7 +17,7 @@ export function CTA() {
             scale: [1, 1.1, 1]
           }}
           transition={{ duration: 8, repeat: Infinity }}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-citrus/10 rounded-full blur-[150px] mix-blend-screen"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-ember/10 rounded-full blur-[150px] mix-blend-screen"
         />
         <div className="absolute inset-0 bg-grid-white/[0.02]" />
       </div>
@@ -43,7 +43,7 @@ export function CTA() {
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-citrus/5 border border-citrus/20 text-citrus text-xs font-black uppercase tracking-[0.3em] mb-12 shadow-[0_0_20px_rgba(217,119,87,0.1)] backdrop-blur-md"
+              className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-ember/5 border border-ember/20 text-ember text-xs font-black uppercase tracking-[0.3em] mb-12 shadow-[0_0_20px_rgba(232,117,26,0.1)] backdrop-blur-md"
             >
               <Terminal className="w-4 h-4" />
               Finalize Initiative
@@ -56,7 +56,7 @@ export function CTA() {
               transition={{ delay: 0.1 }}
               className="font-outfit font-black text-5xl sm:text-7xl text-white mb-8 leading-[0.9] tracking-tight text-balance"
             >
-              Ready to <span className="text-gradient-citrus inline-block">Initiate</span> <br />
+              Ready to <span className="text-gradient-forge inline-block">Initiate</span> <br />
               Your Project?
             </motion.h2>
 
@@ -80,7 +80,7 @@ export function CTA() {
               <Button
                 href={siteConfig.calendlyUrl}
                 size="lg"
-                className="btn-citrus px-12 py-6 rounded-2xl font-black uppercase tracking-widest text-xs"
+                className="btn-forge px-12 py-6 rounded-2xl font-black uppercase tracking-widest text-xs"
               >
                 Book Discovery Call
                 <ArrowRight className="w-5 h-5 ml-2" />

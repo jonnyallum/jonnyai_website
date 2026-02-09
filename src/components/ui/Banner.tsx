@@ -21,7 +21,7 @@ export function Banner() {
     const currentNews = news[currentIndex];
 
     return (
-        <div className="bg-void/80 border-b border-vivid-purple/10 backdrop-blur-md py-3 overflow-hidden relative z-50">
+        <div className="bg-void/80 border-b border-ember/10 backdrop-blur-md py-3 overflow-hidden relative z-50">
             <div className="container mx-auto px-4 text-center">
                 <AnimatePresence mode="wait">
                     <motion.div
@@ -32,9 +32,9 @@ export function Banner() {
                         transition={{ duration: 0.3 }}
                         className="text-xs md:text-sm font-medium tracking-wide flex items-center justify-center gap-3"
                     >
-                        <span className="flex items-center gap-1.5 bg-vivid-purple/10 border border-vivid-purple/20 px-2 py-0.5 rounded-full">
-                            <span className="w-1.5 h-1.5 rounded-full bg-hot-pink animate-pulse" />
-                            <span className="text-[10px] uppercase font-black tracking-wider text-aurora-pink">
+                        <span className="flex items-center gap-1.5 bg-ember/10 border border-ember/20 px-2 py-0.5 rounded-full">
+                            <span className="w-1.5 h-1.5 rounded-full bg-nebula-rose animate-pulse" />
+                            <span className="text-[10px] uppercase font-black tracking-wider text-soft-rose">
                                 Live Update
                             </span>
                         </span>

@@ -19,7 +19,7 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   title: "JonnyAi | Pioneering AI Architecture | Build 10x Faster",
-  description: "Pioneering the future of AI architecture. We deploy 40 specialized AI agents orchestrated by Jai.OS 4.0 to build your product in weeks, not months.",
+  description: "Pioneering the future of AI architecture. We deploy 42 specialized AI agents orchestrated by Jai.OS 4.0 to build your product in weeks, not months.",
   keywords: ["AI development", "AI architecture", "software development", "venture studio", "multi-agent AI", "Jai.OS", "UK", "web development", "mobile apps"],
   authors: [{ name: "Jonny Allum", url: "https://www.jonnyai.co.uk" }],
   creator: "Jonny Allum Innovations Ltd",
@@ -29,12 +29,12 @@ export const metadata: Metadata = {
     url: "https://www.jonnyai.co.uk",
     siteName: "JonnyAi",
     title: "JonnyAi | Pioneering AI Architecture | Build 10x Faster",
-    description: "Pioneering the future of AI architecture with 40 specialized AI agents.",
+    description: "Pioneering the future of AI architecture with 42 specialized AI agents.",
   },
   twitter: {
     card: "summary_large_image",
     title: "JonnyAi | Pioneering AI Architecture",
-    description: "Pioneering AI architecture with our 40-agent orchestra.",
+    description: "Pioneering AI architecture with our 42-agent orchestra.",
   },
   robots: {
     index: true,

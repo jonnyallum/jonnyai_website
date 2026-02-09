@@ -77,7 +77,7 @@ export default function ContactPage() {
     <div className="bg-obsidian min-h-screen text-white">
       {/* Hero */}
       <section className="relative pt-32 pb-20 overflow-hidden text-center">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-citrus/5 blur-[120px] rounded-full pointer-events-none" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-ember/5 blur-[120px] rounded-full pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
@@ -85,7 +85,7 @@ export default function ContactPage() {
             animate={{ opacity: 1, scale: 1 }}
             className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-500 text-[10px] font-black uppercase tracking-[0.3em] mb-8"
           >
-            <Terminal className="w-3 h-3 text-citrus" />
+            <Terminal className="w-3 h-3 text-ember" />
             Establish Comms
           </motion.div>
           <motion.h1
@@ -93,7 +93,7 @@ export default function ContactPage() {
             animate={{ opacity: 1, y: 0 }}
             className="font-outfit font-black text-5xl sm:text-6xl text-white mb-8 tracking-tighter"
           >
-            Initiate <span className="text-citrus">Contact</span>
+            Initiate <span className="text-ember">Contact</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -121,8 +121,8 @@ export default function ContactPage() {
 
             {submitted ? (
               <div className="py-12 text-center">
-                <div className="w-20 h-20 bg-citrus/20 rounded-full flex items-center justify-center mx-auto mb-8 border border-citrus/30 animate-pulse">
-                  <Send className="w-10 h-10 text-citrus" />
+                <div className="w-20 h-20 bg-ember/20 rounded-full flex items-center justify-center mx-auto mb-8 border border-ember/30 animate-pulse">
+                  <Send className="w-10 h-10 text-ember" />
                 </div>
                 <h2 className="font-outfit font-black text-3xl text-white mb-4 uppercase">
                   Data Transmitted
@@ -144,7 +144,7 @@ export default function ContactPage() {
                     <input
                       {...register('name')}
                       type="text"
-                      className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-5 py-4 text-white placeholder:text-gray-700 focus:border-citrus/50 focus:bg-white/[0.05] outline-none transition-all"
+                      className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-5 py-4 text-white placeholder:text-gray-700 focus:border-ember/50 focus:bg-white/[0.05] outline-none transition-all"
                       placeholder="Your identification"
                     />
                     {errors.name && (
@@ -159,7 +159,7 @@ export default function ContactPage() {
                     <input
                       {...register('email')}
                       type="email"
-                      className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-5 py-4 text-white placeholder:text-gray-700 focus:border-citrus/50 focus:bg-white/[0.05] outline-none transition-all"
+                      className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-5 py-4 text-white placeholder:text-gray-700 focus:border-ember/50 focus:bg-white/[0.05] outline-none transition-all"
                       placeholder="Transmission target"
                     />
                     {errors.email && (
@@ -175,7 +175,7 @@ export default function ContactPage() {
                   <input
                     {...register('company')}
                     type="text"
-                    className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-5 py-4 text-white placeholder:text-gray-700 focus:border-citrus/50 focus:bg-white/[0.05] outline-none transition-all"
+                    className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-5 py-4 text-white placeholder:text-gray-700 focus:border-ember/50 focus:bg-white/[0.05] outline-none transition-all"
                     placeholder="Entity name (optional)"
                   />
                 </div>
@@ -187,7 +187,7 @@ export default function ContactPage() {
                     </label>
                     <select
                       {...register('interest')}
-                      className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-5 py-4 text-white focus:border-citrus/50 focus:bg-white/[0.05] outline-none transition-all appearance-none cursor-pointer"
+                      className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-5 py-4 text-white focus:border-ember/50 focus:bg-white/[0.05] outline-none transition-all appearance-none cursor-pointer"
                     >
                       <option value="" className="bg-obsidian">Select Vector</option>
                       {interests.map((opt) => (
@@ -207,7 +207,7 @@ export default function ContactPage() {
                     </label>
                     <select
                       {...register('budget')}
-                      className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-5 py-4 text-white focus:border-citrus/50 focus:bg-white/[0.05] outline-none transition-all appearance-none cursor-pointer"
+                      className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-5 py-4 text-white focus:border-ember/50 focus:bg-white/[0.05] outline-none transition-all appearance-none cursor-pointer"
                     >
                       <option value="" className="bg-obsidian">Select Range</option>
                       {budgets.map((opt) => (
@@ -229,7 +229,7 @@ export default function ContactPage() {
                   <textarea
                     {...register('message')}
                     rows={6}
-                    className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-5 py-4 text-white placeholder:text-gray-700 focus:border-citrus/50 focus:bg-white/[0.05] outline-none transition-all resize-none"
+                    className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-5 py-4 text-white placeholder:text-gray-700 focus:border-ember/50 focus:bg-white/[0.05] outline-none transition-all resize-none"
                     placeholder="Describe your vision, timeline, and core requirements..."
                   />
                   {errors.message && (
@@ -243,7 +243,7 @@ export default function ContactPage() {
                   </div>
                 )}
 
-                <Button type="submit" disabled={submitting} className="w-full py-6 rounded-2xl bg-white text-obsidian font-black uppercase tracking-[0.2em] text-xs hover:bg-citrus hover:text-white transition-all shadow-xl shadow-white/5">
+                <Button type="submit" disabled={submitting} className="w-full py-6 rounded-2xl bg-white text-obsidian font-black uppercase tracking-[0.2em] text-xs hover:bg-ember hover:text-white transition-all shadow-xl shadow-white/5">
                   {submitting ? 'Transmitting...' : 'Initiate Transmission'}
                   <Send className="w-4 h-4 ml-2" />
                 </Button>
@@ -259,12 +259,12 @@ export default function ContactPage() {
             className="space-y-12"
           >
             {/* Book Directly */}
-            <div className="glass-card p-10 border-citrus/20 bg-citrus/[0.02] relative overflow-hidden group">
+            <div className="glass-card p-10 border-ember/20 bg-ember/[0.02] relative overflow-hidden group">
               <div className="absolute top-0 right-0 p-4 opacity-5">
                 <Calendar className="w-20 h-20 text-white" />
               </div>
               <div className="flex items-center gap-3 mb-6 relative z-10">
-                <Sparkles className="w-6 h-6 text-citrus animate-pulse" />
+                <Sparkles className="w-6 h-6 text-ember animate-pulse" />
                 <h2 className="font-outfit font-black text-2xl text-white uppercase tracking-tight">
                   Direct Neural Sync
                 </h2>
@@ -274,7 +274,7 @@ export default function ContactPage() {
               </p>
               <Button
                 href={siteConfig.calendlyUrl}
-                className="w-full py-5 rounded-2xl bg-citrus text-white font-black uppercase tracking-widest text-xs hover:bg-white hover:text-obsidian transition-all shadow-lg shadow-citrus/20 relative z-10"
+                className="w-full py-5 rounded-2xl bg-ember text-white font-black uppercase tracking-widest text-xs hover:bg-white hover:text-obsidian transition-all shadow-lg shadow-ember/20 relative z-10"
               >
                 Book Technical Audit
               </Button>
@@ -288,9 +288,9 @@ export default function ContactPage() {
               <div className="space-y-6">
                 <a
                   href={`mailto:${siteConfig.email}`}
-                  className="flex items-center gap-4 text-gray-500 hover:text-citrus transition-all group"
+                  className="flex items-center gap-4 text-gray-500 hover:text-ember transition-all group"
                 >
-                  <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 group-hover:border-citrus/30">
+                  <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 group-hover:border-ember/30">
                     <Mail className="w-4 h-4" />
                   </div>
                   <span className="text-sm font-mono tracking-tighter">{siteConfig.email}</span>

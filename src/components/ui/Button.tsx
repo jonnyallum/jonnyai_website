@@ -17,9 +17,9 @@ interface ButtonProps {
 }
 
 const variants = {
-  primary: 'bg-citrus text-white hover:bg-citrus/90 shadow-lg shadow-citrus/20',
+  primary: 'bg-ember text-white hover:bg-ember/90 shadow-lg shadow-ember/20',
   secondary: 'bg-void text-white hover:bg-void/90',
-  outline: 'border-2 border-citrus text-citrus hover:bg-citrus hover:text-white',
+  outline: 'border-2 border-ember text-ember hover:bg-ember hover:text-white',
   ghost: 'text-steel hover:text-void hover:bg-ghost',
 };
 

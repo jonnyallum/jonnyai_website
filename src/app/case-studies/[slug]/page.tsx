@@ -49,7 +49,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Link
           href="/case-studies"
-          className="inline-flex items-center gap-2 text-steel hover:text-citrus transition-colors mb-8"
+          className="inline-flex items-center gap-2 text-steel hover:text-ember transition-colors mb-8"
         >
           <ArrowLeft className="w-4 h-4" />
           Back to Case Studies
@@ -60,8 +60,8 @@ export default async function CaseStudyPage({ params }: PageProps) {
 
       {/* Hero Image */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="aspect-video bg-gradient-to-br from-ghost to-citrus/10 rounded-2xl overflow-hidden flex items-center justify-center">
-          <span className="text-6xl font-outfit font-bold text-citrus/20">{study.title}</span>
+        <div className="aspect-video bg-gradient-to-br from-ghost to-ember/10 rounded-2xl overflow-hidden flex items-center justify-center">
+          <span className="text-6xl font-outfit font-bold text-ember/20">{study.title}</span>
         </div>
       </section>
 
@@ -84,8 +84,8 @@ export default async function CaseStudyPage({ params }: PageProps) {
                 <h2 className="font-outfit font-bold text-2xl text-void mb-4">Key Outcomes</h2>
                 <div className="grid grid-cols-1 gap-4">
                   {study.outcomes.map((outcome) => (
-                    <div key={outcome} className="flex items-start gap-3 bg-citrus/5 rounded-lg p-4">
-                      <Check className="w-5 h-5 text-citrus flex-shrink-0 mt-0.5" />
+                    <div key={outcome} className="flex items-start gap-3 bg-ember/5 rounded-lg p-4">
+                      <Check className="w-5 h-5 text-ember flex-shrink-0 mt-0.5" />
                       <span className="text-steel">{outcome}</span>
                     </div>
                   ))}
@@ -115,8 +115,8 @@ export default async function CaseStudyPage({ params }: PageProps) {
                 <div className="space-y-3">
                   {study.agents.map((agent) => (
                     <div key={agent} className="flex items-center gap-3">
-                      <div className="w-8 h-8 rounded-full bg-citrus/20 flex items-center justify-center">
-                        <span className="text-xs font-bold text-citrus">{agent.charAt(0).toUpperCase()}</span>
+                      <div className="w-8 h-8 rounded-full bg-ember/20 flex items-center justify-center">
+                        <span className="text-xs font-bold text-ember">{agent.charAt(0).toUpperCase()}</span>
                       </div>
                       <span className="text-steel capitalize">{agent.replace('-', ' ')}</span>
                     </div>
@@ -124,7 +124,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
                 </div>
                 <Link
                   href="/orchestra"
-                  className="inline-flex items-center gap-2 text-citrus hover:underline text-sm mt-4"
+                  className="inline-flex items-center gap-2 text-ember hover:underline text-sm mt-4"
                 >
                   Meet the Orchestra
                   <ArrowRight className="w-4 h-4" />
@@ -136,7 +136,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
             {study.buildTime && (
               <div className="bg-ghost rounded-xl p-6">
                 <h3 className="font-outfit font-bold text-lg text-void mb-4">Build Time</h3>
-                <p className="text-2xl font-outfit font-bold text-citrus">{study.buildTime}</p>
+                <p className="text-2xl font-outfit font-bold text-ember">{study.buildTime}</p>
                 <p className="text-sm text-steel">from kickoff to launch</p>
               </div>
             )}
@@ -150,12 +150,12 @@ export default async function CaseStudyPage({ params }: PageProps) {
           {prevStudy ? (
             <Link
               href={`/case-studies/${prevStudy.slug}`}
-              className="group flex items-center gap-4 p-4 rounded-xl bg-ghost hover:bg-citrus/5 transition-colors"
+              className="group flex items-center gap-4 p-4 rounded-xl bg-ghost hover:bg-ember/5 transition-colors"
             >
-              <ArrowLeft className="w-5 h-5 text-steel group-hover:text-citrus transition-colors" />
+              <ArrowLeft className="w-5 h-5 text-steel group-hover:text-ember transition-colors" />
               <div>
                 <p className="text-sm text-steel">Previous</p>
-                <p className="font-outfit font-bold text-void group-hover:text-citrus transition-colors">
+                <p className="font-outfit font-bold text-void group-hover:text-ember transition-colors">
                   {prevStudy.title}
                 </p>
               </div>
@@ -167,15 +167,15 @@ export default async function CaseStudyPage({ params }: PageProps) {
           {nextStudy && (
             <Link
               href={`/case-studies/${nextStudy.slug}`}
-              className="group flex items-center gap-4 p-4 rounded-xl bg-ghost hover:bg-citrus/5 transition-colors text-right"
+              className="group flex items-center gap-4 p-4 rounded-xl bg-ghost hover:bg-ember/5 transition-colors text-right"
             >
               <div>
                 <p className="text-sm text-steel">Next</p>
-                <p className="font-outfit font-bold text-void group-hover:text-citrus transition-colors">
+                <p className="font-outfit font-bold text-void group-hover:text-ember transition-colors">
                   {nextStudy.title}
                 </p>
               </div>
-              <ArrowRight className="w-5 h-5 text-steel group-hover:text-citrus transition-colors" />
+              <ArrowRight className="w-5 h-5 text-steel group-hover:text-ember transition-colors" />
             </Link>
           )}
         </div>

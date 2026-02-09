@@ -2,13 +2,13 @@
 
 import { motion } from 'framer-motion';
 import { AgentCard } from '@/components/agents/AgentCard';
-import { agents, agentsByTier } from '@/data/agents';
+import { agents } from '@/data/agents';
 import { Button } from '@/components/ui/Button';
 import { siteConfig } from '@/data/pricing';
 import { Sparkles, Cpu, Globe, Shield, Terminal, Zap } from 'lucide-react';
 
 const tierInfo = {
-  orchestration: { title: 'Orchestration & Leadership', description: 'The command center that keeps everything running smoothly.', icon: Cpu, color: 'text-purple-400' },
+  orchestration: { title: 'Orchestration & Leadership', description: 'The command center that keeps everything running smoothly.', icon: Cpu, color: 'text-nebula-rose' },
   development: { title: 'Core Development', description: 'The builders who turn ideas into reality.', icon: Terminal, color: 'text-blue-400' },
   deployment: { title: 'Deployment & Infrastructure', description: 'The team that keeps systems running 24/7.', icon: Globe, color: 'text-cyan-400' },
   business: { title: 'Business & Growth', description: 'The strategists driving revenue and visibility.', icon: Zap, color: 'text-orange-400' },
@@ -24,7 +24,7 @@ export default function OrchestraPage() {
       {/* Hero */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         {/* Abstract FX */}
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-citrus/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2 pointer-events-none" />
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-ember/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2 pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
@@ -32,19 +32,19 @@ export default function OrchestraPage() {
             animate={{ opacity: 1, y: 0 }}
             className="max-w-4xl"
           >
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-citrus/10 border border-citrus/20 text-citrus text-xs font-black uppercase tracking-widest mb-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-ember/10 border border-ember/20 text-ember text-xs font-black uppercase tracking-widest mb-6">
               <Sparkles className="w-3 h-3" />
               The Neural Core
             </div>
             <h1 className="font-outfit font-black text-5xl sm:text-6xl lg:text-7xl text-white mb-8 tracking-tighter">
-              Meet The <span className="text-citrus">Agent Orchestra</span>
+              Meet The <span className="text-ember">Agent Orchestra</span>
             </h1>
             <p className="text-xl text-gray-400 mb-10 leading-relaxed font-light">
               Meet the 40 specialized AI agents that power every JonnyAi project. Each agent is a discrete
               intelligence with a custom-engineered human identity, expertise, and operational framework.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button href={siteConfig.calendlyUrl} className="bg-white text-obsidian px-10 py-4 rounded-xl font-bold hover:bg-citrus hover:text-white transition-all">
+              <Button href={siteConfig.calendlyUrl} className="bg-white text-obsidian px-10 py-4 rounded-xl font-bold hover:bg-ember hover:text-white transition-all">
                 Hire The Orchestra
               </Button>
             </div>
@@ -81,7 +81,7 @@ export default function OrchestraPage() {
       {/* Agents by Tier */}
       <div className="py-20">
         {tiers.map((tier, tierIdx) => {
-          const tierAgents = agentsByTier(tier);
+          const tierAgents = agents.filter(a => a.tier === tier);
           if (tierAgents.length === 0) return null;
           const info = tierInfo[tier];
 
@@ -130,13 +130,13 @@ export default function OrchestraPage() {
             viewport={{ once: true }}
           >
             <h2 className="font-outfit font-black text-4xl sm:text-5xl text-white mb-8">
-              Want This Orchestra on <br /> <span className="text-citrus">Your Project?</span>
+              Want This Orchestra on <br /> <span className="text-ember">Your Project?</span>
             </h2>
             <p className="text-gray-400 text-xl mb-12 font-light">
               Don&apos;t just build a product. Orchestrate a masterpiece. <br />
               Book a call to see how we deploy this framework to your vision.
             </p>
-            <Button href={siteConfig.calendlyUrl} className="bg-white text-obsidian px-12 py-5 rounded-2xl font-black uppercase tracking-widest text-xs hover:bg-citrus hover:text-white transition-all shadow-2xl">
+            <Button href={siteConfig.calendlyUrl} className="bg-white text-obsidian px-12 py-5 rounded-2xl font-black uppercase tracking-widest text-xs hover:bg-ember hover:text-white transition-all shadow-2xl">
               Initiate Project Protocol
             </Button>
           </motion.div>

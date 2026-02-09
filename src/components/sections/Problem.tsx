@@ -111,9 +111,9 @@ export function Problem() {
           className="mt-32 text-center"
         >
           <div className="inline-block relative">
-            <div className="absolute inset-0 bg-citrus/20 blur-2xl rounded-full" />
+            <div className="absolute inset-0 bg-ember/20 blur-2xl rounded-full" />
             <p className="relative text-3xl md:text-4xl text-white font-outfit font-light tracking-wide">
-              We built <span className="text-citrus font-black border-b-2 border-citrus/30 pb-1">The Antigravity Method</span> to fix this.
+              We built <span className="text-ember font-black border-b-2 border-ember/30 pb-1">The Antigravity Method</span> to fix this.
             </p>
           </div>
         </motion.div>

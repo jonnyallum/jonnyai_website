@@ -30,7 +30,7 @@ export default function AboutPage() {
     <div className="bg-obsidian min-h-screen">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-citrus/5 rounded-full blur-[150px] pointer-events-none" />
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-ember/5 rounded-full blur-[150px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
@@ -38,12 +38,12 @@ export default function AboutPage() {
             animate={{ opacity: 1, y: 0 }}
             className="max-w-4xl"
           >
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-citrus text-[10px] font-black uppercase tracking-widest mb-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-ember text-[10px] font-black uppercase tracking-widest mb-6">
               <Terminal className="w-3 h-3" />
               Manifesto // v4.0
             </div>
             <h1 className="font-outfit font-black text-5xl sm:text-6xl lg:text-7xl text-white mb-8 tracking-tighter">
-              The Architecture of <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-citrus to-orange-400">High-Velocity Intelligence</span>
+              The Architecture of <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-ember to-amber">High-Velocity Intelligence</span>
             </h1>
             <p className="text-xl text-gray-400 font-light leading-relaxed max-w-3xl">
               JonnyAi isn&apos;t just an agency—it&apos;s a stateful Hive Mind. One human architect orchestrating
@@ -63,13 +63,13 @@ export default function AboutPage() {
               viewport={{ once: true }}
               className="relative group"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-citrus to-purple-600 blur-3xl opacity-10 group-hover:opacity-20 transition-opacity" />
+              <div className="absolute inset-0 bg-gradient-to-br from-ember to-nebula-rose blur-3xl opacity-10 group-hover:opacity-20 transition-opacity" />
               <div className="glass-panel p-10 lg:p-16 border-white/10 text-center relative z-10 overflow-hidden">
                 <div className="w-40 h-40 rounded-3xl bg-gradient-to-br from-white/10 to-transparent mx-auto mb-10 flex items-center justify-center border border-white/10 group-hover:rotate-6 transition-transform">
                   <span className="text-6xl font-outfit font-black text-white">JA</span>
                 </div>
                 <h3 className="font-outfit font-black text-3xl text-white mb-2 uppercase tracking-tight">Jonny Allum</h3>
-                <p className="text-citrus font-mono text-xs uppercase tracking-widest mb-8">Founder & Chief Architect</p>
+                <p className="text-ember font-mono text-xs uppercase tracking-widest mb-8">Founder & Chief Architect</p>
                 <blockquote className="text-gray-400 italic leading-relaxed font-light">
                   &ldquo;The best code is the code you don&apos;t have to write manually.
                   Let AI handle the structure so humans can focus on the soul of the product.&rdquo;
@@ -90,12 +90,12 @@ export default function AboutPage() {
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
                 <div className="p-6 bg-white/[0.03] border border-white/5 rounded-2xl">
-                  <Cpu className="w-8 h-8 text-citrus mb-4" />
+                  <Cpu className="w-8 h-8 text-ember mb-4" />
                   <h4 className="text-white font-bold mb-2">Technical Mastery</h4>
                   <p className="text-gray-500 text-xs">Full ownership of every line of code generated.</p>
                 </div>
                 <div className="p-6 bg-white/[0.03] border border-white/5 rounded-2xl">
-                  <Sparkles className="w-8 h-8 text-purple-400 mb-4" />
+                  <Sparkles className="w-8 h-8 text-nebula-rose mb-4" />
                   <h4 className="text-white font-bold mb-2">Neural Speed</h4>
                   <p className="text-gray-500 text-xs">Deliveries measured in weeks, not business quarters.</p>
                 </div>
@@ -115,7 +115,7 @@ export default function AboutPage() {
 
           <div className="relative space-y-24">
             {/* The glowing line */}
-            <div className="absolute left-[31px] md:left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-citrus via-purple-500 to-transparent opacity-20" />
+            <div className="absolute left-[31px] md:left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-ember via-purple-500 to-transparent opacity-20" />
 
             {timeline.map((item, index) => (
               <motion.div
@@ -128,16 +128,16 @@ export default function AboutPage() {
               >
                 <div className="flex-1 w-full flex md:block items-center gap-6">
                   <div className="md:hidden w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 z-20">
-                    <span className="text-citrus font-black">{item.year}</span>
+                    <span className="text-ember font-black">{item.year}</span>
                   </div>
-                  <div className={`flex-1 glass-card p-10 border-white/5 hover:border-citrus/20 transition-all ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
-                    <span className="hidden md:block text-citrus font-outfit font-black text-2xl mb-2">{item.year}</span>
+                  <div className={`flex-1 glass-card p-10 border-white/5 hover:border-ember/20 transition-all ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
+                    <span className="hidden md:block text-ember font-outfit font-black text-2xl mb-2">{item.year}</span>
                     <h3 className="font-outfit font-bold text-xl text-white mb-4 italic tracking-tight uppercase">{item.title}</h3>
                     <p className="text-gray-500 text-sm leading-relaxed">{item.description}</p>
                   </div>
                 </div>
 
-                <div className="hidden md:flex w-12 h-12 rounded-full bg-obsidian border-4 border-citrus shadow-[0_0_20px_rgba(217,119,87,0.4)] items-center justify-center z-20">
+                <div className="hidden md:flex w-12 h-12 rounded-full bg-obsidian border-4 border-ember shadow-[0_0_20px_rgba(232,117,26,0.4)] items-center justify-center z-20">
                   <div className="w-3 h-3 bg-white rounded-full animate-pulse" />
                 </div>
 
@@ -152,7 +152,7 @@ export default function AboutPage() {
       <section className="py-32 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-24">
-            <h2 className="font-outfit font-black text-4xl text-white mb-6 uppercase tracking-tighter">Operating <span className="text-citrus">Principles</span></h2>
+            <h2 className="font-outfit font-black text-4xl text-white mb-6 uppercase tracking-tighter">Operating <span className="text-ember">Principles</span></h2>
             <p className="text-gray-500 max-w-2xl mx-auto font-light leading-relaxed">The high-frequency directives that guide every agent and human decision in the studio.</p>
           </div>
 
@@ -167,7 +167,7 @@ export default function AboutPage() {
                 className="glass-panel p-10 border-white/5 hover:bg-white/[0.04] transition-all group"
               >
                 <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
-                  <value.icon className="w-6 h-6 text-citrus" />
+                  <value.icon className="w-6 h-6 text-ember" />
                 </div>
                 <h3 className="font-outfit font-bold text-lg text-white mb-4 uppercase tracking-tight">{value.title}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed">{value.description}</p>
@@ -185,7 +185,7 @@ export default function AboutPage() {
               <h2 className="font-outfit font-black text-4xl text-white mb-2 tracking-tighter uppercase">The Human + AI <span className="text-gray-500">Hybrid</span></h2>
               <p className="text-gray-500 pt-2 font-light italic leading-relaxed">Every project is powered by these specialized agents under Jonny&apos;s architectural lead.</p>
             </div>
-            <Link href="/orchestra" className="hidden sm:flex items-center gap-2 text-citrus font-black text-xs uppercase tracking-widest hover:text-white transition-all">
+            <Link href="/orchestra" className="hidden sm:flex items-center gap-2 text-ember font-black text-xs uppercase tracking-widest hover:text-white transition-all">
               Registry Hub <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -214,14 +214,14 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="glass-panel p-16 sm:p-24 text-center border-white/10 relative overflow-hidden group shadow-2xl"
           >
-            <div className="absolute inset-0 bg-gradient-to-t from-citrus/5 to-transparent pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-t from-ember/5 to-transparent pointer-events-none" />
 
             <h2 className="font-outfit font-black text-4xl sm:text-5xl text-white mb-10 tracking-tighter leading-tight relative z-10">
-              Ready to <span className="text-citrus">Architect</span> <br /> Your Vision?
+              Ready to <span className="text-ember">Architect</span> <br /> Your Vision?
             </h2>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center relative z-10">
-              <Button href="/contact" size="lg" className="bg-white text-obsidian px-12 py-5 rounded-2xl font-black uppercase tracking-widest text-xs hover:bg-citrus hover:text-white transition-all">
+              <Button href="/contact" size="lg" className="bg-white text-obsidian px-12 py-5 rounded-2xl font-black uppercase tracking-widest text-xs hover:bg-ember hover:text-white transition-all">
                 Initiate Conversation
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>

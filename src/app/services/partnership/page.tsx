@@ -39,7 +39,7 @@ export default function PartnershipPage() {
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-[10px] font-black uppercase tracking-[0.3em] mb-6"
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-nebula-rose text-[10px] font-black uppercase tracking-[0.3em] mb-6"
           >
             <Handshake className="w-3 h-3" />
             Venture // Partnership
@@ -99,7 +99,7 @@ export default function PartnershipPage() {
                 className="glass-panel p-8 border-white/5 hover:bg-white/[0.03] transition-all group"
               >
                 <div className="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center mb-6 border border-purple-500/20 group-hover:scale-110 transition-transform">
-                  <benefit.icon className="w-5 h-5 text-purple-400" />
+                  <benefit.icon className="w-5 h-5 text-nebula-rose" />
                 </div>
                 <h3 className="font-outfit font-bold text-sm text-white mb-2 uppercase tracking-tight">{benefit.title}</h3>
                 <p className="text-gray-600 text-xs leading-relaxed">{benefit.description}</p>
@@ -136,7 +136,7 @@ export default function PartnershipPage() {
               >
                 <h3 className="font-outfit font-black text-2xl text-white mb-4 uppercase tracking-tight">{term.title}</h3>
                 {'range' in term && (
-                  <p className="text-purple-400 font-outfit font-black text-3xl mb-4 italic tracking-tighter">{term.range}</p>
+                  <p className="text-nebula-rose font-outfit font-black text-3xl mb-4 italic tracking-tighter">{term.range}</p>
                 )}
                 <p className="text-gray-600 text-sm mb-10 h-16">{term.description}</p>
                 <div className="mt-auto pt-8 border-t border-white/5">
@@ -232,7 +232,7 @@ export default function PartnershipPage() {
                 className="flex gap-8 glass-card p-10 border-white/5 hover:bg-white/[0.03] transition-all group items-center"
               >
                 <div className="w-16 h-16 rounded-3xl bg-purple-500/10 flex items-center justify-center flex-shrink-0 border border-purple-500/20 group-hover:scale-110 transition-transform">
-                  <span className="font-outfit font-black text-purple-400 text-xl">{item.step}</span>
+                  <span className="font-outfit font-black text-nebula-rose text-xl">{item.step}</span>
                 </div>
                 <div>
                   <h3 className="font-outfit font-black text-lg text-white mb-2 uppercase tracking-tight">{item.title}</h3>

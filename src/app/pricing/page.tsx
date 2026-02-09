@@ -18,7 +18,7 @@ export default function PricingPage() {
             animate={{ opacity: 1, scale: 1 }}
             className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-400 text-xs font-black uppercase tracking-widest mb-8"
           >
-            <ShieldCheck className="w-3 h-3 text-citrus" />
+            <ShieldCheck className="w-3 h-3 text-ember" />
             Transparent Investment Tiers
           </motion.div>
           <motion.h1
@@ -26,7 +26,7 @@ export default function PricingPage() {
             animate={{ opacity: 1, y: 0 }}
             className="font-outfit font-black text-5xl sm:text-6xl text-white mb-8 tracking-tighter"
           >
-            Transparent <span className="text-citrus">Investment</span>
+            Transparent <span className="text-ember">Investment</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -56,10 +56,10 @@ export default function PricingPage() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ y: -5 }}
-                className={`glass-panel p-8 relative transition-all duration-300 ${tier.highlighted ? 'border-citrus/40 bg-citrus/5' : 'border-white/5 hover:border-white/20'}`}
+                className={`glass-panel p-8 relative transition-all duration-300 ${tier.highlighted ? 'border-ember/40 bg-ember/5' : 'border-white/5 hover:border-white/20'}`}
               >
                 {tier.highlighted && (
-                  <div className="absolute top-0 right-10 -translate-y-1/2 px-3 py-1 bg-citrus text-white text-[10px] font-black uppercase tracking-widest rounded-full">
+                  <div className="absolute top-0 right-10 -translate-y-1/2 px-3 py-1 bg-ember text-white text-[10px] font-black uppercase tracking-widest rounded-full">
                     Recommended
                   </div>
                 )}
@@ -72,14 +72,14 @@ export default function PricingPage() {
                 <ul className="space-y-3 mb-8 h-48 overflow-y-auto custom-scrollbar">
                   {tier.features.map((feature, i) => (
                     <li key={i} className="flex items-start gap-2 text-xs text-gray-400">
-                      <Check className="w-3 h-3 text-citrus flex-shrink-0 mt-0.5" />
+                      <Check className="w-3 h-3 text-ember flex-shrink-0 mt-0.5" />
                       {feature}
                     </li>
                   ))}
                 </ul>
                 <Button
                   href={tier.ctaLink}
-                  className={`w-full py-4 rounded-xl text-[10px] font-black uppercase tracking-widest ${tier.highlighted ? 'bg-citrus text-white' : 'bg-white/5 text-gray-400 border-white/10 hover:bg-white hover:text-black'}`}
+                  className={`w-full py-4 rounded-xl text-[10px] font-black uppercase tracking-widest ${tier.highlighted ? 'bg-ember text-white' : 'bg-white/5 text-gray-400 border-white/10 hover:bg-white hover:text-black'}`}
                 >
                   {tier.cta}
                 </Button>
@@ -105,10 +105,10 @@ export default function PricingPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className={`glass-card p-10 relative transition-all duration-300 ${tier.highlighted ? 'border-citrus/40 bg-citrus/5 ring-1 ring-citrus/20' : 'border-white/5'}`}
+                className={`glass-card p-10 relative transition-all duration-300 ${tier.highlighted ? 'border-ember/40 bg-ember/5 ring-1 ring-ember/20' : 'border-white/5'}`}
               >
                 {tier.highlighted && (
-                  <div className="absolute top-0 left-10 -translate-y-1/2 px-4 py-1 bg-citrus text-white text-[10px] font-black uppercase tracking-widest rounded-full">
+                  <div className="absolute top-0 left-10 -translate-y-1/2 px-4 py-1 bg-ember text-white text-[10px] font-black uppercase tracking-widest rounded-full">
                     High Demand
                   </div>
                 )}
@@ -121,7 +121,7 @@ export default function PricingPage() {
                 <ul className="space-y-4 mb-10">
                   {tier.features.map((feature, i) => (
                     <li key={i} className="flex items-start gap-2 text-sm text-gray-400">
-                      <Zap className="w-4 h-4 text-citrus flex-shrink-0 mt-0.5" />
+                      <Zap className="w-4 h-4 text-ember flex-shrink-0 mt-0.5" />
                       {feature}
                     </li>
                   ))}
@@ -139,13 +139,13 @@ export default function PricingPage() {
 
           <div className="mt-16 flex items-center justify-center gap-8 py-6 bg-white/[0.02] border border-white/10 rounded-2xl">
             <div className="flex items-center gap-2 text-xs text-gray-500">
-              <ShieldCheck className="w-4 h-4 text-citrus" /> Full Source IP Ownership
+              <ShieldCheck className="w-4 h-4 text-ember" /> Full Source IP Ownership
             </div>
             <div className="flex items-center gap-2 text-xs text-gray-500">
-              <ShieldCheck className="w-4 h-4 text-citrus" /> Technical Documentation
+              <ShieldCheck className="w-4 h-4 text-ember" /> Technical Documentation
             </div>
             <div className="flex items-center gap-2 text-xs text-gray-500">
-              <ShieldCheck className="w-4 h-4 text-citrus" /> 30-Day Launch Support
+              <ShieldCheck className="w-4 h-4 text-ember" /> 30-Day Launch Support
             </div>
           </div>
         </div>
@@ -155,7 +155,7 @@ export default function PricingPage() {
       <section className="py-32 bg-white/[0.02]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <h2 className="font-outfit font-black text-4xl text-white mb-4 italic uppercase tracking-tighter">Venture <span className="text-citrus">Partnership</span></h2>
+            <h2 className="font-outfit font-black text-4xl text-white mb-4 italic uppercase tracking-tighter">Venture <span className="text-ember">Partnership</span></h2>
             <p className="text-gray-500 max-w-2xl mx-auto">High-stakes collaboration for validated ideas. We build for equity when the mission is worth the risk.</p>
           </div>
 
@@ -169,7 +169,7 @@ export default function PricingPage() {
                 transition={{ delay: index * 0.1 }}
                 className="glass-panel p-10 border-white/5 flex flex-col items-center text-center group hover:bg-white/[0.05] transition-all"
               >
-                <TrendingUp className="w-10 h-10 text-citrus mb-6 group-hover:scale-110 transition-transform" />
+                <TrendingUp className="w-10 h-10 text-ember mb-6 group-hover:scale-110 transition-transform" />
                 <h3 className="font-outfit font-black text-xl text-white mb-4 uppercase tracking-tight">{(term as any).title}</h3>
                 {'range' in term && (
                   <p className="font-outfit font-black text-4xl text-white mb-4 tracking-tighter">{(term as any).range}</p>
@@ -197,7 +197,7 @@ export default function PricingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-16">
             <div className="flex items-center gap-3 mb-4">
-              <Settings className="w-8 h-8 text-citrus" />
+              <Settings className="w-8 h-8 text-ember" />
               <h2 className="font-outfit font-black text-3xl text-white uppercase tracking-tight">Website Management</h2>
             </div>
             <p className="text-gray-500 max-w-2xl">Ongoing support and development to keep your site running smoothly and evolving with your business.</p>
@@ -211,10 +211,10 @@ export default function PricingPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className={`glass-card p-10 relative transition-all duration-300 ${tier.highlighted ? 'border-citrus/40 bg-citrus/5 ring-1 ring-citrus/20' : 'border-white/5'}`}
+                className={`glass-card p-10 relative transition-all duration-300 ${tier.highlighted ? 'border-ember/40 bg-ember/5 ring-1 ring-ember/20' : 'border-white/5'}`}
               >
                 {tier.highlighted && (
-                  <div className="absolute top-0 left-10 -translate-y-1/2 px-4 py-1 bg-citrus text-white text-[10px] font-black uppercase tracking-widest rounded-full">
+                  <div className="absolute top-0 left-10 -translate-y-1/2 px-4 py-1 bg-ember text-white text-[10px] font-black uppercase tracking-widest rounded-full">
                     Popular
                   </div>
                 )}
@@ -227,7 +227,7 @@ export default function PricingPage() {
                 <ul className="space-y-3 mb-10">
                   {tier.features.map((feature, i) => (
                     <li key={i} className="flex items-start gap-2 text-sm text-gray-400">
-                      <Check className="w-4 h-4 text-citrus flex-shrink-0 mt-0.5" />
+                      <Check className="w-4 h-4 text-ember flex-shrink-0 mt-0.5" />
                       {feature}
                     </li>
                   ))}
@@ -249,7 +249,7 @@ export default function PricingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-16">
             <div className="flex items-center gap-3 mb-4">
-              <Server className="w-8 h-8 text-citrus" />
+              <Server className="w-8 h-8 text-ember" />
               <h2 className="font-outfit font-black text-3xl text-white uppercase tracking-tight">Hosting</h2>
             </div>
             <p className="text-gray-500 max-w-2xl">Reliable, fast hosting with the infrastructure your project needs. All plans include SSL and CDN.</p>
@@ -263,10 +263,10 @@ export default function PricingPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className={`glass-card p-10 relative transition-all duration-300 ${tier.highlighted ? 'border-citrus/40 bg-citrus/5 ring-1 ring-citrus/20' : 'border-white/5'}`}
+                className={`glass-card p-10 relative transition-all duration-300 ${tier.highlighted ? 'border-ember/40 bg-ember/5 ring-1 ring-ember/20' : 'border-white/5'}`}
               >
                 {tier.highlighted && (
-                  <div className="absolute top-0 left-10 -translate-y-1/2 px-4 py-1 bg-citrus text-white text-[10px] font-black uppercase tracking-widest rounded-full">
+                  <div className="absolute top-0 left-10 -translate-y-1/2 px-4 py-1 bg-ember text-white text-[10px] font-black uppercase tracking-widest rounded-full">
                     Most Popular
                   </div>
                 )}
@@ -279,7 +279,7 @@ export default function PricingPage() {
                 <ul className="space-y-3 mb-10">
                   {tier.features.map((feature, i) => (
                     <li key={i} className="flex items-start gap-2 text-sm text-gray-400">
-                      <Check className="w-4 h-4 text-citrus flex-shrink-0 mt-0.5" />
+                      <Check className="w-4 h-4 text-ember flex-shrink-0 mt-0.5" />
                       {feature}
                     </li>
                   ))}
@@ -301,7 +301,7 @@ export default function PricingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-16">
             <div className="flex items-center gap-3 mb-4">
-              <Plus className="w-8 h-8 text-citrus" />
+              <Plus className="w-8 h-8 text-ember" />
               <h2 className="font-outfit font-black text-3xl text-white uppercase tracking-tight">Add-Ons</h2>
             </div>
             <p className="text-gray-500 max-w-2xl">Enhance your project with these one-time services or ongoing extras.</p>
@@ -315,11 +315,11 @@ export default function PricingPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.05 }}
-                className="glass-panel p-6 border-white/5 hover:border-citrus/30 transition-all group"
+                className="glass-panel p-6 border-white/5 hover:border-ember/30 transition-all group"
               >
                 <div className="flex justify-between items-start mb-3">
-                  <h3 className="font-outfit font-bold text-white group-hover:text-citrus transition-colors">{addon.name}</h3>
-                  <span className="font-outfit font-black text-citrus text-lg">{addon.price}</span>
+                  <h3 className="font-outfit font-bold text-white group-hover:text-ember transition-colors">{addon.name}</h3>
+                  <span className="font-outfit font-black text-ember text-lg">{addon.price}</span>
                 </div>
                 <p className="text-gray-500 text-xs leading-relaxed">{addon.description}</p>
               </motion.div>
@@ -332,7 +332,7 @@ export default function PricingPage() {
       <section className="py-32 bg-obsidian border-t border-white/5">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-center gap-3 mb-16">
-            <HelpCircle className="w-8 h-8 text-citrus" />
+            <HelpCircle className="w-8 h-8 text-ember" />
             <h2 className="font-outfit font-black text-4xl text-white tracking-tighter">
               Common <span className="text-gray-500">Queries</span>
             </h2>
@@ -369,7 +369,7 @@ export default function PricingPage() {
                 transition={{ delay: i * 0.05 }}
                 className="glass-card p-8 border-white/5 hover:bg-white/5 group transition-all"
               >
-                <h3 className="font-outfit font-bold text-white mb-3 group-hover:text-citrus transition-colors">{faq.q}</h3>
+                <h3 className="font-outfit font-bold text-white mb-3 group-hover:text-ember transition-colors">{faq.q}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed">{faq.a}</p>
               </motion.div>
             ))}
@@ -379,15 +379,15 @@ export default function PricingPage() {
 
       {/* CTA Closer */}
       <section className="py-32 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-t from-citrus/5 to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ember/5 to-transparent pointer-events-none" />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="font-outfit font-black text-4xl sm:text-5xl text-white mb-8 tracking-tighter">
-            Ready to <span className="text-citrus">Initiate</span> Your Project?
+            Ready to <span className="text-ember">Initiate</span> Your Project?
           </h2>
           <p className="text-gray-400 text-xl mb-12 font-light max-w-2xl mx-auto">
             Book a discovery call to discuss your vision and find the right investment package for your launch.
           </p>
-          <Button href={siteConfig.calendlyUrl} className="bg-white text-obsidian px-12 py-5 rounded-2xl font-black uppercase tracking-widest text-xs hover:bg-citrus hover:text-white transition-all shadow-2xl">
+          <Button href={siteConfig.calendlyUrl} className="bg-white text-obsidian px-12 py-5 rounded-2xl font-black uppercase tracking-widest text-xs hover:bg-ember hover:text-white transition-all shadow-2xl">
             Book Discovery Call
             <ArrowRight className="w-4 h-4 ml-2" />
           </Button>

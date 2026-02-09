@@ -36,8 +36,8 @@ const services = [
     ],
     cta: 'Start Your Build',
     href: '/services/builds',
-    color: 'from-citrus to-orange-600',
-    border: 'border-citrus/30',
+    color: 'from-ember to-amber',
+    border: 'border-ember/30',
     highlighted: true,
   },
   {
@@ -63,7 +63,7 @@ export function ServiceCards() {
   return (
     <section className="py-32 bg-obsidian-light relative overflow-hidden" id="services">
       {/* Background glow for the whole section */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-citrus/5 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-ember/5 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -72,7 +72,7 @@ export function ServiceCards() {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-citrus font-mono text-sm tracking-[0.2em] uppercase mb-4"
+            className="text-ember font-mono text-sm tracking-[0.2em] uppercase mb-4"
           >
             Engagement Models
           </motion.div>
@@ -114,7 +114,7 @@ export function ServiceCards() {
                 group relative overflow-hidden rounded-[2.5rem] p-10 
                 border transition-all duration-500 glass-card
                 ${service.highlighted
-                  ? 'border-citrus/40 bg-citrus/[0.03] shadow-[0_20px_60px_-15px_rgba(217,119,87,0.15)]'
+                  ? 'border-ember/40 bg-ember/[0.03] shadow-[0_20px_60px_-15px_rgba(232,117,26,0.15)]'
                   : 'border-white/10 hover:border-white/20'
                 }
               `}
@@ -128,7 +128,7 @@ export function ServiceCards() {
               />
 
               {service.highlighted && (
-                <div className="absolute -top-1 px-8 py-2 bg-citrus text-white text-[10px] font-black uppercase tracking-widest rounded-b-xl left-10 shadow-[0_5px_15px_rgba(217,119,87,0.4)] z-20">
+                <div className="absolute -top-1 px-8 py-2 bg-ember text-white text-[10px] font-black uppercase tracking-widest rounded-b-xl left-10 shadow-[0_5px_15px_rgba(232,117,26,0.4)] z-20">
                   Most Popular
                 </div>
               )}
@@ -140,7 +140,7 @@ export function ServiceCards() {
 
               {/* Title & Sub */}
               <div className="mb-8 relative z-10">
-                <h3 className="font-outfit font-black text-2xl text-white mb-2 uppercase tracking-tight group-hover:text-citrus transition-colors">
+                <h3 className="font-outfit font-black text-2xl text-white mb-2 uppercase tracking-tight group-hover:text-ember transition-colors">
                   {service.title}
                 </h3>
                 <p className="text-gray-500 text-sm leading-relaxed font-light">
@@ -158,8 +158,8 @@ export function ServiceCards() {
               <ul className="space-y-4 mb-12 relative z-10">
                 {service.features.map((feature, i) => (
                   <li key={i} className="flex items-start gap-4 text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
-                    <div className="mt-1 w-5 h-5 rounded-full bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 group-hover:border-citrus/50 group-hover:bg-citrus/10 transition-all">
-                      <Check className="w-3 h-3 text-citrus" />
+                    <div className="mt-1 w-5 h-5 rounded-full bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 group-hover:border-ember/50 group-hover:bg-ember/10 transition-all">
+                      <Check className="w-3 h-3 text-ember" />
                     </div>
                     {feature}
                   </li>
@@ -173,7 +173,7 @@ export function ServiceCards() {
                   className={`
                     w-full py-6 rounded-2xl font-black uppercase tracking-widest text-xs transition-all duration-300
                     ${service.highlighted
-                      ? 'btn-citrus'
+                      ? 'btn-forge'
                       : 'btn-glow'
                     }
                   `}

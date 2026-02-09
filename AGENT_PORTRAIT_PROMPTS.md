@@ -238,3 +238,18 @@ All 40 portraits share these core traits:
 - **Aesthetic**: Futuristic, High-Tech, Elite Professional, Godfather/Industrial vibe
 - **Quality**: Cinematic photography, 8k resolution, razor-sharp focus
 - **Consistency**: Each agent holds a tool or has holographic overlays related to their nickname and role.
+
+---
+
+## 📸 Reserve Portraits (Pre-generated)
+
+The following files are available in `public/agents/` for immediate assignment to new agents:
+
+- `dup1.png`: Female, green blazer, dark hair, strategic look
+- `dup3.png` - `dup10.png`: Various professional portraits (male/female mix)
+
+**Usage Protocol:**
+1. Pick a `dupX.png` matching the new agent's vibe.
+2. Rename it to `[agent-name].png`.
+3. Delete the used `dupX.png` file.
+

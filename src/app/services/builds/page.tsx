@@ -34,13 +34,13 @@ export default function BuildsPage() {
     <div className="bg-obsidian min-h-screen text-white">
       {/* Hero */}
       <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[600px] bg-citrus/5 blur-[120px] rounded-full pointer-events-none" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[600px] bg-ember/5 blur-[120px] rounded-full pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-citrus/10 border border-citrus/20 text-citrus text-[10px] font-black uppercase tracking-[0.3em] mb-6"
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-ember/10 border border-ember/20 text-ember text-[10px] font-black uppercase tracking-[0.3em] mb-6"
           >
             <Cpu className="w-3 h-3 animate-pulse" />
             Execution // Builds
@@ -50,7 +50,7 @@ export default function BuildsPage() {
             animate={{ opacity: 1, y: 0 }}
             className="font-outfit font-black text-5xl sm:text-6xl lg:text-7xl text-white mb-8 tracking-tighter"
           >
-            We Architect. <br /> <span className="text-citrus">You Dominance.</span>
+            We Architect. <br /> <span className="text-ember">You Dominance.</span>
           </motion.h1>
           <p className="text-xl text-gray-400 font-light leading-relaxed max-w-3xl">
             Pass your directives to the Agent Orchestra. 21+ AI specialists work in precise
@@ -73,13 +73,13 @@ export default function BuildsPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="glass-panel p-10 border-white/5 hover:border-citrus/30 transition-all group"
+              className="glass-panel p-10 border-white/5 hover:border-ember/30 transition-all group"
             >
               <div className="flex items-center justify-between mb-8">
-                <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-citrus/10 transition-all">
-                  <item.icon className="w-6 h-6 text-citrus" />
+                <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-ember/10 transition-all">
+                  <item.icon className="w-6 h-6 text-ember" />
                 </div>
-                <span className="font-outfit font-black text-gray-800 text-3xl group-hover:text-citrus/20 transition-all">{item.step}</span>
+                <span className="font-outfit font-black text-gray-800 text-3xl group-hover:text-ember/20 transition-all">{item.step}</span>
               </div>
               <h3 className="font-outfit font-bold text-xl text-white mb-4 uppercase tracking-tight">{item.title}</h3>
               <p className="text-gray-500 text-sm leading-relaxed font-light">{item.description}</p>
@@ -98,7 +98,7 @@ export default function BuildsPage() {
               viewport={{ once: true }}
             >
               <h2 className="font-outfit font-black text-4xl text-white mb-6 uppercase tracking-tighter">
-                Asset <span className="text-citrus">Directives</span>
+                Asset <span className="text-ember">Directives</span>
               </h2>
               <p className="text-gray-400 mb-12 font-light leading-relaxed">
                 Every build deployment includes a complete neural handoff. You receive
@@ -114,8 +114,8 @@ export default function BuildsPage() {
                     transition={{ delay: idx * 0.05 }}
                     className="flex items-center gap-3 group"
                   >
-                    <div className="w-5 h-5 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-citrus/50 transition-all">
-                      <Check className="w-3 h-3 text-citrus" />
+                    <div className="w-5 h-5 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-ember/50 transition-all">
+                      <Check className="w-3 h-3 text-ember" />
                     </div>
                     <span className="text-xs font-bold text-gray-500 group-hover:text-white transition-colors">{item}</span>
                   </motion.div>
@@ -145,10 +145,10 @@ export default function BuildsPage() {
                 ].map((item, i) => (
                   <div key={item.phase} className="flex items-center justify-between py-4 border-b border-white/5 last:border-0 group">
                     <div className="flex items-center gap-4">
-                      <item.icon className="w-4 h-4 text-gray-700 group-hover:text-citrus transition-colors" />
+                      <item.icon className="w-4 h-4 text-gray-700 group-hover:text-ember transition-colors" />
                       <span className="text-gray-400 text-sm font-medium">{item.phase}</span>
                     </div>
-                    <span className="text-citrus font-mono text-xs font-bold">{item.duration}</span>
+                    <span className="text-ember font-mono text-xs font-bold">{item.duration}</span>
                   </div>
                 ))}
               </div>
@@ -166,7 +166,7 @@ export default function BuildsPage() {
           className="text-center mb-24"
         >
           <h2 className="font-outfit font-black text-4xl text-white mb-6 uppercase tracking-tighter">
-            Execution <span className="text-citrus">Tiers</span>
+            Execution <span className="text-ember">Tiers</span>
           </h2>
           <p className="text-gray-500 max-w-2xl mx-auto font-light">Engineered for projects ranging from prototype to enterprise scale.</p>
         </motion.div>
@@ -180,11 +180,11 @@ export default function BuildsPage() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ y: -5 }}
-              className={`glass-panel p-10 border transition-all duration-300 relative ${tier.highlighted ? 'border-citrus/40 bg-citrus/[0.03] ring-1 ring-citrus/20 shadow-2xl shadow-citrus/5' : 'border-white/5'
+              className={`glass-panel p-10 border transition-all duration-300 relative ${tier.highlighted ? 'border-ember/40 bg-ember/[0.03] ring-1 ring-ember/20 shadow-2xl shadow-ember/5' : 'border-white/5'
                 }`}
             >
               {tier.highlighted && (
-                <div className="absolute top-0 left-10 -translate-y-1/2 px-4 py-1 bg-citrus text-white text-[10px] font-black uppercase tracking-widest rounded-full">
+                <div className="absolute top-0 left-10 -translate-y-1/2 px-4 py-1 bg-ember text-white text-[10px] font-black uppercase tracking-widest rounded-full">
                   High Performance
                 </div>
               )}
@@ -198,7 +198,7 @@ export default function BuildsPage() {
               <ul className="space-y-4 mb-12">
                 {tier.features.slice(0, 5).map((feature) => (
                   <li key={feature} className="flex items-start gap-2">
-                    <Check className="w-4 h-4 text-citrus flex-shrink-0 mt-0.5" />
+                    <Check className="w-4 h-4 text-ember flex-shrink-0 mt-0.5" />
                     <span className="text-xs text-gray-500 leading-relaxed">{feature}</span>
                   </li>
                 ))}
@@ -222,10 +222,10 @@ export default function BuildsPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="glass-card p-16 border-white/5 bg-citrus/[0.02]"
+            className="glass-card p-16 border-white/5 bg-ember/[0.02]"
           >
             <div className="w-20 h-20 rounded-3xl bg-white/5 border border-white/10 flex items-center justify-center mx-auto mb-10 group-hover:rotate-12 transition-transform">
-              <Shield className="w-10 h-10 text-citrus" />
+              <Shield className="w-10 h-10 text-ember" />
             </div>
             <h2 className="font-outfit font-black text-4xl text-white mb-6 uppercase tracking-tighter">
               The Neural Guarantee
@@ -245,14 +245,14 @@ export default function BuildsPage() {
       <section className="py-40 relative">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="font-outfit font-black text-5xl text-white mb-8 tracking-tighter">
-            Ready to <span className="text-citrus">Execute?</span>
+            Ready to <span className="text-ember">Execute?</span>
           </h2>
           <p className="text-gray-400 text-xl mb-12 font-light max-w-2xl mx-auto">
             Book a Technical Directive. We&apos;ll audit your scope and provide a precise
             deployment roadmap for your vision.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button href="/contact" size="lg" className="bg-white text-obsidian px-12 py-5 rounded-2xl font-black uppercase tracking-widest text-xs hover:bg-citrus hover:text-white transition-all shadow-2xl shadow-white/5">
+            <Button href="/contact" size="lg" className="bg-white text-obsidian px-12 py-5 rounded-2xl font-black uppercase tracking-widest text-xs hover:bg-ember hover:text-white transition-all shadow-2xl shadow-white/5">
               Initiate Discovery
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>

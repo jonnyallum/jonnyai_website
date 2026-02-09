@@ -18,7 +18,7 @@ export default function BrandLogo({ className = "" }: { className?: string }) {
                         scale: [1, 1.2, 1]
                     }}
                     transition={{ duration: 2, repeat: Infinity }}
-                    className="absolute -top-1 left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-citrus rounded-full z-10"
+                    className="absolute -top-1 left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-ember rounded-full z-10"
                 />
             </div>
             <div className="flex flex-col">

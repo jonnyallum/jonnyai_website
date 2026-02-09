@@ -33,7 +33,7 @@ export function Solution() {
             viewport={{ once: true }}
             className="font-outfit font-black text-4xl sm:text-5xl lg:text-6xl text-white mb-8 tracking-tight"
           >
-            The Antigravity <span className="text-transparent bg-clip-text bg-gradient-to-r from-citrus via-citrus-glow to-orange-400">Agent Orchestra</span>
+            The Antigravity <span className="text-transparent bg-clip-text bg-gradient-to-r from-ember via-amber to-amber">Agent Orchestra</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -55,7 +55,7 @@ export function Solution() {
             viewport={{ once: true }}
             className="space-y-10"
           >
-            <h3 className="font-outfit font-bold text-3xl text-white mb-10 border-l-4 border-citrus pl-6">How It Works</h3>
+            <h3 className="font-outfit font-bold text-3xl text-white mb-10 border-l-4 border-ember pl-6">How It Works</h3>
 
             {[
               {
@@ -87,11 +87,11 @@ export function Solution() {
                 transition={{ delay: i * 0.1 }}
                 className="flex gap-6 group"
               >
-                <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-citrus/10 group-hover:border-citrus/50 transition-all duration-300 shadow-lg">
-                  <span className="font-outfit font-black text-xl text-gray-500 group-hover:text-citrus transition-colors">{step.num}</span>
+                <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-ember/10 group-hover:border-ember/50 transition-all duration-300 shadow-lg">
+                  <span className="font-outfit font-black text-xl text-gray-500 group-hover:text-ember transition-colors">{step.num}</span>
                 </div>
                 <div>
-                  <h4 className="font-outfit font-bold text-xl text-white mb-2 group-hover:text-citrus transition-colors">{step.title}</h4>
+                  <h4 className="font-outfit font-bold text-xl text-white mb-2 group-hover:text-ember transition-colors">{step.title}</h4>
                   <p className="text-gray-400 text-sm leading-relaxed max-w-md">{step.desc}</p>
                 </div>
               </motion.div>
@@ -107,7 +107,7 @@ export function Solution() {
           >
             <h3 className="font-outfit font-bold text-2xl text-white mb-8 flex items-center gap-3">
               The Unfair Advantage
-              <span className="px-3 py-1 bg-citrus/20 text-citrus text-xs font-black uppercase tracking-widest rounded-full border border-citrus/30 animate-pulse-slow">10x ROI</span>
+              <span className="px-3 py-1 bg-ember/20 text-ember text-xs font-black uppercase tracking-widest rounded-full border border-ember/30 animate-pulse-slow">10x ROI</span>
             </h3>
 
             <div className="overflow-hidden rounded-xl border border-white/10 shadow-inner bg-black/20">
@@ -116,7 +116,7 @@ export function Solution() {
                   <tr className="bg-white/5 border-b border-white/10">
                     <th className="px-6 py-5 text-left text-sm font-medium text-gray-400 uppercase tracking-wider">Comparison</th>
                     <th className="px-6 py-5 text-center text-sm font-medium text-gray-500 uppercase tracking-wider">Traditional Agency</th>
-                    <th className="px-6 py-5 text-center text-sm font-bold text-citrus bg-citrus/5 border-b-2 border-citrus uppercase tracking-wider shadow-[inset_0_-2px_4px_rgba(217,119,87,0.1)]">JonnyAi</th>
+                    <th className="px-6 py-5 text-center text-sm font-bold text-ember bg-ember/5 border-b-2 border-ember uppercase tracking-wider shadow-[inset_0_-2px_4px_rgba(232,117,26,0.1)]">JonnyAi</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-white/5">
@@ -124,10 +124,10 @@ export function Solution() {
                     <tr key={row.label} className={i % 2 === 0 ? 'bg-transparent' : 'bg-white/[0.02]'}>
                       <td className="px-6 py-5 text-sm font-medium text-white">{row.label}</td>
                       <td className="px-6 py-5 text-center text-sm text-gray-500 line-through decoration-red-500/30 decoration-2">{row.traditional}</td>
-                      <td className="px-6 py-5 text-center text-sm font-bold text-white bg-citrus/[0.02] border-l border-citrus/10 relative">
+                      <td className="px-6 py-5 text-center text-sm font-bold text-white bg-ember/[0.02] border-l border-ember/10 relative">
                         {/* Highlight marker */}
                         {row.jonnyai}
-                        <CheckCircle2 className="w-4 h-4 text-citrus absolute right-3 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                        <CheckCircle2 className="w-4 h-4 text-ember absolute right-3 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity" />
                       </td>
                     </tr>
                   ))}
@@ -149,7 +149,7 @@ export function Solution() {
             <h3 className="font-outfit font-bold text-3xl text-white">Meet The Core Team</h3>
             <Link
               href="/orchestra"
-              className="flex items-center gap-2 text-citrus hover:text-white transition-colors text-sm font-medium uppercase tracking-wider"
+              className="flex items-center gap-2 text-ember hover:text-white transition-colors text-sm font-medium uppercase tracking-wider"
             >
               View Full Team
               <ArrowRight className="w-4 h-4" />

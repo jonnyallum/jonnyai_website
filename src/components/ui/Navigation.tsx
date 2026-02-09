@@ -88,7 +88,7 @@ export function Navigation() {
         <div className={`
           relative flex items-center justify-between h-16 px-6 transition-all duration-500 pointer-events-auto
           ${scrolled
-            ? 'bg-void/60 backdrop-blur-3xl border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.5),0_0_60px_rgba(139,92,246,0.05)] rounded-full mt-2'
+            ? 'bg-void/60 backdrop-blur-3xl border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.5),0_0_60px_rgba(232,117,26,0.05)] rounded-full mt-2'
             : 'bg-transparent border-transparent rounded-none'
           }
         `}>
@@ -97,10 +97,10 @@ export function Navigation() {
             <div className="relative">
               <PrismIcon className="w-9 h-9 group-hover:scale-110 transition-transform duration-300" />
               {/* Subtle glow behind icon */}
-              <div className="absolute inset-0 bg-vivid-purple/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-ember/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </div>
             <span className="font-outfit font-black text-xl text-white tracking-tighter">
-              Jonny<span className="text-gradient-aurora">Ai</span>
+              Jonny<span className="text-gradient-forge">Ai</span>
             </span>
           </Link>
 
@@ -114,7 +114,7 @@ export function Navigation() {
                     onMouseEnter={() => setServicesOpen(true)}
                     onMouseLeave={() => setServicesOpen(false)}
                   >
-                    <button className={`flex items-center gap-1 text-sm font-medium transition-colors ${servicesOpen ? 'text-vivid-purple' : 'text-frost hover:text-white'}`}>
+                    <button className={`flex items-center gap-1 text-sm font-medium transition-colors ${servicesOpen ? 'text-ember' : 'text-frost hover:text-white'}`}>
                       {item.label}
                       <ChevronDown className={`w-3 h-3 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
                     </button>
@@ -124,14 +124,14 @@ export function Navigation() {
                           initial={{ opacity: 0, y: 10, scale: 0.95 }}
                           animate={{ opacity: 1, y: 0, scale: 1 }}
                           exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                          className="absolute top-full left-0 mt-4 w-64 bg-abyss/95 backdrop-blur-2xl rounded-2xl shadow-2xl border border-vivid-purple/15 py-3 overflow-hidden"
+                          className="absolute top-full left-0 mt-4 w-64 bg-abyss/95 backdrop-blur-2xl rounded-2xl shadow-2xl border border-ember/15 py-3 overflow-hidden"
                         >
-                          <div className="absolute inset-0 bg-gradient-to-br from-vivid-purple/5 to-hot-pink/5 pointer-events-none" />
+                          <div className="absolute inset-0 bg-gradient-to-br from-ember/5 to-nebula-rose/5 pointer-events-none" />
                           {item.children.map((child) => (
                             <Link
                               key={child.href}
                               href={child.href}
-                              className="block px-6 py-3 text-sm text-frost hover:bg-vivid-purple/10 hover:text-white transition-all"
+                              className="block px-6 py-3 text-sm text-frost hover:bg-ember/10 hover:text-white transition-all"
                             >
                               {child.label}
                             </Link>
@@ -146,7 +146,7 @@ export function Navigation() {
                     className="text-sm font-medium text-frost hover:text-white transition-colors relative group"
                   >
                     {item.label}
-                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-vivid-purple to-hot-pink transition-all group-hover:w-full" />
+                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-ember to-nebula-rose transition-all group-hover:w-full" />
                   </Link>
                 )}
               </div>
@@ -158,7 +158,7 @@ export function Navigation() {
             <Button
               href={siteConfig.calendlyUrl}
               size="sm"
-              className="bg-gradient-to-r from-vivid-purple to-hot-pink text-white rounded-xl px-6 hover:shadow-[0_0_25px_rgba(139,92,246,0.4)] transition-all font-bold border border-white/10"
+              className="bg-gradient-to-r from-ember to-nebula-rose text-white rounded-xl px-6 hover:shadow-[0_0_25px_rgba(232,117,26,0.4)] transition-all font-bold border border-white/10"
             >
               Book Call
             </Button>
@@ -181,7 +181,7 @@ export function Navigation() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="md:hidden absolute top-full left-0 right-0 mx-4 mt-2 bg-abyss/95 backdrop-blur-2xl rounded-3xl border border-vivid-purple/15 shadow-3xl overflow-hidden"
+            className="md:hidden absolute top-full left-0 right-0 mx-4 mt-2 bg-abyss/95 backdrop-blur-2xl rounded-3xl border border-ember/15 shadow-3xl overflow-hidden"
           >
             <div className="px-6 py-8 space-y-4">
               {navItems.map((item) => (
@@ -214,7 +214,7 @@ export function Navigation() {
                 </div>
               ))}
               <div className="pt-6">
-                <Button href={siteConfig.calendlyUrl} className="w-full btn-aurora py-4 rounded-2xl">
+                <Button href={siteConfig.calendlyUrl} className="w-full btn-forge py-4 rounded-2xl">
                   Book Discovery Call
                 </Button>
               </div>

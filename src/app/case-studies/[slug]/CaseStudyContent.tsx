@@ -18,7 +18,7 @@ export function CaseStudyContent({ study, isLive }: CaseStudyContentProps) {
       className="max-w-3xl"
     >
       <div className="flex items-center gap-3 mb-4">
-        <span className="text-sm font-medium text-citrus bg-citrus/10 px-3 py-1 rounded-full">
+        <span className="text-sm font-medium text-ember bg-ember/10 px-3 py-1 rounded-full">
           {study.category}
         </span>
         <span className={`text-sm font-medium px-3 py-1 rounded-full ${

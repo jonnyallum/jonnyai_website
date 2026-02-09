@@ -16,7 +16,7 @@ export function AgentCard({ agent, variant = 'compact' }: AgentCardProps) {
   if (variant === 'compact') {
     return (
       <motion.div
-        className="group relative bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10 hover:border-citrus/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(0,0,0,0.3)] overflow-hidden"
+        className="group relative bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10 hover:border-ember/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(0,0,0,0.3)] overflow-hidden"
         whileHover={{ y: -4 }}
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -28,7 +28,7 @@ export function AgentCard({ agent, variant = 'compact' }: AgentCardProps) {
         {/* Avatar */}
         <div className="relative z-10">
           {!imgError ? (
-            <div className="w-16 h-16 rounded-full mb-4 relative overflow-hidden border-2 border-white/20 group-hover:border-citrus/50 transition-colors">
+            <div className="w-16 h-16 rounded-full mb-4 relative overflow-hidden border-2 border-white/20 group-hover:border-ember/50 transition-colors">
               <Image
                 src={agent.avatar || `/agents/${agent.id}.png`}
                 alt={agent.name}
@@ -47,7 +47,7 @@ export function AgentCard({ agent, variant = 'compact' }: AgentCardProps) {
           )}
 
           {/* Name & Role */}
-          <h3 className="font-outfit font-bold text-white text-lg group-hover:text-citrus transition-colors">
+          <h3 className="font-outfit font-bold text-white text-lg group-hover:text-ember transition-colors">
             {agent.humanName}
           </h3>
           <p className="text-gray-400 text-sm font-medium mb-2">
@@ -70,7 +70,7 @@ export function AgentCard({ agent, variant = 'compact' }: AgentCardProps) {
           <ul className="space-y-2">
             {agent.capabilities.slice(0, 4).map((cap, i) => (
               <li key={i} className="text-sm text-gray-300 flex items-start gap-2">
-                <span className="text-citrus mt-0.5">›</span>
+                <span className="text-ember mt-0.5">›</span>
                 {cap}
               </li>
             ))}
@@ -116,19 +116,19 @@ export function AgentCard({ agent, variant = 'compact' }: AgentCardProps) {
               <h3 className="font-outfit font-bold text-white text-2xl">
                 {agent.humanName}
               </h3>
-              <span className="px-3 py-1 rounded-full bg-white/10 text-xs text-citrus font-mono uppercase tracking-wider border border-white/5">
+              <span className="px-3 py-1 rounded-full bg-white/10 text-xs text-ember font-mono uppercase tracking-wider border border-white/5">
                 {agent.tier}
               </span>
             </div>
 
             <p className="text-gray-400 font-medium text-lg">
-              {agent.name} <span className="text-white/20 mx-2">|</span> <span className="text-citrus">&ldquo;{agent.nickname}&rdquo;</span>
+              {agent.name} <span className="text-white/20 mx-2">|</span> <span className="text-ember">&ldquo;{agent.nickname}&rdquo;</span>
             </p>
             <p className="text-gray-500 mt-1">{agent.role}</p>
           </div>
 
           {/* Philosophy */}
-          <blockquote className="border-l-4 border-citrus pl-4 mb-6 text-gray-300 italic bg-white/5 p-4 rounded-r-lg">
+          <blockquote className="border-l-4 border-ember pl-4 mb-6 text-gray-300 italic bg-white/5 p-4 rounded-r-lg">
             &ldquo;{agent.philosophy}&rdquo;
           </blockquote>
 
@@ -140,7 +140,7 @@ export function AgentCard({ agent, variant = 'compact' }: AgentCardProps) {
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-2">
               {agent.capabilities.map((cap, i) => (
                 <li key={i} className="text-sm text-gray-300 flex items-start gap-2">
-                  <span className="text-citrus">●</span>
+                  <span className="text-ember">●</span>
                   {cap}
                 </li>
               ))}
