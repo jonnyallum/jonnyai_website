@@ -163,7 +163,7 @@ export default function CaseStudiesPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 relative z-10">
             {[
               { value: '24M+', label: 'Neural Inferences', icon: Cpu },
-              { value: '42', label: 'Specialized Agents', icon: Zap },
+              { value: '43', label: 'Specialized Agents', icon: Zap },
               { value: '0.0ms', label: 'Latency Targeted', icon: Rocket },
               { value: '100%', label: 'IP Retention', icon: Shield },
             ].map((stat) => (

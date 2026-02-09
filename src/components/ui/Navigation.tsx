@@ -56,9 +56,9 @@ export function Navigation() {
               <Image
                 src="/Logo/JonnyAI full logo.png"
                 alt="JonnyAI"
-                width={160}
-                height={40}
-                className="h-9 w-auto group-hover:scale-105 transition-transform duration-300"
+                width={220}
+                height={55}
+                className="h-12 w-auto group-hover:scale-105 transition-transform duration-300"
                 priority
               />
               {/* Subtle glow behind logo */}

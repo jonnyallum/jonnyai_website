@@ -90,7 +90,7 @@ export function Hero() {
           className="text-lg sm:text-xl md:text-2xl text-frost max-w-2xl mx-auto mb-14 leading-relaxed font-light text-balance"
         >
           Stop waiting months for developers. Our proprietary{' '}
-          <span className="text-white font-medium border-b border-ember/40">39-Agent Orchestra</span>{' '}
+          <span className="text-white font-medium border-b border-ember/40">43-Agent Orchestra</span>{' '}
           turns your vision into production-ready software in weeks.
         </motion.p>
 
@@ -123,7 +123,7 @@ export function Hero() {
               <Users className="w-5 h-5 text-frost group-hover:text-ember transition-colors" />
             </div>
             <div className="text-left">
-              <div className="text-white font-bold font-outfit text-xl leading-none tracking-tight">39</div>
+              <div className="text-white font-bold font-outfit text-xl leading-none tracking-tight">43</div>
               <div className="text-steel text-[10px] font-bold uppercase tracking-widest mt-0.5">Specialised Agents</div>
             </div>
           </div>
