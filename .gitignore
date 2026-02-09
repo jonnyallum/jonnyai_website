@@ -1,7 +1,14 @@
+# Environment & Secrets
 .env
-.tmp/
+.env.*
+!.env.example
 credentials.json
 token.json
+**/mcp-config.json
+**/mcp_servers.json
+
+# Temp & Build
+.tmp/
 __pycache__/
 node_modules/
 .next/
@@ -9,3 +16,8 @@ dist/
 out/
 *.log
 .DS_Store
+
+# SSH keys
+ssh_results.txt
+*.pem
+*.key
