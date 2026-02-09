@@ -101,7 +101,7 @@ export function Hero() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-xl sm:text-2xl text-frost max-w-2xl mb-12 leading-relaxed font-light text-balance"
             >
-              Stop waiting months for developers. Our proprietary <span className="text-white font-medium border-b border-ember/40">42-Agent Orchestra</span> turns your vision into production-ready software in weeks.
+              Stop waiting months for developers. Our proprietary <span className="text-white font-medium border-b border-ember/40">39-Agent Orchestra</span> turns your vision into production-ready software in weeks.
             </motion.p>
 
             {/* CTAs */}
@@ -135,7 +135,7 @@ export function Hero() {
                   <Users className="w-6 h-6 text-frost group-hover:text-ember transition-colors" />
                 </div>
                 <div>
-                  <div className="text-white font-bold font-outfit text-2xl leading-none tracking-tight">42</div>
+                  <div className="text-white font-bold font-outfit text-2xl leading-none tracking-tight">39</div>
                   <div className="text-steel text-[10px] mobile:text-xs font-bold uppercase tracking-widest mt-1">Specialised Agents</div>
                 </div>
               </div>
