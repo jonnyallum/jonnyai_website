@@ -45,24 +45,37 @@ export function Hero() {
           </span>
         </motion.div>
 
-        {/* Hero Logo — Full Width Centrepiece */}
+        {/* Hero Logo — Icon + Styled Text on transparent background */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.1, ease: "easeOut" }}
-          className="relative mx-auto mb-12 max-w-4xl"
+          className="relative mx-auto mb-12 flex flex-col items-center"
         >
           {/* Glow behind the logo */}
           <div className="absolute inset-0 bg-ember/20 blur-[100px] rounded-full scale-75 pointer-events-none" />
-          <Image
-            src="/Logo/jai-hero-logo.png"
-            alt="JonnyAI — Jonny Allum Innovations Ltd"
-            width={1200}
-            height={675}
-            className="relative w-full h-auto drop-shadow-[0_0_60px_rgba(232,117,26,0.3)]"
-            style={{ mixBlendMode: 'lighten' }}
-            priority
-          />
+
+          {/* JAi Icon — black bg removed via mix-blend-mode: screen */}
+          <div className="relative mb-6">
+            <Image
+              src="/Logo/jonnyai-icon.png"
+              alt="JAi"
+              width={280}
+              height={280}
+              className="relative w-40 sm:w-52 md:w-64 lg:w-72 h-auto drop-shadow-[0_0_80px_rgba(232,117,26,0.4)]"
+              style={{ mixBlendMode: 'screen' }}
+              priority
+            />
+          </div>
+
+          {/* Brand Text */}
+          <h2 className="font-outfit font-black text-5xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tighter leading-none">
+            <span className="text-white drop-shadow-[0_0_30px_rgba(255,255,255,0.15)]">Jonny</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-ember via-amber to-forge-gold drop-shadow-[0_0_30px_rgba(232,117,26,0.3)]">Ai</span>
+          </h2>
+          <p className="mt-3 text-frost/40 text-xs sm:text-sm font-mono tracking-[0.3em] uppercase">
+            Jonny Allum Innovations Ltd
+          </p>
         </motion.div>
 
         {/* Tagline */}
