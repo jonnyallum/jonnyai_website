@@ -9,21 +9,37 @@ import { siteConfig } from '@/data/pricing';
 export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Atmospheric depth layers */}
+      {/* Atmospheric depth layers — cranked up */}
       <div className="absolute inset-0 z-[1]">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_20%,#030308_75%)]" />
+        {/* Vignette */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_10%,#030308_70%)]" />
+
+        {/* Primary ember nebula — top right */}
         <motion.div
-          animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0.35, 0.2] }}
-          transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute -top-32 -right-32 w-[800px] h-[800px] rounded-full blur-[200px]"
-          style={{ background: 'rgba(232, 117, 26, 0.15)' }}
+          animate={{ scale: [1, 1.3, 1], opacity: [0.25, 0.5, 0.25] }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute -top-20 -right-20 w-[900px] h-[900px] rounded-full blur-[180px]"
+          style={{ background: 'rgba(232, 117, 26, 0.22)' }}
         />
+
+        {/* Secondary rose nebula — bottom left */}
         <motion.div
-          animate={{ scale: [1.1, 1, 1.1], opacity: [0.12, 0.22, 0.12] }}
-          transition={{ duration: 16, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute -bottom-40 -left-40 w-[700px] h-[700px] rounded-full blur-[180px]"
-          style={{ background: 'rgba(232, 67, 147, 0.12)' }}
+          animate={{ scale: [1.1, 1, 1.1], opacity: [0.15, 0.3, 0.15] }}
+          transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute -bottom-32 -left-32 w-[800px] h-[800px] rounded-full blur-[160px]"
+          style={{ background: 'rgba(232, 67, 147, 0.18)' }}
         />
+
+        {/* Tertiary gold bloom — centre */}
+        <motion.div
+          animate={{ scale: [0.9, 1.1, 0.9], opacity: [0.1, 0.2, 0.1] }}
+          transition={{ duration: 18, repeat: Infinity, ease: "easeInOut", delay: 3 }}
+          className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full blur-[200px]"
+          style={{ background: 'rgba(255, 180, 50, 0.12)' }}
+        />
+
+        {/* Subtle grid overlay for depth */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-[size:80px_80px] [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_70%)]" />
       </div>
 
       {/* Content */}
