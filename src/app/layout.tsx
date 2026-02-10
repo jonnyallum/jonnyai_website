@@ -37,6 +37,9 @@ export const metadata: Metadata = {
     title: "JonnyAi | Pioneering AI Architecture",
     description: "Pioneering AI architecture with our 43-agent orchestra. UK based, global delivery.",
   },
+  alternates: {
+    canonical: 'https://www.jonnyai.co.uk',
+  },
   robots: {
     index: true,
     follow: true,
