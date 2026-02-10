@@ -60,6 +60,7 @@ export function Hero() {
             width={1200}
             height={675}
             className="relative w-full h-auto drop-shadow-[0_0_60px_rgba(232,117,26,0.3)]"
+            style={{ mixBlendMode: 'lighten' }}
             priority
           />
         </motion.div>

@@ -39,7 +39,10 @@ export function Banner() {
                             </span>
                         </span>
                         <span className="text-frost/50 font-mono text-[10px]">[{currentNews.date}]</span>
-                        <span className="text-ice/70 hover:text-white transition-colors cursor-default">{currentNews.message}</span>
+                        <span
+                            className="text-ice/70 hover:text-white transition-colors cursor-default"
+                            dangerouslySetInnerHTML={{ __html: currentNews.message.replace(/\*\*(.*?)\*\*/g, '<strong class="text-white font-bold">$1</strong>') }}
+                        />
                     </motion.div>
                 </AnimatePresence>
             </div>
