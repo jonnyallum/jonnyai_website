@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ArrowRight, Users, Clock, Shield, Cpu } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
@@ -8,46 +9,25 @@ import { siteConfig } from '@/data/pricing';
 export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Atmospheric depth layers — sit between canvas and content */}
+      {/* Atmospheric depth layers */}
       <div className="absolute inset-0 z-[1]">
-        {/* Deep navy vignette */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_20%,#030308_75%)]" />
-
-        {/* Warm forge glow — top right */}
         <motion.div
-          animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.2, 0.35, 0.2],
-          }}
+          animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0.35, 0.2] }}
           transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
           className="absolute -top-32 -right-32 w-[800px] h-[800px] rounded-full blur-[200px]"
           style={{ background: 'rgba(232, 117, 26, 0.15)' }}
         />
-
-        {/* Rose nebula glow — bottom left */}
         <motion.div
-          animate={{
-            scale: [1.1, 1, 1.1],
-            opacity: [0.12, 0.22, 0.12],
-          }}
+          animate={{ scale: [1.1, 1, 1.1], opacity: [0.12, 0.22, 0.12] }}
           transition={{ duration: 16, repeat: Infinity, ease: "easeInOut" }}
           className="absolute -bottom-40 -left-40 w-[700px] h-[700px] rounded-full blur-[180px]"
           style={{ background: 'rgba(232, 67, 147, 0.12)' }}
         />
-
-        {/* Blue accent glow — centre */}
-        <motion.div
-          animate={{
-            opacity: [0.06, 0.14, 0.06],
-          }}
-          transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full blur-[160px]"
-          style={{ background: 'rgba(59, 130, 246, 0.08)' }}
-        />
       </div>
 
-      {/* Content — centred, floating over the neural mesh */}
-      <div className="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20 text-center">
+      {/* Content */}
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20 text-center">
 
         {/* Badge */}
         <motion.div
@@ -60,34 +40,47 @@ export function Hero() {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-ember opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2 w-2 bg-ember shadow-[0_0_10px_#e8751a]"></span>
           </span>
-          <span className="text-ice/80 text-sm font-medium tracking-wide flex items-center gap-2">
+          <span className="text-ice/80 text-sm font-medium tracking-wide">
             Jai.OS 4.0: Pioneering AI Architecture
-            <span className="w-1 h-1 bg-ember rounded-full animate-pulse mx-1" />
-            <span className="text-[10px] text-amber font-mono uppercase tracking-tighter">Live Pulse Active</span>
           </span>
         </motion.div>
 
-        {/* Headline */}
+        {/* Hero Logo — Full Width Centrepiece */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, delay: 0.1, ease: "easeOut" }}
+          className="relative mx-auto mb-12 max-w-4xl"
+        >
+          {/* Glow behind the logo */}
+          <div className="absolute inset-0 bg-ember/20 blur-[100px] rounded-full scale-75 pointer-events-none" />
+          <Image
+            src="/Logo/jai-hero-logo.png"
+            alt="JonnyAI — Jonny Allum Innovations Ltd"
+            width={1200}
+            height={675}
+            className="relative w-full h-auto drop-shadow-[0_0_60px_rgba(232,117,26,0.3)]"
+            priority
+          />
+        </motion.div>
+
+        {/* Tagline */}
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.1 }}
-          className="font-outfit font-black text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white leading-[0.95] mb-8 tracking-tighter"
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="font-outfit font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-[0.95] mb-6 tracking-tighter"
         >
-          We Build Products <br />
-          <span className="text-gradient-forge animate-pulse-slow relative inline-block">
-            10x Faster
-            <span className="absolute inset-0 blur-3xl -z-10" style={{ background: 'linear-gradient(to right, rgba(232,117,26,0.25), rgba(245,158,11,0.25))' }} />
-          </span> <br />
-          <span className="text-ice/90">with Artificial Intelligence.</span>
+          We Build Products{' '}
+          <span className="text-gradient-forge">10x Faster</span>
         </motion.h1>
 
         {/* Subheadline */}
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-lg sm:text-xl md:text-2xl text-frost max-w-2xl mx-auto mb-14 leading-relaxed font-light text-balance"
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="text-lg sm:text-xl text-frost max-w-2xl mx-auto mb-12 leading-relaxed font-light text-balance"
         >
           Stop waiting months for developers. Our proprietary{' '}
           <span className="text-white font-medium border-b border-ember/40">43-Agent Orchestra</span>{' '}
@@ -98,8 +91,8 @@ export function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="flex flex-col sm:flex-row gap-5 justify-center mb-20"
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className="flex flex-col sm:flex-row gap-5 justify-center mb-16"
         >
           <Button href="/orchestra" size="lg" className="btn-forge text-lg px-10 py-6">
             <Cpu className="w-5 h-5 mr-2" />
@@ -115,7 +108,7 @@ export function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5 }}
+          transition={{ delay: 0.7 }}
           className="inline-flex flex-wrap justify-center gap-8 sm:gap-12 py-6 px-8 bg-white/[0.03] backdrop-blur-xl border border-white/[0.06] rounded-2xl"
         >
           <div className="flex items-center gap-3 group cursor-default">
@@ -150,7 +143,7 @@ export function Hero() {
         </motion.div>
       </div>
 
-      {/* Bottom fade into next section */}
+      {/* Bottom fade */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-void to-transparent z-10" />
     </section>
   );
