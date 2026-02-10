@@ -360,6 +360,10 @@ export default function PricingPage() {
                 q: 'Can I hire you on retainer?',
                 a: 'Yes. For ongoing development, we offer monthly retainers starting at £100/month. This is ideal for post-launch iteration and maintenance.',
               },
+              {
+                q: 'Do you work with international clients?',
+                a: 'Absolutely. We are based in Emsworth, Hampshire, but our workforce is 100% remote-first. We support clients globally across all time zones using high-velocity asynchronous communication.',
+              },
             ].map((faq, i) => (
               <motion.div
                 key={i}

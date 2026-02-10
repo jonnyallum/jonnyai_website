@@ -2,13 +2,12 @@ name: Deploy to Hostinger
 
 on:
   push:
-    branches: [main]
-  workflow_dispatch:
+    branches:
+      - main
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -16,28 +15,25 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'npm'
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: "./Clients/jonnyai.website/package-lock.json"
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
+        working-directory: ./Clients/jonnyai.website
 
-      - name: Build
+      - name: Build project
         run: npm run build
-        env:
-          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
-          NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+        working-directory: ./Clients/jonnyai.website
 
-      - name: Setup SSH
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -p ${{ secrets.SSH_PORT }} ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
-
-      - name: Deploy via rsync
-        run: |
-          rsync -avz --delete \
-            -e "ssh -p ${{ secrets.SSH_PORT }}" \
-            ./out/ \
-            ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:~/domains/jonnyai.co.uk/public_html/
+      - name: Deploy to Hostinger via SFTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: 92.112.189.250
+          username: u384342620
+          password: ${{ secrets.SFTP_PASSWORD }}
+          port: 65002
+          local-dir: ./Clients/jonnyai.website/out/
+          server-dir: public_html/
+          protocol: sftp

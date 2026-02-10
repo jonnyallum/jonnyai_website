@@ -1,5 +1,9 @@
 export const news = [
   {
+    "date": "2026-02-10",
+    "message": "**Global Vision, Local Roots** - JonnyAi establishes Emsworth, Hampshire HQ for scale: building elite AI solutions globally with 100% remote delivery focus."
+  },
+  {
     "date": "2026-02-09",
     "message": "**Full System Audit Complete** - All 43 agents upgraded, memory rebuilt, security hardened. Jai.OS 4.0 at peak performance."
   },

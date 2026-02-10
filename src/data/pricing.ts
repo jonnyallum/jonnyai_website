@@ -313,6 +313,6 @@ export const siteConfig = {
   email: 'jonny@jonnyai.co.uk',
   linkedin: 'https://linkedin.com/in/jonny-allum-12a757140',
   github: 'https://github.com/jonnyallum',
-  location: 'United Kingdom',
+  location: 'Emsworth, Hampshire, UK',
   domain: 'www.jonnyai.co.uk',
 };

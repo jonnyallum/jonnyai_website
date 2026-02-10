@@ -54,11 +54,12 @@ export function Navigation() {
           <Link href="/" className="flex items-center group">
             <div className="relative">
               <Image
-                src="/Logo/jonnyai-hero-transparent.webp"
+                src="/Logo/jonnyai-icon.png"
                 alt="JonnyAI"
-                width={220}
-                height={220}
-                className="h-12 w-auto group-hover:scale-105 transition-transform duration-300 drop-shadow-[0_0_20px_rgba(232,117,26,0.2)]"
+                width={120}
+                height={120}
+                className="h-10 w-auto group-hover:scale-110 transition-transform duration-300"
+                style={{ mixBlendMode: 'screen' }}
                 priority
               />
               {/* Subtle glow behind logo */}

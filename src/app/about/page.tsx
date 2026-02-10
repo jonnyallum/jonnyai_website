@@ -85,8 +85,12 @@ export default function AboutPage() {
             >
               <h2 className="font-outfit font-black text-4xl text-white tracking-tight">The Vision</h2>
               <p className="text-gray-400 text-lg font-light leading-relaxed">
-                After years in enterprise development, watching talented teams burn out on repetitive
-                tasks while innovation stalled, Jonny asked a simple question: <span className="text-white font-medium italic">What if AI could handle everything except the creative decisions?</span>
+                Based in <span className="text-white font-medium">Emsworth, Hampshire</span>, Jonny Allum Innovations Ltd was founded on a singular obsession: decentralising elite engineering. After years in enterprise development, watching talented teams burn out on repetitive tasks while innovation stalled, Jonny asked a simple question: <span className="text-white font-medium italic">What if AI could handle everything except the creative decisions?</span>
+              </p>
+
+              <h2 className="font-outfit font-black text-3xl text-white tracking-tight pt-8 border-t border-white/5">The Remote Freedom</h2>
+              <p className="text-gray-400 text-lg font-light leading-relaxed">
+                By building the Antigravity Orchestra, Jonny has enabled a new paradigm of work—one where a single architect can deliver global-scale products from a quiet corner of the UK south coast. This isn&apos;t just about automation; it&apos;s about <span className="text-white font-medium">total remote freedom</span> for founders who want to build the future without the overhead of traditional offices.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
                 <div className="p-6 bg-white/[0.03] border border-white/5 rounded-2xl">

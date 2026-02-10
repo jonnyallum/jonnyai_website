@@ -61,43 +61,30 @@ export function Hero() {
           </span>
         </motion.div>
 
-        {/* Hero Brand Logo — Transparent .webp floating on atmospheric bg */}
+        {/* Hero Brand Logo — Full brand image with neural network bg */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.85, y: 20 }}
+          initial={{ opacity: 0, scale: 0.9, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="relative mx-auto mb-14"
+          className="relative mx-auto mb-14 max-w-3xl"
         >
-          {/* Multi-layer glow system behind logo */}
+          {/* Glow behind the brand card */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
             <motion.div
-              animate={{ scale: [1, 1.15, 1], opacity: [0.3, 0.5, 0.3] }}
+              animate={{ scale: [1, 1.1, 1], opacity: [0.4, 0.6, 0.4] }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-              className="w-80 h-80 sm:w-[400px] sm:h-[400px] bg-ember/25 rounded-full blur-[120px]"
-            />
-          </div>
-          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <motion.div
-              animate={{ scale: [1.1, 1, 1.1], opacity: [0.15, 0.25, 0.15] }}
-              transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-              className="w-64 h-64 sm:w-80 sm:h-80 bg-amber/20 rounded-full blur-[100px]"
+              className="w-full h-full bg-ember/20 rounded-3xl blur-[80px]"
             />
           </div>
 
-          {/* The actual brand logo */}
-          <motion.div
-            animate={{ y: [0, -8, 0] }}
-            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-          >
-            <Image
-              src="/Logo/jonnyai-hero-transparent.webp"
-              alt="JonnyAi — Jonny Allum Innovations Ltd"
-              width={600}
-              height={600}
-              className="relative w-64 sm:w-80 md:w-96 lg:w-[440px] h-auto mx-auto drop-shadow-[0_0_60px_rgba(232,117,26,0.35)] drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]"
-              priority
-            />
-          </motion.div>
+          <Image
+            src="/Logo/jonnyai-brand-hero.png"
+            alt="JonnyAi — Jonny Allum Innovations Ltd"
+            width={1024}
+            height={576}
+            className="relative w-full h-auto rounded-3xl shadow-[0_20px_80px_rgba(232,117,26,0.3),0_0_120px_rgba(0,200,200,0.1)] border border-white/10"
+            priority
+          />
         </motion.div>
 
         {/* Tagline */}
@@ -107,7 +94,8 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="font-outfit font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-[0.95] mb-6 tracking-tighter"
         >
-          We Build Products{' '}
+          An AI Architecture Studio <br className="hidden md:block" />
+          That Builds {' '}
           <span className="text-gradient-forge">10x Faster</span>
         </motion.h1>
 
