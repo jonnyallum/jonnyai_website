@@ -9,37 +9,73 @@ import { siteConfig } from '@/data/pricing';
 export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Atmospheric depth layers — cranked up */}
+      {/* Atmospheric depth layers — God-Tier Depth */}
       <div className="absolute inset-0 z-[1]">
-        {/* Vignette */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_10%,#030308_70%)]" />
+        {/* Deep Void Base */}
+        <div className="absolute inset-0 bg-[#020205]" />
 
-        {/* Primary ember nebula — top right */}
+        {/* Vignette — Harder edge to focus the core */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,#020205_85%)]" />
+
+        {/* Moving 'Scanning' Horizon Line — subtle high-tech feel */}
         <motion.div
-          animate={{ scale: [1, 1.3, 1], opacity: [0.25, 0.5, 0.25] }}
-          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute -top-20 -right-20 w-[900px] h-[900px] rounded-full blur-[180px]"
-          style={{ background: 'rgba(232, 117, 26, 0.22)' }}
+          animate={{ y: ['-100%', '200%'] }}
+          transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+          className="absolute inset-0 w-full h-[1px] bg-gradient-to-r from-transparent via-ember/20 to-transparent opacity-30"
         />
 
-        {/* Secondary rose nebula — bottom left */}
+        {/* Primary ember nebula — top right (More intense) */}
         <motion.div
-          animate={{ scale: [1.1, 1, 1.1], opacity: [0.15, 0.3, 0.15] }}
-          transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute -bottom-32 -left-32 w-[800px] h-[800px] rounded-full blur-[160px]"
-          style={{ background: 'rgba(232, 67, 147, 0.18)' }}
+          animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.6, 0.3], x: [0, 20, 0], y: [0, -20, 0] }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute -top-40 -right-40 w-[1000px] h-[1000px] rounded-full blur-[200px]"
+          style={{ background: 'radial-gradient(circle, rgba(232, 117, 26, 0.35) 0%, transparent 70%)' }}
         />
 
-        {/* Tertiary gold bloom — centre */}
+        {/* Secondary rose nebula — bottom left (More vibrant) */}
         <motion.div
-          animate={{ scale: [0.9, 1.1, 0.9], opacity: [0.1, 0.2, 0.1] }}
-          transition={{ duration: 18, repeat: Infinity, ease: "easeInOut", delay: 3 }}
-          className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full blur-[200px]"
-          style={{ background: 'rgba(255, 180, 50, 0.12)' }}
+          animate={{ scale: [1.2, 1, 1.2], opacity: [0.2, 0.4, 0.2], x: [0, -30, 0] }}
+          transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute -bottom-48 -left-48 w-[900px] h-[900px] rounded-full blur-[180px]"
+          style={{ background: 'radial-gradient(circle, rgba(232, 67, 147, 0.25) 0%, transparent 70%)' }}
         />
 
-        {/* Subtle grid overlay for depth */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-[size:80px_80px] [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_70%)]" />
+        {/* Tertiary nebula — deep blue resonance */}
+        <motion.div
+          animate={{ opacity: [0.1, 0.3, 0.1] }}
+          transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute top-1/4 left-1/4 w-[700px] h-[700px] rounded-full blur-[220px]"
+          style={{ background: 'radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%)' }}
+        />
+
+        {/* God-Tier Particle Depth — Starfield */}
+        <div className="absolute inset-0 opacity-40">
+          {[...Array(30)].map((_, i) => (
+            <motion.div
+              key={i}
+              initial={{
+                x: Math.random() * 100 + '%',
+                y: Math.random() * 100 + '%',
+                scale: Math.random() * 0.5 + 0.5,
+                opacity: Math.random() * 0.3 + 0.3
+              }}
+              animate={{
+                opacity: [0.3, 0.8, 0.3],
+                scale: [1, 1.2, 1]
+              }}
+              transition={{
+                duration: 3 + Math.random() * 4,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: Math.random() * 5
+              }}
+              className="absolute w-1 h-1 bg-white rounded-full blur-[0.5px]"
+            />
+          ))}
+        </div>
+
+        {/* Subtle grid overlay for depth — sharper focus */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:100px_100px] [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_90%)]" />
       </div>
 
       {/* Content */}
@@ -66,23 +102,23 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.9, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="relative mx-auto mb-14 max-w-3xl"
+          className="relative mx-auto mb-14 max-w-4xl"
         >
-          {/* Glow behind the brand card */}
+          {/* Central Glow Projection */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
             <motion.div
-              animate={{ scale: [1, 1.1, 1], opacity: [0.4, 0.6, 0.4] }}
-              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-              className="w-full h-full bg-ember/20 rounded-3xl blur-[80px]"
+              animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
+              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+              className="w-2/3 h-2/3 bg-ember/30 rounded-full blur-[100px]"
             />
           </div>
 
           <Image
-            src="/Logo/jonnyai-brand-hero.png"
+            src="/Logo/Logo/JonnyAI_Logo_Transparent_Complete.png"
             alt="JonnyAi — Jonny Allum Innovations Ltd"
-            width={1024}
-            height={576}
-            className="relative w-full h-auto rounded-3xl shadow-[0_20px_80px_rgba(232,117,26,0.3),0_0_120px_rgba(0,200,200,0.1)] border border-white/10"
+            width={1200}
+            height={480}
+            className="relative w-full h-auto drop-shadow-[0_0_60px_rgba(232,117,26,0.5)]"
             priority
           />
         </motion.div>
