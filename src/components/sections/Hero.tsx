@@ -45,37 +45,43 @@ export function Hero() {
           </span>
         </motion.div>
 
-        {/* Hero Logo — Icon + Styled Text on transparent background */}
+        {/* Hero Brand Logo — Transparent .webp floating on atmospheric bg */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.1, ease: "easeOut" }}
-          className="relative mx-auto mb-12 flex flex-col items-center"
+          initial={{ opacity: 0, scale: 0.85, y: 20 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 1.2, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+          className="relative mx-auto mb-14"
         >
-          {/* Glow behind the logo */}
-          <div className="absolute inset-0 bg-ember/20 blur-[100px] rounded-full scale-75 pointer-events-none" />
-
-          {/* JAi Icon — black bg removed via mix-blend-mode: screen */}
-          <div className="relative mb-6">
-            <Image
-              src="/Logo/jonnyai-icon.png"
-              alt="JAi"
-              width={280}
-              height={280}
-              className="relative w-40 sm:w-52 md:w-64 lg:w-72 h-auto drop-shadow-[0_0_80px_rgba(232,117,26,0.4)]"
-              style={{ mixBlendMode: 'screen' }}
-              priority
+          {/* Multi-layer glow system behind logo */}
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <motion.div
+              animate={{ scale: [1, 1.15, 1], opacity: [0.3, 0.5, 0.3] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+              className="w-80 h-80 sm:w-[400px] sm:h-[400px] bg-ember/25 rounded-full blur-[120px]"
+            />
+          </div>
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <motion.div
+              animate={{ scale: [1.1, 1, 1.1], opacity: [0.15, 0.25, 0.15] }}
+              transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+              className="w-64 h-64 sm:w-80 sm:h-80 bg-amber/20 rounded-full blur-[100px]"
             />
           </div>
 
-          {/* Brand Text */}
-          <h2 className="font-outfit font-black text-5xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tighter leading-none">
-            <span className="text-white drop-shadow-[0_0_30px_rgba(255,255,255,0.15)]">Jonny</span>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-ember via-amber to-forge-gold drop-shadow-[0_0_30px_rgba(232,117,26,0.3)]">Ai</span>
-          </h2>
-          <p className="mt-3 text-frost/40 text-xs sm:text-sm font-mono tracking-[0.3em] uppercase">
-            Jonny Allum Innovations Ltd
-          </p>
+          {/* The actual brand logo */}
+          <motion.div
+            animate={{ y: [0, -8, 0] }}
+            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+          >
+            <Image
+              src="/Logo/jonnyai-hero-transparent.webp"
+              alt="JonnyAi — Jonny Allum Innovations Ltd"
+              width={600}
+              height={600}
+              className="relative w-64 sm:w-80 md:w-96 lg:w-[440px] h-auto mx-auto drop-shadow-[0_0_60px_rgba(232,117,26,0.35)] drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]"
+              priority
+            />
+          </motion.div>
         </motion.div>
 
         {/* Tagline */}

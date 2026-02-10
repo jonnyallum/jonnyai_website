@@ -54,11 +54,11 @@ export function Navigation() {
           <Link href="/" className="flex items-center group">
             <div className="relative">
               <Image
-                src="/Logo/jonnyai-full-logo.png"
+                src="/Logo/jonnyai-hero-transparent.webp"
                 alt="JonnyAI"
                 width={220}
-                height={55}
-                className="h-12 w-auto group-hover:scale-105 transition-transform duration-300"
+                height={220}
+                className="h-12 w-auto group-hover:scale-105 transition-transform duration-300 drop-shadow-[0_0_20px_rgba(232,117,26,0.2)]"
                 priority
               />
               {/* Subtle glow behind logo */}
