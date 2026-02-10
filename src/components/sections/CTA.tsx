@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ArrowRight, Sparkles, Terminal } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
@@ -23,6 +24,26 @@ export function CTA() {
       </div>
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Testimonial + Cost row */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="rounded-3xl overflow-hidden border border-white/10 hover:border-ember/30 transition-all duration-500"
+          >
+            <Image src="/Logo/marketing-testimonial.png" alt="Traditional development is broken. JonnyAI is the future." width={1024} height={1024} className="w-full h-auto" />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="rounded-3xl overflow-hidden border border-white/10 hover:border-ember/30 transition-all duration-500"
+          >
+            <Image src="/Logo/marketing-cost.png" alt="Stop Burning Your Runway — 10x More Affordable" width={1024} height={1024} className="w-full h-auto" />
+          </motion.div>
+        </div>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

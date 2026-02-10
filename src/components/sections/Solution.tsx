@@ -1,28 +1,19 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { AgentCard } from '@/components/agents/AgentCard';
 import { featuredAgents } from '@/data/agents';
 import { Button } from '@/components/ui/Button';
-
-const comparison = [
-  { label: 'MVP Timeline', traditional: '3-6 months', jonnyai: '2-4 weeks' },
-  { label: 'Build Cost', traditional: '£30-80k', jonnyai: '£5-15k' },
-  { label: 'Team Size', traditional: '5-10 people', jonnyai: '1 human + 43 agents' },
-  { label: 'Coordination', traditional: 'Overhead Nightmare', jonnyai: 'Seamless Sync' },
-  { label: 'Deliverable', traditional: 'Static Code', jonnyai: 'Living System' },
-];
 
 export function Solution() {
   const topAgents = featuredAgents.slice(0, 6);
 
   return (
     <section className="py-32 bg-obsidian-light relative overflow-hidden" id="how-it-works">
-      {/* Background FX */}
       <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-      <div className="absolute inset-0 bg-grid-white/[0.02]" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -42,104 +33,88 @@ export function Solution() {
             transition={{ delay: 0.1 }}
             className="text-gray-400 text-xl max-w-3xl mx-auto leading-relaxed font-light text-balance"
           >
-            We&apos;ve spent two years building a proprietary multi-agent AI system that functions like a complete development department—without the overhead, delays, or coordination failures.
+            We&apos;ve spent two years building a proprietary multi-agent AI system that functions like a complete development department.
           </motion.p>
         </div>
 
-        {/* How it works */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 mb-32 items-center">
-          {/* Left: Steps */}
+        {/* Marketing Images — 3 column showcase */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-32">
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="space-y-10"
+            className="rounded-3xl overflow-hidden border border-white/10 hover:border-ember/30 transition-all duration-500 hover:shadow-[0_0_60px_rgba(232,117,26,0.1)]"
           >
-            <h3 className="font-outfit font-bold text-3xl text-white mb-10 border-l-4 border-ember pl-6">How It Works</h3>
-
-            {[
-              {
-                num: '01',
-                title: 'The Conductor Orchestrates',
-                desc: 'Every project is managed by our Conductor agent, routing tasks to specialists based on requirements in real-time.',
-              },
-              {
-                num: '02',
-                title: '43 Specialized Agents Execute',
-                desc: 'Development, design, QA, security, SEO, analytics, automation—each specific domain handled by a dedicated expert AI.',
-              },
-              {
-                num: '03',
-                title: 'Self-Improving Systems',
-                desc: 'Our agents learn from every project, updating their own procedures (SKILL.md) and catching mistakes before they ship.',
-              },
-              {
-                num: '04',
-                title: 'Human Oversight',
-                desc: 'Jonny personally reviews all output, ensuring "God-Tier" aesthetic and functional quality on every delivery.',
-              },
-            ].map((step, i) => (
-              <motion.div
-                key={step.num}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="flex gap-6 group"
-              >
-                <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-ember/10 group-hover:border-ember/50 transition-all duration-300 shadow-lg">
-                  <span className="font-outfit font-black text-xl text-gray-500 group-hover:text-ember transition-colors">{step.num}</span>
-                </div>
-                <div>
-                  <h4 className="font-outfit font-bold text-xl text-white mb-2 group-hover:text-ember transition-colors">{step.title}</h4>
-                  <p className="text-gray-400 text-sm leading-relaxed max-w-md">{step.desc}</p>
-                </div>
-              </motion.div>
-            ))}
+            <Image
+              src="/Logo/marketing-system.png"
+              alt="A Proven System — The Antigravity Method"
+              width={1024}
+              height={1024}
+              className="w-full h-auto"
+            />
           </motion.div>
-
-          {/* Right: Comparison table */}
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="glass-card transform hover:scale-[1.02] transition-transform duration-500 shadow-2xl"
+            transition={{ delay: 0.1 }}
+            className="rounded-3xl overflow-hidden border border-white/10 hover:border-ember/30 transition-all duration-500 hover:shadow-[0_0_60px_rgba(232,117,26,0.1)]"
           >
-            <h3 className="font-outfit font-bold text-2xl text-white mb-8 flex items-center gap-3">
-              The Unfair Advantage
-              <span className="px-3 py-1 bg-ember/20 text-ember text-xs font-black uppercase tracking-widest rounded-full border border-ember/30 animate-pulse-slow">10x ROI</span>
-            </h3>
+            <Image
+              src="/Logo/marketing-agents.png"
+              alt="Meet Your New Development Team — 43 AI Agents"
+              width={1024}
+              height={1024}
+              className="w-full h-auto"
+            />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="rounded-3xl overflow-hidden border border-white/10 hover:border-ember/30 transition-all duration-500 hover:shadow-[0_0_60px_rgba(232,117,26,0.1)]"
+          >
+            <Image
+              src="/Logo/marketing-vision.png"
+              alt="From Vision to Reality — We Turn Ideas Into Production-Ready Software"
+              width={1024}
+              height={1024}
+              className="w-full h-auto"
+            />
+          </motion.div>
+        </div>
 
-            <div className="overflow-hidden rounded-xl border border-white/10 shadow-inner bg-black/20">
-              <table className="w-full">
-                <thead>
-                  <tr className="bg-white/5 border-b border-white/10">
-                    <th className="px-6 py-5 text-left text-sm font-medium text-gray-400 uppercase tracking-wider">Comparison</th>
-                    <th className="px-6 py-5 text-center text-sm font-medium text-gray-500 uppercase tracking-wider">Traditional Agency</th>
-                    <th className="px-6 py-5 text-center text-sm font-bold text-ember bg-ember/5 border-b-2 border-ember uppercase tracking-wider shadow-[inset_0_-2px_4px_rgba(232,117,26,0.1)]">JonnyAi</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-white/5">
-                  {comparison.map((row, i) => (
-                    <tr key={row.label} className={i % 2 === 0 ? 'bg-transparent' : 'bg-white/[0.02]'}>
-                      <td className="px-6 py-5 text-sm font-medium text-white">{row.label}</td>
-                      <td className="px-6 py-5 text-center text-sm text-gray-500 line-through decoration-red-500/30 decoration-2">{row.traditional}</td>
-                      <td className="px-6 py-5 text-center text-sm font-bold text-white bg-ember/[0.02] border-l border-ember/10 relative">
-                        {/* Highlight marker */}
-                        {row.jonnyai}
-                        <CheckCircle2 className="w-4 h-4 text-ember absolute right-3 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-
-            <div className="mt-8 text-center">
-              <p className="text-sm text-gray-500 italic font-medium">
-                "We stopped hiring junior devs. We just spin up more agents."
-              </p>
-            </div>
+        {/* Quality + Speed row */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-32">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="rounded-3xl overflow-hidden border border-white/10 hover:border-ember/30 transition-all duration-500 hover:shadow-[0_0_60px_rgba(232,117,26,0.1)]"
+          >
+            <Image
+              src="/Logo/marketing-quality.png"
+              alt="Enterprise-Grade Quality Without the Enterprise Price Tag"
+              width={1024}
+              height={1024}
+              className="w-full h-auto"
+            />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="rounded-3xl overflow-hidden border border-white/10 hover:border-ember/30 transition-all duration-500 hover:shadow-[0_0_60px_rgba(232,117,26,0.1)]"
+          >
+            <Image
+              src="/Logo/marketing-speed.png"
+              alt="No More Waiting — Start Building Today"
+              width={1024}
+              height={1024}
+              className="w-full h-auto"
+            />
           </motion.div>
         </div>
 
@@ -158,7 +133,6 @@ export function Solution() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {topAgents.map((agent) => (
-              // Use a nice staggered entrance for these
               <AgentCard key={agent.id} agent={agent} variant="compact" />
             ))}
           </div>

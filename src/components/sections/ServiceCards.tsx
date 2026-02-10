@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Code, Wrench, Handshake, ArrowRight, Check } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
@@ -93,6 +94,36 @@ export function ServiceCards() {
           >
             Whether you want our tools, our team, or our partnership—we have a path that fits your current stage.
           </motion.p>
+        </div>
+
+        {/* Marketing Visual Row */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="rounded-3xl overflow-hidden border border-white/10 hover:border-blue-500/30 transition-all duration-500"
+          >
+            <Image src="/Logo/marketing-framework.png" alt="Build Your Own Agent Team — License The Framework" width={1024} height={1024} className="w-full h-auto" />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="rounded-3xl overflow-hidden border border-white/10 hover:border-ember/30 transition-all duration-500"
+          >
+            <Image src="/Logo/marketing-founders.png" alt="Built For Founders By A Founder Who Gets It" width={1024} height={1024} className="w-full h-auto" />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="rounded-3xl overflow-hidden border border-white/10 hover:border-purple-500/30 transition-all duration-500"
+          >
+            <Image src="/Logo/marketing-equity.png" alt="We Build For Equity — Your Technical Co-Founder" width={1024} height={1024} className="w-full h-auto" />
+          </motion.div>
         </div>
 
         {/* Cards */}
