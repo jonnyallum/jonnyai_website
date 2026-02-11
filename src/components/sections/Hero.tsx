@@ -9,74 +9,13 @@ import { siteConfig } from '@/data/pricing';
 export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Atmospheric depth layers — God-Tier Depth */}
+      {/* Clean Professional Background — Focus on Brand Logo */}
       <div className="absolute inset-0 z-[1]">
         {/* Deep Void Base */}
         <div className="absolute inset-0 bg-[#020205]" />
 
-        {/* Vignette — Harder edge to focus the core */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,#020205_85%)]" />
-
-        {/* Moving 'Scanning' Horizon Line — subtle high-tech feel */}
-        <motion.div
-          animate={{ y: ['-100%', '200%'] }}
-          transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-          className="absolute inset-0 w-full h-[1px] bg-gradient-to-r from-transparent via-ember/20 to-transparent opacity-30"
-        />
-
-        {/* Primary ember nebula — top right (More intense) */}
-        <motion.div
-          animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.6, 0.3], x: [0, 20, 0], y: [0, -20, 0] }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute -top-40 -right-40 w-[1000px] h-[1000px] rounded-full blur-[200px]"
-          style={{ background: 'radial-gradient(circle, rgba(232, 117, 26, 0.35) 0%, transparent 70%)' }}
-        />
-
-        {/* Secondary rose nebula — bottom left (More vibrant) */}
-        <motion.div
-          animate={{ scale: [1.2, 1, 1.2], opacity: [0.2, 0.4, 0.2], x: [0, -30, 0] }}
-          transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute -bottom-48 -left-48 w-[900px] h-[900px] rounded-full blur-[180px]"
-          style={{ background: 'radial-gradient(circle, rgba(232, 67, 147, 0.25) 0%, transparent 70%)' }}
-        />
-
-        {/* Tertiary nebula — deep blue resonance */}
-        <motion.div
-          animate={{ opacity: [0.1, 0.3, 0.1] }}
-          transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-1/4 left-1/4 w-[700px] h-[700px] rounded-full blur-[220px]"
-          style={{ background: 'radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%)' }}
-        />
-
-        {/* God-Tier Particle Depth — Starfield */}
-        <div className="absolute inset-0 opacity-50">
-          {[...Array(60)].map((_, i) => (
-            <motion.div
-              key={i}
-              initial={{
-                x: Math.random() * 100 + '%',
-                y: Math.random() * 100 + '%',
-                scale: Math.random() * 0.5 + 0.5,
-                opacity: Math.random() * 0.3 + 0.2
-              }}
-              animate={{
-                opacity: [0.2, 0.7, 0.2],
-                scale: [1, 1.4, 1],
-                y: [0, -20, 0]
-              }}
-              transition={{
-                duration: 4 + Math.random() * 6,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: Math.random() * 5
-              }}
-              className="absolute w-[2px] h-[2px] bg-white rounded-full blur-[0.3px]"
-            />
-          ))}
-        </div>
-
-        {/* Subtle grid overlay for depth — sharper focus */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:100px_100px] [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_90%)]" />
+        {/* Subtle Static Vignette */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,#020205_90%)]" />
       </div>
 
       {/* Content */}
@@ -144,7 +83,7 @@ export function Hero() {
           className="text-lg sm:text-xl text-frost max-w-2xl mx-auto mb-12 leading-relaxed font-light text-balance"
         >
           Stop waiting months for developers. Our proprietary{' '}
-          <span className="text-white font-medium border-b border-ember/40">43-Agent Orchestra</span>{' '}
+          <span className="text-white font-medium border-b border-ember/40">44-Agent Orchestra</span>{' '}
           turns your vision into production-ready software in weeks.
         </motion.p>
 
@@ -177,7 +116,7 @@ export function Hero() {
               <Users className="w-5 h-5 text-frost group-hover:text-ember transition-colors" />
             </div>
             <div className="text-left">
-              <div className="text-white font-bold font-outfit text-xl leading-none tracking-tight">43</div>
+              <div className="text-white font-bold font-outfit text-xl leading-none tracking-tight">44</div>
               <div className="text-steel text-[10px] font-bold uppercase tracking-widest mt-0.5">Specialised Agents</div>
             </div>
           </div>
