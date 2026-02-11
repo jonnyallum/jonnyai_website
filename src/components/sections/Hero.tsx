@@ -49,27 +49,28 @@ export function Hero() {
         />
 
         {/* God-Tier Particle Depth — Starfield */}
-        <div className="absolute inset-0 opacity-40">
-          {[...Array(30)].map((_, i) => (
+        <div className="absolute inset-0 opacity-50">
+          {[...Array(60)].map((_, i) => (
             <motion.div
               key={i}
               initial={{
                 x: Math.random() * 100 + '%',
                 y: Math.random() * 100 + '%',
                 scale: Math.random() * 0.5 + 0.5,
-                opacity: Math.random() * 0.3 + 0.3
+                opacity: Math.random() * 0.3 + 0.2
               }}
               animate={{
-                opacity: [0.3, 0.8, 0.3],
-                scale: [1, 1.2, 1]
+                opacity: [0.2, 0.7, 0.2],
+                scale: [1, 1.4, 1],
+                y: [0, -20, 0]
               }}
               transition={{
-                duration: 3 + Math.random() * 4,
+                duration: 4 + Math.random() * 6,
                 repeat: Infinity,
                 ease: "easeInOut",
                 delay: Math.random() * 5
               }}
-              className="absolute w-1 h-1 bg-white rounded-full blur-[0.5px]"
+              className="absolute w-[2px] h-[2px] bg-white rounded-full blur-[0.3px]"
             />
           ))}
         </div>
@@ -97,28 +98,28 @@ export function Hero() {
           </span>
         </motion.div>
 
-        {/* Hero Brand Logo — Full brand image with neural network bg */}
+        {/* Hero Brand Logo — Programmatic God-Tier Logo */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.9, y: 20 }}
+          initial={{ opacity: 0, scale: 0.95, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
           className="relative mx-auto mb-14 max-w-4xl"
         >
-          {/* Central Glow Projection */}
+          {/* Enhanced Aura Projection */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
             <motion.div
-              animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
-              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-              className="w-2/3 h-2/3 bg-ember/30 rounded-full blur-[100px]"
+              animate={{ scale: [1, 1.3, 1], opacity: [0.2, 0.4, 0.2] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+              className="w-3/4 h-3/4 bg-ember/20 rounded-full blur-[120px]"
             />
           </div>
 
           <Image
-            src="/Logo/Logo/JonnyAI_Logo_Transparent_Complete.png"
+            src="/Logo/jonnyai-hero-fixed.png"
             alt="JonnyAi — Jonny Allum Innovations Ltd"
             width={1200}
             height={480}
-            className="relative w-full h-auto drop-shadow-[0_0_60px_rgba(232,117,26,0.5)]"
+            className="relative w-full h-auto drop-shadow-[0_0_80px_rgba(232,117,26,0.4)]"
             priority
           />
         </motion.div>
