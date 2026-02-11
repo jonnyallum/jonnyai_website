@@ -54,7 +54,7 @@ export function Navigation() {
           <Link href="/" className="flex items-center group">
             <div className="relative">
               <Image
-                src="/Logo/jonnyai-icon.png"
+                src="/Logo/jonnyai-icon-transparent.png"
                 alt="JonnyAI"
                 width={120}
                 height={120}

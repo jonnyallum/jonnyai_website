@@ -54,7 +54,7 @@ export function Hero() {
           </div>
 
           <Image
-            src="/Logo/jonnyai-hero-fixed.png"
+            src="/Logo/jonnyai-hero-transparent.png"
             alt="JonnyAi — Jonny Allum Innovations Ltd"
             width={1200}
             height={480}
