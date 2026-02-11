@@ -34,5 +34,5 @@ jobs:
           REMOTE_HOST: "92.112.189.250"
           REMOTE_USER: "u384342620"
           REMOTE_PORT: "65002"
-          TARGET: "public_html/"
+          TARGET: "domains/jonnyai.co.uk/public_html/"
           EXCLUDE: "/node_modules/"
