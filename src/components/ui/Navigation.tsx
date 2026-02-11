@@ -59,7 +59,6 @@ export function Navigation() {
                 width={120}
                 height={120}
                 className="h-10 w-auto group-hover:scale-110 transition-transform duration-300"
-                style={{ mixBlendMode: 'screen' }}
                 priority
               />
               {/* Subtle glow behind logo */}

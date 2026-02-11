@@ -108,9 +108,9 @@ export function Hero() {
           {/* Enhanced Aura Projection */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
             <motion.div
-              animate={{ scale: [1, 1.3, 1], opacity: [0.2, 0.4, 0.2] }}
-              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-              className="w-3/4 h-3/4 bg-ember/20 rounded-full blur-[120px]"
+              animate={{ scale: [1, 1.4, 1], opacity: [0.3, 0.6, 0.3] }}
+              transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+              className="w-[120%] h-[120%] bg-[radial-gradient(circle,rgba(232,117,26,0.2)_0%,rgba(232,117,26,0.05)_50%,transparent_80%)] blur-[120px] animate-pulse"
             />
           </div>
 
