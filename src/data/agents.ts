@@ -767,6 +767,30 @@ export const agents: Agent[] = [
     color: "#ec4899",
     avatar: "/agents/monte.png"
   },
+  // ═══════════════════════════════════════
+  // GITHUB INTELLIGENCE
+  // ═══════════════════════════════════════
+  {
+    id: "hugo",
+    name: "Hugo",
+    humanName: "Hugo Reeves",
+    nickname: "The Crawler",
+    role: "GitHub Intelligence & Repo Ops",
+    philosophy: "Every repository tells a story. I read between the commits.",
+    capabilities: [
+      "Deep repository research & analysis",
+      "PR workflow management",
+      "GitHub Actions pipeline design",
+      "Release engineering & tagging",
+      "Security advisory monitoring",
+      "Open-source intelligence gathering"
+    ],
+    personality: ["Relentless researcher", "Git history archaeologist", "Quietly brilliant"],
+    tier: "deployment",
+    featured: true,
+    color: "#3b82f6",
+    avatar: "/agents/hugo.png"
+  },
 ];
 
 export const featuredAgents = agents.filter(agent => agent.featured);

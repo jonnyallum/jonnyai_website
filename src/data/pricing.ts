@@ -19,7 +19,7 @@ export const frameworkPricing: PricingTier[] = [
     priceNote: 'one-time',
     description: 'Core agent profiles and architecture documentation',
     features: [
-      '43 agent profiles',
+      '44 agent profiles',
       'Architecture documentation',
       'Basic setup guide',
       'Email support',

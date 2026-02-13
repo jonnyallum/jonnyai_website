@@ -10,7 +10,7 @@ import { featuredAgents } from '@/data/agents';
 const timeline = [
   { year: '2024', title: 'The Spark', description: 'Jonny discovered the power of AI tools, using them to navigate a complex personal challenge. The experience revealed what was possible.' },
   { year: 'Jan 2025', title: 'The Leap', description: 'Left a decade-long career as General Manager to pursue a vision: an AI-powered agency that could outpace traditional development.' },
-  { year: '2025', title: 'The Orchestra Forms', description: 'Built the agent framework from scratch—43 specialized AI agents, each with defined human identities and elite skills.' },
+  { year: '2025', title: 'The Orchestra Forms', description: 'Built the agent framework from scratch—44 specialized AI agents, each with defined human identities and elite skills.' },
   { year: '2026', title: 'Jai.OS 4.0', description: 'The Antigravity Operating System reaches maturity. Multi-AI Shared Brain, real-time orchestration, and enterprise deployments go live.' },
 ];
 
@@ -47,7 +47,7 @@ export default function AboutPage() {
             </h1>
             <p className="text-xl text-gray-400 font-light leading-relaxed max-w-3xl">
               JonnyAi isn&apos;t just an agency—it&apos;s a stateful Hive Mind. One human architect orchestrating
-              43 specialized AI agents to deliver enterprise-grade software at the speed of thought.
+              44 specialized AI agents to deliver enterprise-grade software at the speed of thought.
             </p>
           </motion.div>
         </div>

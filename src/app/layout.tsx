@@ -30,12 +30,12 @@ export const metadata: Metadata = {
     url: "https://www.jonnyai.co.uk",
     siteName: "JonnyAi",
     title: "JonnyAi | Pioneering AI Architecture | Build 10x Faster",
-    description: "Pioneering the future of AI architecture with 43 specialized AI agents. Delivering global AI solutions from our Emsworth base.",
+    description: "Pioneering the future of AI architecture with 44 specialized AI agents. Delivering global AI solutions from our Emsworth base.",
   },
   twitter: {
     card: "summary_large_image",
     title: "JonnyAi | Pioneering AI Architecture",
-    description: "Pioneering AI architecture with our 43-agent orchestra. UK based, global delivery.",
+    description: "Pioneering AI architecture with our 44-agent orchestra. UK based, global delivery.",
   },
   alternates: {
     canonical: 'https://www.jonnyai.co.uk',

@@ -40,7 +40,7 @@ export default function OrchestraPage() {
               Meet The <span className="text-ember">Agent Orchestra</span>
             </h1>
             <p className="text-xl text-gray-400 mb-10 leading-relaxed font-light">
-              Meet the 43 specialized AI agents that power every JonnyAi project. Each agent is a discrete
+              Meet the 44 specialized AI agents that power every JonnyAi project. Each agent is a discrete
               intelligence with a custom-engineered human identity, expertise, and operational framework.
             </p>
             <div className="flex flex-wrap gap-4">

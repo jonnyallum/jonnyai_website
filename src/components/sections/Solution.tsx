@@ -146,7 +146,7 @@ export function Solution() {
           className="mt-20 text-center"
         >
           <Button href="/orchestra" size="lg" className="btn-glow text-white text-lg px-10 py-5">
-            Explore All 43 Agents
+            Explore All 44 Agents
             <ArrowRight className="w-5 h-5 ml-2" />
           </Button>
         </motion.div>
